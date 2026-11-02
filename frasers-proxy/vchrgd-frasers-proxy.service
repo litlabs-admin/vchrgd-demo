@@ -1,0 +1,20 @@
+[Unit]
+Description=VCHRGD Frasers Plus API Proxy
+After=network.target
+
+[Service]
+Type=simple
+User=deploy
+WorkingDirectory=/opt/vchrgd-frasers-proxy
+EnvironmentFile=/etc/vchrgd-frasers-proxy.env
+ExecStart=/usr/bin/node /opt/vchrgd-frasers-proxy/server.js
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/vchrgd-frasers-proxy
+
+[Install]
+WantedBy=multi-user.target

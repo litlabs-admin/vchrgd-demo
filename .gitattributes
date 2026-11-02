@@ -1,0 +1,2 @@
+# Preserve recovered deployed bytes across platforms for reproducible hash checks.
+* -text

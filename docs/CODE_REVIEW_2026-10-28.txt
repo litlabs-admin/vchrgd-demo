@@ -1,0 +1,275 @@
+VCHRGD D2C / FRASERS PLUS — SOURCE CODE REVIEW
+Provider: Alex Watson | Intended recipient: Chapeau Collective
+Prepared: 28 October 2026, 16:20 GMT | Validation completed: 16:25 GMT
+Historical review status: findings open in the reviewed production baseline.
+29 October update: all eight items are addressed in the verified repository
+candidate, not deployed. See REMEDIATION_2026-10-28.txt and current validation.
+CONFIDENTIAL — Do not share without Alex Watson's express permission.
+The recipient is responsible for secure storage and limiting access to authorised personnel.
+
+DECISION
+
+The existing regression suite passes, but this review identifies eight actionable
+items: four priority-one items and four priority-two items. Seven application
+defects were reproduced offline; the eighth item is dependency/advisory exposure.
+Do not describe the system as having passed an unrestricted security sign-off.
+No evidence of an actual compromise or duplicate live charge was established.
+
+Priority one means address promptly before accepting responsibility for production
+releases. Priority two means schedule a corrective change and verify it before
+closing the handover maintenance backlog. These are engineering priorities,
+separate from the dependency scanner's critical/high package classifications.
+
+BASELINE AND SCOPE
+
+Reviewed Git commit: e1782afe991ee98d01b1817d1ef7fa2f60172f33.
+Repository: https://github.com/VCHRGD/vchrgd-d2c (private).
+Production source baseline: dpl_3717WEVxQ5Eg8n2djdoAs7u9uCoF, dated 15 October.
+The baseline was matched earlier on 28 October before this review. This review
+performed no cloud configuration changes, deployments, real payment/refund calls,
+notifications, production database connections or customer-data writes.
+
+Manual source inspection covered checkout capabilities and server pricing;
+administrator sessions, passwords/TOTP and Google OAuth; payment creation,
+provider callbacks, reconciliation and refunds; customer balance collection;
+workflow persistence/deduplication; notification delivery; Next/Vercel settings;
+the fixed-IP proxy source; and secret/access/deployment handling in the handover.
+API entry points were inventoried for authentication and origin checks. Detailed
+reproduction focused on the payment, persistence and access paths below.
+
+This is a targeted source review with executable synthetic reproductions, not an
+independent human penetration test or exhaustive certification of every route.
+Provider and database integration checks, real Google MFA sign-in, restore/load
+testing and live Supabase grants/RLS/TLS inspection remain separate acceptance
+work. Neither agency credentials nor production access are supplied by this report.
+
+FINDINGS
+
+R1 — P1 — Update the locked Next.js/sharp dependencies after compatibility testing
+
+Evidence: package.json:25 and :34 pins Next.js 16.3.6 and overrides sharp to 0.35.4.
+A fresh npm audit --package-lock-only --json on 28 October reports six affected
+package entries: one critical and five high. These are NOT six proven application
+exploits. The earlier 21 October snapshot of eight high findings remains historical.
+
+The maintainer image-optimisation advisory GHSA-2464-fhr4-w9xw names an affected
+Next.js range and a sharp >=0.35.5 workaround. The explicit sharp override means
+upgrading Next alone must not be assumed to fix the image dependency. Actual risk
+depends on runtime and image-input conditions. No attacker-controlled image source
+or exploitable live path was established here; Vercel's deployed image-processing
+implementation and mitigations were not certified by this review.
+
+The other critical Next advisory GHSA-673q-mjm6-r5xr requires Cache Components and
+a use-cache function returning multiple typed arrays. Neither cacheComponents nor
+use-cache functions were found in the reviewed source. The image SSRF advisory
+GHSA-cjq9-62q9-8jv4 requires allowed remote images; no images.remotePatterns config
+was found. Do not present those conditions as confirmed vulnerabilities here.
+
+Remaining affected package entries are sharp, source-map-js, zod, @vercel/cli-config
+and @vercel/oidc. Some are propagated dependency classifications. The lock contains
+runtime zod 4.1.11 under @vercel/cli-config as well as dev zod 4.3.6. Source-map use
+with untrusted input and application reachability of the zod advisory were not
+demonstrated. Audit evidence records the full advisory list and affected nodes.
+
+Action: prepare a dependency-update branch, remove/update the vulnerable sharp
+override, select maintainer-patched compatible releases and regenerate the lock.
+The registry currently suggests Next 16.4.3; this is a candidate, not a tested
+approval. Do not blindly apply npm's suggested @vercel/oidc downgrade. Recheck the
+audit, build, payment/auth tests and isolated staging behaviour before deployment.
+Owner: CC engineering; Alex approves production release and validates operations.
+
+Primary sources checked 28 October:
+https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw
+https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr
+https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4
+https://github.com/lovell/sharp/security/advisories/GHSA-wq5f-xc86-pv6w
+
+R2 — P1 — Make payment/workflow read-modify-write operations atomic
+
+Evidence: src/lib/frasers-plus-merchant-state.ts:183-195 reads the full merchant
+state and writes a replacement payload. src/lib/server-data.ts:228-240 upserts that
+whole JSON payload without a version condition or enclosing read/write transaction.
+src/lib/post-survey-workflows.ts:814-841 follows the same pattern for workflows.
+
+Reproduction: two concurrent calls to the actual storeCardCheckoutSession function
+with two distinct synthetic order IDs leave ONE session instead of two. This was
+executed against the actual memory adapter. SQL inspection confirms the same whole
+payload replacement contract; this was not reproduced against production Supabase.
+An atomic SQL UPSERT prevents torn writes, but does not merge stale JSON snapshots.
+
+Impact: simultaneous checkouts, callbacks, admin actions or audit writes can lose
+another order/status/history update. Per-payment dedupe does not serialise two
+different orders sharing merchant-state.json or post-survey-workflows.json.
+Action: transactional per-order rows, or compare-and-swap/versioned mutations with
+retry at the persistence boundary; keep audit writes consistent. Verify separate
+orders and conflicting callbacks across two database clients/server instances.
+Owner: CC engineering; Alex reconciles any affected operational records if found.
+
+R3 — P1 — Reuse or cancel pending balance-payment attempts before creating another
+
+Evidence: src/app/api/survey-review/balance/complete/route.ts:35-91 accepts a valid
+token with an outstanding balance even when another attempt is pending. Helpers at
+src/lib/post-survey-payments.ts:134 and :230 generate a new timestamp-based payment
+ID for each request. The new ID also produces a new Revolut idempotency key.
+
+Reproduction: two sequential valid balance POSTs invoke the mocked provider twice
+and return two different checkout URLs/payment IDs. The first attempt remains
+payable; the workflow tracks the later attempt. This uses the actual route/helper.
+No real charge was made. The defect creates the possibility of two payments if a
+customer uses both links; it does not prove any customer has been charged twice.
+Action: transactionally reserve one active attempt per balance/quote revision;
+reuse its URL while pending, reconcile uncertain outcomes, and explicitly expire
+or cancel superseded provider attempts before replacement. Test double clicks,
+multiple tabs, retries after timeouts and switching card/Frasers methods.
+Owner: CC engineering; Alex validates reconciliation and customer support process.
+
+R4 — P1 — Apply confirmed-capture/refund checks to the legacy administrator PUT
+
+Evidence: src/app/api/frasers-plus/payment/[upr]/route.ts:391-427 treats any 2xx
+provider result as completed capture/credit and can invoke fulfillment. It sends
+the caller's payment update payload without the safer workflow refund validation.
+The newer capture/refund helpers correctly distinguish submission from completion;
+this older authenticated path bypasses those checks.
+
+Reproduction: an authenticated synthetic CAPTURE request receives HTTP 202 with
+provider status PENDING. The route still writes COMPLETED and invokes the
+fulfillment helper once. The downstream provider/network boundary was mocked.
+This requires an authenticated admin; it is not an unauthenticated payment bypass.
+Action: remove/restrict the legacy mutation endpoint or route it through the same
+validated, idempotent capture/refund service. Re-fetch actual provider state and
+verify order, amount, currency and outcome before recording completion/fulfillment.
+Owner: CC engineering; Alex confirms whether operational tools still use this path.
+
+R5 — P2 — Allow verified REFUNDED status to replace a completed card payment
+
+Evidence: src/lib/frasers-plus-merchant-state.ts:367-382 protects all successful
+states from any non-success state, including REFUNDED. The provider refund adapter
+calls this function with REFUNDED after successful provider confirmation.
+Reproduction: COMPLETED -> REFUNDED leaves the payment session COMPLETED.
+The workflow refund record can still close correctly, so this is a payment-ledger
+inconsistency rather than proof the provider refund failed or the order stayed open.
+Action: define explicit valid transitions including verified refunds; prevent later
+completion callbacks/reconciliation from reopening a refunded payment. Test the
+adapter, stored payment, workflow and reporting together.
+Owner: CC engineering; Alex verifies finance reports against provider records.
+
+R6 — P2 — Revoke existing sessions when administrator credentials are reset
+
+Evidence: src/lib/admin-auth.ts:138-149 signs only username/expiry; :180-189 checks
+the user is enabled but no session version/credential-reset timestamp. Password and
+TOTP rotations in src/lib/admin-users.ts do not invalidate existing session tokens.
+Reproduction: the same old cookie remains valid after both password reset and TOTP
+rotation. Disabling the user DOES block it, which was verified as a control.
+Impact: a previously stolen cookie can remain valid for the remaining 12-hour TTL
+after a credential reset. Re-enabling a disabled account can also revive an old
+unexpired cookie because there is no revocation version.
+Action: add session version or revoked-before/issued-at checks and increment/revoke
+on credential/security changes; cover bootstrap sessions and logout-all behaviour.
+Owner: CC engineering; Alex owns the incident/offboarding procedure.
+
+R7 — P2 — Retry Google Chat notifications after definite send failure
+
+Evidence: src/lib/google-chat-notifications.ts:43-104 swallows HTTP/network failure,
+then sendUniqueGoogleChatNotification records the event as sent and retains its
+dedupe reservation. This is the generic payment/operations notifier, separate from
+the newer stage-alert transport repaired on 29 September.
+Reproduction: mocked HTTP 503 creates one sent-ledger entry; the second invocation
+never retries. Missing webhook configuration follows the same false-success path.
+Action: return an explicit send outcome; record only confirmed delivery, release
+reservations on definite failures and provide a reconciliation route for ambiguous
+timeouts. Test transient errors, missing configuration and concurrent retries.
+Owner: CC engineering; Alex confirms notification channels and operational fallback.
+
+R8 — P2 — Await payment-session lookups before serialising the API response
+
+Evidence: src/app/api/frasers-plus/session/route.ts:17-28 assigns unresolved Promises
+to session. A Promise is truthy, so the missing-session check/fallback never works;
+NextResponse.json serialises it as an empty object.
+Reproduction: an authenticated missing-paymentId + known-UPR request returns
+HTTP 200 / {} and never calls the UPR fallback. This is not a customer-data leak.
+Action: await each lookup before nullish fallback; verify found/missing results,
+UPR fallback and the unauthenticated 401 response.
+Owner: CC engineering.
+
+CONFIGURATION AND ACCEPTANCE GATES — NOT CLAIMED AS PROVEN LIVE EXPOSURES
+
+1. Google sign-in issues an application session without a local TOTP step, even
+   when mfaRequired is true. Google identity verification is implemented, but this
+   code does not prove upstream MFA occurred. Verify enforced Workspace MFA and
+   the intended SSO policy, or add step-up verification; explain the setting in UI.
+2. app_state and app_dedupe_keys creation does not itself enable RLS or revoke
+   public API grants. Existing production policies/grants were NOT inspected, so
+   absence of a migration is not proof these live tables are publicly accessible.
+   Verify grants/RLS and least-privilege DB credentials before sharing access.
+   APP_DATA_NAMESPACE is a key prefix, not an access-control boundary.
+3. Database TLS depends on connection URL/environment; no explicit TLS enforcement
+   is present in the client options. Verify the actual production connection uses
+   authenticated TLS without copying connection secrets into this report.
+4. Dedupe records have no lease/expiry. A hard function termination can leave a
+   checkout/refund reservation stuck because finally cannot run after termination.
+   Define reconciliation and safe lease recovery; never blindly retry financial
+   operations. This crash scenario was inspected, not injected into production.
+5. Vercel without APP_DATA_STORE defaults to memory. Validate required persistent
+   storage and provider configuration at startup in production. Missing settings
+   must not silently switch a transferred environment to memory/demo operation.
+6. The configured CSP is report-only. It is not an enforced script policy. Review
+   provider compatibility before enforcing a tested policy.
+7. Cloud project isolation, database restore, Google identity federation, provider
+   introductions and credential custody remain gated until authorised access is
+   supplied. No Chapeau account invitation or transfer was performed by this review.
+
+VERIFICATION AND LOCAL USER-REQUESTED CHANGE
+
+The 10 existing offline suites passed again: 1,537 assertions plus landing-client
+checks; 13 static security controls passed. Seven additional defect reproductions
+passed by asserting the observed BAD behaviour. These are diagnostic evidence,
+not seven successful fixes and not part of the normal green regression suite.
+
+The working-folder TypeScript command encountered stale .next validators referring
+to Apple association routes removed during source recovery. An initial clean-copy
+check reused an existing node_modules tree whose Next version differed from the
+lockfile; its build is excluded from validation evidence. Final clean-install
+results are recorded in validation-results.json beside the reproduction evidence.
+The fresh npm-ci installation used Next 16.3.6 / sharp 0.35.4 / TypeScript 5.9.3.
+TypeScript, source lint, all 10 offline suites, all 13 static security controls and
+the Webpack production build passed. Existing middleware deprecation and upstream
+Edge-runtime warnings remain. The popup behaviour harness passed with historical
+sibling snapshot guards excluded; click instrumentation was checked separately by
+the click suite. The exact new URL was verified in all four current assets.
+
+On Alex's additional instruction, the LOCAL Frasers popup URL and three Squarespace
+handover assets now use:
+https://application.pay.frasers.plus/?partner=VCHRGD&template=online&location=frasersplus_webpage
+
+This fixes the malformed old partner=VCHRGD=online query. Secure new-tab attributes
+and click tracking are retained. The lifetime changelog marks the change as pending
+publication. The production source manifest is preserved; its checker validates
+that the popup differs only by this exact URL substitution. This pending change is
+not evidence the live site/Squarespace was updated. No security finding was fixed
+or production release made as part of this review.
+
+Evidence: docs/release-evidence/code-review-20261028/
+- dependency-audit.json: raw fresh npm audit of the preserved lockfile.
+- reproduce.cjs: actual-source, synthetic-only diagnostic runner.
+- reproduction-results.json: seven reproduced application defects.
+- validation-results.json: final validation outcomes and limitations.
+
+Run diagnostics from repository root:
+node --require ./scripts/offline-test-guard.cjs docs/release-evidence/code-review-20261028/reproduce.cjs
+The diagnostic runner expects current defects and should fail once corrected.
+Keep it as dated evidence; write normal desired-behaviour tests with each fix.
+
+REMEDIATION AND HANDOVER ORDER
+
+Alex assigns an accountable engineering owner and agrees the release window.
+CC first patches/assesses dependencies and implements atomic persistence. Balance
+attempt deduplication and the legacy capture endpoint then use those guarantees.
+Card refund transitions, session revocation and notification delivery can be
+developed in parallel once shared persistence changes are agreed; fix the session
+lookup API in the same maintenance programme. Re-run relevant regression suites,
+add failure/concurrency tests, validate against isolated provider sandboxes and a
+non-production database, then obtain operational sign-off before a live release.
+Production promotion/credential rotation remains a separate authorised action.
+
+CONFIDENTIAL INFORMATION — Not to be shared without express permission.
+Recipient: Chapeau Collective. Securely store this document and limit access.

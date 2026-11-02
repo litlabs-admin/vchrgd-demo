@@ -1,0 +1,61 @@
+VCHRGD — RECONNECTION CHECKPOINT, 28 OCTOBER 2026
+HISTORICAL: resumed and completed on 29 October. See REMEDIATION_2026-10-28.txt
+and release-evidence/remediation-20261029/validation-results.json for final results.
+CONFIDENTIAL — Alex Watson's local engineering work. Do not share without permission.
+
+User requested a safe stopping point before leaving. No push or deployment authorised
+or performed for this remediation. Resume the existing branch, do not start again.
+
+Repository: C:/Users/Alexa/Desktop/Fraser's Plus/vchrgd-integration-mock
+Branch: fix/handover-review-20261028
+Review baseline: e1782afe991ee98d01b1817d1ef7fa2f60172f33
+Fresh validation folder: C:/Users/Alexa/.codex/tmp/d2c-remediation-20261028/source
+Disposable PostgreSQL runtime: sibling database-runtime folder (not app dependencies).
+
+IMPLEMENTED
+All eight review fixes are present in the branch: dependency patches; transactional
+JSON mutations; durable balance-attempt reservations; validated legacy Frasers
+captures/refund endpoint restrictions; terminal refund statuses; credential-bound
+admin sessions; notification failure handling; awaited session lookup.
+The corrected popup URL and Squarespace embed assets from the earlier instruction
+are included. All of these application changes remain LOCAL, not live.
+
+VERIFIED SO FAR
+- Fresh npm-ci installation of patched runtime dependencies succeeded.
+- Webpack production build passed on Next 16.4.3; TypeScript passed.
+- Existing 10 offline suites passed; new remediation suite passed 57 assertions.
+- Static security checks: 13 controls passed.
+- Real disposable PostgreSQL 17 test passed: two clients, all 50 concurrent orders
+  and audits retained, rollback/nested transactions and legacy payload checks passed.
+- Fresh dependency audit returned zero findings before final development-lint
+  configuration adjustment; its snapshot is preserved as evidence.
+- Final lint check passed after retaining baseline eslint-config-next 16.3.6 and
+  pinning React hooks 7.0.1 within its supported range. New runtime remains 16.4.3.
+  Next 16.4.3's newer lint rules flagged seven pre-existing UI patterns, so we kept
+  the existing ruleset rather than altering unrelated checkout behaviour.
+
+REMAINING BEFORE CALLING THIS CANDIDATE FULLY VERIFIED
+1. Re-run npm audit on the final lockfile after retaining that baseline lint config.
+2. Copy final working files into the clean validation folder (no .env/.data/.vercel).
+   Run all 11 offline suites and source/security checks there against the final lock.
+3. The DB integration suite was extended after its successful run to test balance
+   reservation/unknown outcomes across two clients. Run this expanded suite using
+   .tmp/run-database-check.mjs with the validation folder argument. The runner uses
+   a new local-only cluster and stops it in finally. Never use production DB access.
+4. Finish the before/after validation JSON and README/HANDOVER/VERIFICATION updates.
+   They still describe the original review; do not misrepresent the live site.
+5. Add the paired lifetime changelog entry for the remediation candidate; status
+   Configured/pending deployment, not Live. Update candidate manifest hashes after
+   any further runtime edit. Never rewrite production-source-manifest.json.
+6. Final diff/security review. Commit any follow-up work on this same branch.
+7. Provider-sandbox/Google staging acceptance is still gated on supplied access.
+   Production rollout is a separate decision. See REMEDIATION_2026-10-28.txt for
+   relogin, pending attempt reconciliation, old/new worker overlap and rollback gates.
+
+The historical reproduce.cjs intentionally asserts OLD defects and will now fail;
+use scripts/test-handover-remediation.cjs for desired behaviour on corrected code.
+The source verifier distinguishes the pinned local candidate from production;
+--strict-production is expected to fail while this candidate differs from live.
+
+No production environment values or customer data belong in any committed report.
+Local .env files/private diagnostic backups remain ignored and outside the commit.

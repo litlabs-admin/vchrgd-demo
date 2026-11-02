@@ -1,0 +1,152 @@
+.popup,
+.popup * {
+  box-sizing: border-box;
+}
+
+.popup {
+  position: fixed;
+  z-index: 9999;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  width: min(375px, calc(100vw - 24px));
+  min-height: 439px;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 22px 24px 20px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(76, 35, 133, 0.66), transparent 46%),
+    linear-gradient(150deg, #24134e 0%, #090216 82%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 22px 58px rgba(8, 2, 22, 0.42);
+  font-family: "Avenir Next", Avenir, "Century Gothic", sans-serif;
+}
+
+.close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font: 300 32px/40px "Avenir Next", Avenir, sans-serif;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.close:focus-visible,
+.cta:focus-visible {
+  outline: 3px solid #43e9ed;
+  outline-offset: 3px;
+}
+
+.brand {
+  padding-right: 28px;
+}
+
+.brand img {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+}
+
+.popup h2,
+.popup p,
+.popup ul {
+  margin: 0;
+  color: inherit;
+}
+
+.popup h2 {
+  font-size: 25px;
+  font-weight: 750;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+.popup h2 span {
+  display: block;
+  margin-top: 3px;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.popup ul {
+  display: grid;
+  gap: 6px;
+  padding-left: 22px;
+  list-style: disc;
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 1.18;
+}
+
+.cta {
+  display: inline-flex;
+  width: 100%;
+  min-height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  color: #fff;
+  background: #b115f4;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.cta:hover {
+  filter: brightness(1.12);
+}
+
+.popup .apr {
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.05;
+}
+
+.apr span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.popup .legal {
+  color: #eee9f7;
+  font-size: 11px;
+  font-weight: 550;
+  line-height: 1.2;
+}
+
+@media (max-width: 520px) {
+  .popup {
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    left: 12px;
+    width: auto;
+    min-height: min(439px, calc(100vh - 24px));
+    min-height: min(439px, calc(100dvh - 24px - env(safe-area-inset-bottom)));
+    max-height: calc(100dvh - 24px - env(safe-area-inset-bottom));
+    padding: 20px;
+  }
+}

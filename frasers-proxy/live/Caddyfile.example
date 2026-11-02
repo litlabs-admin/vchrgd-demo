@@ -1,0 +1,15 @@
+frasers-proxy.payments.vchrgd.app {
+    @liveApi path /live/v1/* /live/health
+    route {
+        handle @liveApi {
+            uri strip_prefix /live
+            reverse_proxy 127.0.0.1:3026
+        }
+        handle /live/* {
+            respond "Not found" 404
+        }
+        handle {
+            reverse_proxy 127.0.0.1:3025
+        }
+    }
+}

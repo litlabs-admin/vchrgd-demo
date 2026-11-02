@@ -1,0 +1,47 @@
+{
+  "name": "vchrgd-integration-mock",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --quiet",
+    "security:check": "node scripts/security-check.mjs",
+    "backoffice:credentials": "node scripts/generate-backoffice-credentials.mjs",
+    "revolut:webhook": "node scripts/register-revolut-webhook.mjs",
+    "jumptech:webhook": "node scripts/register-jumptech-webhook.mjs",
+    "demo:reset": "node scripts/reset-demo-state.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/run-regressions.mjs",
+    "verify:production-source": "node scripts/verify-production-source.mjs"
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@vercel/oidc": "^3.8.0",
+    "google-auth-library": "^10.9.0",
+    "lucide-react": "^1.8.0",
+    "next": "16.4.3",
+    "pdf-lib": "^1.17.1",
+    "postgres": "^3.4.9",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwindcss": "^4.2.2"
+  },
+  "overrides": {
+    "postcss": "8.5.25",
+    "sharp": "0.35.5",
+    "zod": "4.6.7",
+    "source-map-js": "1.2.2",
+    "eslint-plugin-react-hooks": "7.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,20 @@
+.git
+node_modules
+.next
+.vercel
+.env*
+.data
+.tmp
+scripts
+*.tsbuildinfo
+*.log
+*.pem
+*.key
+AGENTS.md
+.agents
+
+# Repository-only handover/support material
+.gitattributes
+docs
+marketing
+frasers-proxy

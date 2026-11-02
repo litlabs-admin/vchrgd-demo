@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/home-charging",
+      "destination": "/home-charging/index.html"
+    },
+    {
+      "source": "/home-charging/",
+      "destination": "/home-charging/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/home-charging/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Local data and deployment metadata
+.data/
+.vercel/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Local diagnostic exports
+*-vercel-env.txt
+jumptech-openapi.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+cloudflared*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+
+
+# Private diagnostics, recovery files and local build metadata
+.local-logs/
+.tmp/
+*.tsbuildinfo
+*.log
+*.private*
+*.pem
+*.key
+*.bundle

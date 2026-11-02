@@ -1,0 +1,77 @@
+LIMITED PRODUCTION RELEASE - COMPLETED
+29 October 2026, approximately 15:47 UK time.
+
+Production: https://payments.vchrgd.app
+Vercel project: vchrgd-staging / prj_OFRhCZfnOZseTdK1iAfFXoTqcUDZ
+Live deployment: dpl_3cWtCPpDAraqYmDHPCuE3nB7iYph
+Live host: vchrgd-staging-kj8kmmju2-alex-watsons-projects-d9009c32.vercel.app
+Previous deployment / rollback target: dpl_3717WEVxQ5Eg8n2djdoAs7u9uCoF
+Previous host: vchrgd-staging-ad1l5p41a-alex-watsons-projects-d9009c32.vercel.app
+
+SCOPE
+Built separately from verified original production source commit 0207060.
+Release artifact: C:/Users/Alexa/.codex/tmp/d2c-safe-release-20261029
+Normal Vercel deploy --prod --yes, using existing production environment values.
+No preview promotion, environment overrides, database migration, restoration,
+maintenance mode, Git commit or push. No mock settings deployed.
+
+Only four application/package files changed in content:
+- package.json and package-lock.json: Next 16.4.3 and dependency security updates.
+- src/app/api/frasers-plus/session/route.ts: await both async session lookups.
+- src/components/frasers-plus-promo-popup.tsx: repair tracked eligibility URL to
+  https://application.pay.frasers.plus/?partner=VCHRGD&template=online&location=frasersplus_webpage
+Other recorded differences were line-ending normalization only.
+Deployment exclusions prevent local env, data, test scripts and docs upload.
+
+NOT RELEASED
+The full 8bca360/remediation candidate and later working-tree changes were NOT
+deployed. In particular: new transaction/advisory locks, payment balance attempt
+reservation/recovery, capture/refund changes, admin session revocation changes,
+notification changes and isolated-preview/mock changes remain separate.
+Do not deploy the main checkout wholesale based on this limited-release sign-off.
+
+CHECKS
+- Ten baseline-compatible offline regression suites passed; network/live credentials
+  excluded. Additional targeted session/referral checks: 14 passed.
+- Security checker: 13 controls passed. Dependency audit: zero vulnerabilities.
+- ESLint src --quiet passed. Local production build and TypeScript passed.
+- Local smoke: homepage/login 200, backoffice redirect 307, protected APIs 401.
+  Initial local smoke failure was missing test-only signing configuration;
+  a generated ephemeral local key resolved it without changing application code.
+- Vercel production build/TypeScript passed; target production and state READY.
+- Source verification: 203 files checked, only four permitted content differences.
+- Homepage and backoffice login 200 before, during and after deployment.
+- Unauthorized Frasers session and backoffice state APIs return 401 after release.
+- Backoffice redirects to login; Google start 303 has correct production callback,
+  state/nonce and Secure/HttpOnly/SameSite cookie. Full Google/MFA login not repeated.
+- All nine homepage scripts fetched successfully; corrected referral URL present,
+  malformed URL absent.
+- Live public product prices and settings revision match production database:
+  tethered installed 935 / unit 550; untethered installed 895 / unit 500 (GBP).
+- Vercel environment metadata identical before/after. No database/config edits.
+- No real payment, capture, refund or customer email test performed.
+No outage observed in bounded checks; this is not a guarantee of zero request errors.
+
+CRON
+The normal deployment automatically refreshed cron bindings to the new release.
+vercel.json content was unchanged from the previous production source. Four entries:
+stage alerts */15, card reconciliation */5, recovery email hourly, landing analytics
+cleanup 03:20 UTC daily. The project's previously stale binding had only three jobs;
+the existing cleanup definition is now also registered. No job manually invoked.
+
+EVIDENCE
+Generated source hashes: docs/production-safe-release-source-manifest-20261029.json
+Its baseline field identifies the OLD source parent, not the new live deployment.
+Ignored detailed reports: .tmp/staging-remediation-20261029/
+  safe-release-manifest.json
+  safe-release-local-smoke.json
+  safe-release-deployment.json
+  safe-release-live-checks.json
+No credentials or customer records are included in these release reports.
+
+ROLLBACK
+If needed, use the recorded previous deployment with Vercel's rollback operation
+for this exact project, then verify domain alias, public/auth routes and cron bindings.
+Do not restore the database. Retain the previous deployment and this clean artifact.
+The full-candidate cutover runbook is still preparatory, but its old current/cron
+deployment IDs are now historical. Refresh its baseline before any future release.

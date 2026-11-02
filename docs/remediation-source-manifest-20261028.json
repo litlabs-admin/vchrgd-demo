@@ -1,0 +1,157 @@
+{
+  "status": "local-candidate-not-deployed",
+  "baseline": "dpl_3717WEVxQ5Eg8n2djdoAs7u9uCoF",
+  "files": [
+    {
+      "path": "package-lock.json",
+      "productionSha1": "6cbd28a794bb8120988d00a148099dde58fc67c6",
+      "sha256": "3632d4d0b57951de0da0352f95cb417a211cce3302e1d48cb76010856c1c7fef"
+    },
+    {
+      "path": "package.json",
+      "productionSha1": "82162f3b11d238009ef45e590f71c15243c8ced2",
+      "sha256": "b154a88ec40a70a9e8ea7a13e24174cbbfc6f25de23e08569470e2ab63b5717d"
+    },
+    {
+      "path": "src/app/api/admin/session/route.ts",
+      "productionSha1": "378e0dae1a61c1ff28a1833c453172f681cef1c2",
+      "sha256": "6d5118f8484ee9b881246403852cb8af9a31b208bd57c7b4286bf33b28955025"
+    },
+    {
+      "path": "src/app/api/frasers-plus/payment/[upr]/route.ts",
+      "productionSha1": "5cbf3bf83cbfbc54fea3b37c4d9dc140a612a4ad",
+      "sha256": "2781d71a7cba392c89e80fcd43e029701606bb126534fbbd9ab0bb5a22710918"
+    },
+    {
+      "path": "src/app/api/frasers-plus/session/route.ts",
+      "productionSha1": "13b2f45e8c49937270845eb43e3cacd967bb5b00",
+      "sha256": "55fd110683079a94fc2b318c0706dda409a6d4aa0adbf95814d3603b686a996d"
+    },
+    {
+      "path": "src/app/api/frasers-plus/webhook/authorization/route.ts",
+      "productionSha1": "ea1edee06a7a2a1509185e3f13c68489881e0732",
+      "sha256": "0155990d3f58e0ee5d02778ad86432a9ea50547101798965b48d024598694a78"
+    },
+    {
+      "path": "src/app/api/revolut/webhook/route.ts",
+      "productionSha1": "ae12e6f90c74b35e02d652b1661ea0a332b54431",
+      "sha256": "8d582679fe1447ecc4e1838ff77984306acd02b5c0c0a48d2bcb457e8754c638"
+    },
+    {
+      "path": "src/app/api/square/webhook/route.ts",
+      "productionSha1": "ee6286f6cb7ed853fa1984fcfd999b797313346d",
+      "sha256": "b53d65e2d5cddd558f03aae2625af4a831ecd01555750394d75ece10adff6974"
+    },
+    {
+      "path": "src/app/api/survey-review/balance/complete/route.ts",
+      "productionSha1": "91fb1624a6232acdf294316e8dfe1087b373d240",
+      "sha256": "e763c1155e782eb1a5d14e45cb18be24aa08dbfb747e4a0b3572178971a6f743"
+    },
+    {
+      "path": "src/app/card/return/page.tsx",
+      "productionSha1": "71c27076f946cb8d8336059973cb7e7144f83598",
+      "sha256": "1ee37d17222515159c22376dc6ba4449e2c0c59261485ade91baefeba079ec69"
+    },
+    {
+      "path": "src/components/frasers-plus-promo-popup.tsx",
+      "productionSha1": "e864709bb12fd2f352017e674d53574e2cd69868",
+      "sha256": "b060af7b07922fcd893eb9816fb3d0812bbee9119c7a14302bebe6e162bdd799"
+    },
+    {
+      "path": "src/lib/admin-auth.ts",
+      "productionSha1": "c68c66d0af14226d08f7093cef26c37e9dbacf34",
+      "sha256": "534f7a2e3a6af9c829c2470625a8c424264fcd065a47a3e021d7db659292990c"
+    },
+    {
+      "path": "src/lib/admin-security.ts",
+      "productionSha1": "cb79c0bbdb488a07577bfd0894051457deecbd12",
+      "sha256": "3342f2559c92b6cd395cd0b5e3a540b8775ed05db81055c43c6321a13d876cee"
+    },
+    {
+      "path": "src/lib/admin-users.ts",
+      "productionSha1": "23a4b731fe6fb7057370026b03d9410a5f72582c",
+      "sha256": "6cc37bc1be75c5a934978850c80cac35e87155d48805c8707fae1d095f82e202"
+    },
+    {
+      "path": "src/lib/backoffice-saved-views.ts",
+      "productionSha1": "49d14252cab3df63d4a4368fd4fde40624f3e1be",
+      "sha256": "565561c8839a912b51960c198136290562982fe33d7b2e6038d18e79d586d643"
+    },
+    {
+      "path": "src/lib/card-payment-completion.ts",
+      "productionSha1": "bd227763799ee65530481cf4b22320606a0a5baa",
+      "sha256": "3652b7d37154d541d1e7e1987fba6222287457e787e6a9487699d7da2ee47c7d"
+    },
+    {
+      "path": "src/lib/card-payment-reconciliation.ts",
+      "productionSha1": "cce23c699781ce558ad1bc60ce0dc50cc3ebe581",
+      "sha256": "fdb3938ab53c2fedcef3230c6e1bb15e82edac7ca3c4cfcd215b02385b76f4ea"
+    },
+    {
+      "path": "src/lib/changelog.ts",
+      "productionSha1": "3d8b462e6756092b520a1a9c2f64e3cbd9f275ae",
+      "sha256": "0cdfd2a8fdbb4f49d032f065a9dd753f6a47cf45f30946b6770b9b602fb32ba0"
+    },
+    {
+      "path": "src/lib/checkout-interactions.ts",
+      "productionSha1": "0e0b56c7f522565f7871d0b49d34f7aa484b38bd",
+      "sha256": "8b32b328c7d3622acc7f38a1e4650bd590a2ddef664806704548548bda9801b9"
+    },
+    {
+      "path": "src/lib/frasers-plus-capture.ts",
+      "productionSha1": "b0f1c5ebc4e80658ddb0ec42e842220e1c63a100",
+      "sha256": "8c9bae4143dbd332c6f09cf4c8606831247af1b24efb8864a7d1678724e823df"
+    },
+    {
+      "path": "src/lib/frasers-plus-merchant-state.ts",
+      "productionSha1": "e2cabc1d64fa9a16ffd14e30543e95d3dfae47ea",
+      "sha256": "37fc8661632c5cec0db41de7edfa632e1a9048c98f6fe4bc1e2b63e917b88399"
+    },
+    {
+      "path": "src/lib/google-chat-notifications.ts",
+      "productionSha1": "4fdc64f73619f26c2d30f22d6740707c54304442",
+      "sha256": "e2e8ff645edb413e4277c6e1e24db0b2fd5eefda4bfdc5e62b2eed4bdde78ad8"
+    },
+    {
+      "path": "src/lib/installers.ts",
+      "productionSha1": "c397c88f7c661c4a1c3e06c9828495f193dad4c1",
+      "sha256": "7c2ac1ea2e128ab5d9b30647bbc11f448b6144ad595defa2a616b3568051c610"
+    },
+    {
+      "path": "src/lib/mock-tymit.ts",
+      "productionSha1": "9a1742f6777a0022422ed3cce72583dc24f8145c",
+      "sha256": "7624335f077636f38654b1b962dbbd6b85b389ee2c2696d3f6bf658ab8637fb3"
+    },
+    {
+      "path": "src/lib/post-survey-payments.ts",
+      "productionSha1": "3a19d7c56d1cfe76b7951cda274b5fe1687eef43",
+      "sha256": "4bc32d9138ad6c02d6b62e26f34e22d4fdd47f83c149437f812a6a2adb2c8259"
+    },
+    {
+      "path": "src/lib/post-survey-workflows.ts",
+      "productionSha1": "697db4a09714020dfae02d6f2b59a20affcc6b99",
+      "sha256": "d5bedbbd2e2731c470383a310fc2fe123c605c08ff899a37de2515bbe938e827"
+    },
+    {
+      "path": "src/lib/product-settings.ts",
+      "productionSha1": "d8190b7bb992b813b4f179d9c13c4b5a5652c2fb",
+      "sha256": "20d08ed5bacd3662032b119c90c50caefd14e58592986d0e0923965fdb3fb335"
+    },
+    {
+      "path": "src/lib/server-data.ts",
+      "productionSha1": "812a34776db5845e32875ad973149af4142ca186",
+      "sha256": "d5c2accfba4edcc660f1623b349a0756b17031c656e332e3cf573eb4752a26d5"
+    },
+    {
+      "path": "src/lib/work-orders.ts",
+      "productionSha1": "58d7d72aa99099fcd8c14b4bb7dd628da2496c30",
+      "sha256": "353820ed432bb1246b70bfaa4a156b0cd714ec8cfc0f065f622d8deed93eb662"
+    },
+    {
+      "path": "src/lib/balance-checkout.ts",
+      "productionSha1": null,
+      "sha256": "6152a20d4aec55807e50f4617ce3fde32b575392af21ce3ba5da7010ed03c907"
+    }
+  ],
+  "verifiedOn": "2026-10-29"
+}

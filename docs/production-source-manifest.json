@@ -1,0 +1,833 @@
+{
+  "checkedAt": "2026-10-21T14:39:14.851Z",
+  "deploymentId": "dpl_3717WEVxQ5Eg8n2djdoAs7u9uCoF",
+  "projectName": "vchrgd-staging",
+  "projectId": "prj_OFRhCZfnOZseTdK1iAfFXoTqcUDZ",
+  "readyState": "READY",
+  "gitSource": null,
+  "files": [
+    {
+      "path": ".vercelignore",
+      "sha1": "82cbf5919c3d8d4a782ce8b68e1374ffeefd9c4b"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha1": "76e488855346db319fc11455bd8dc6879e2e51aa"
+    },
+    {
+      "path": "README.md",
+      "sha1": "55a99386dd9eca7e8e42960cbbbe53932af4eede"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha1": "7b3b62d43ebb71550e9aad41f196d9c16bcbf52c"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha1": "d3fc80b7fae627e01dce199d12132aa4fc32d773"
+    },
+    {
+      "path": "next.config.ts",
+      "sha1": "b2d39ae5b4b1cae371d101d01dc92bec2d1d6a93"
+    },
+    {
+      "path": "package-lock.json",
+      "sha1": "6cbd28a794bb8120988d00a148099dde58fc67c6"
+    },
+    {
+      "path": "package.json",
+      "sha1": "82162f3b11d238009ef45e590f71c15243c8ced2"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha1": "ccb8b6288e0fe829534eb4c452a48bc27bbcdf01"
+    },
+    {
+      "path": "public/apple-developer-merchantid-domain-association",
+      "sha1": "e6c91d64512c3721042f4f08d83824621be2b7da"
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "sha1": "8f1d6b02859f99faa4057b37a4373663b38577d8"
+    },
+    {
+      "path": "public/content/frasers-plus-official-horizontal-background.svg",
+      "sha1": "d7a60ff6626f91d79759f71a5e75d25e484eefef"
+    },
+    {
+      "path": "public/content/frasers-plus-official-horizontal.svg",
+      "sha1": "f132965280073b1d6e582d854c2b37cd1c353c68"
+    },
+    {
+      "path": "public/content/frasersplus-logo-symbol.svg",
+      "sha1": "83af7a780052dd1b10fa390bf32da25f280595e6"
+    },
+    {
+      "path": "public/content/frasersplus-stacked.png",
+      "sha1": "1817c5ab19f046d44445935e7f785d9bccceec91"
+    },
+    {
+      "path": "public/content/hero-header.jpg",
+      "sha1": "adbcb385f670876d4e463d0b4918bc5a7fb6e7e9"
+    },
+    {
+      "path": "public/content/seven-pro-tethered.png",
+      "sha1": "74b71617cbab9439b5f4e3619d7cb99698e2249d"
+    },
+    {
+      "path": "public/content/seven-pro-untethered.png",
+      "sha1": "a295675757682ba563438410cb46b5666a9b9579"
+    },
+    {
+      "path": "public/content/vchrgd-email-logo.png",
+      "sha1": "0c1adae7f953a15c09872c692ccd3d0424e334f6"
+    },
+    {
+      "path": "public/content/vchrgd-logo-light.png",
+      "sha1": "e356e9895f3c8e575aba3374ddd580246e369837"
+    },
+    {
+      "path": "public/content/work-order-font.ttf",
+      "sha1": "8a4c78e86e13dbf6e741a84f526dd79481b679db"
+    },
+    {
+      "path": "public/home-charging/assets/frasersplus.svg",
+      "sha1": "f132965280073b1d6e582d854c2b37cd1c353c68"
+    },
+    {
+      "path": "public/home-charging/assets/american-express.svg",
+      "sha1": "3958615a93672a76e876884697790810f4723b6f"
+    },
+    {
+      "path": "public/home-charging/assets/app.png",
+      "sha1": "fd8ff51abc190809f67956a0f58c6329dd502903"
+    },
+    {
+      "path": "public/home-charging/assets/app.webp",
+      "sha1": "e4d3f322f1ad3855ddc7d12762a001b97bd69a2d"
+    },
+    {
+      "path": "public/home-charging/assets/apple-pay.svg",
+      "sha1": "321806e17158f502b63e91d0a2c894a35239de58"
+    },
+    {
+      "path": "public/home-charging/assets/ascent.jpg",
+      "sha1": "7cab9d5dbc0b83dda2e7027f32ce923a7a7f408e"
+    },
+    {
+      "path": "public/home-charging/assets/ascent.webp",
+      "sha1": "81fa4bc506c7ab115d0279e081ec4e23d6e76088"
+    },
+    {
+      "path": "public/home-charging/assets/charging-400.woff2",
+      "sha1": "d95c5b4fbb4fd29dd43ee0399ca0ed9985f7dfc9"
+    },
+    {
+      "path": "public/home-charging/assets/charging-500.woff2",
+      "sha1": "d95c5b4fbb4fd29dd43ee0399ca0ed9985f7dfc9"
+    },
+    {
+      "path": "public/home-charging/assets/charging-700.woff2",
+      "sha1": "d95c5b4fbb4fd29dd43ee0399ca0ed9985f7dfc9"
+    },
+    {
+      "path": "public/home-charging/assets/charging.woff2",
+      "sha1": "d95c5b4fbb4fd29dd43ee0399ca0ed9985f7dfc9"
+    },
+    {
+      "path": "public/home-charging/assets/coiled-cable.svg",
+      "sha1": "b31b12db8d7acea96c5e0333530ba7a3776972d0"
+    },
+    {
+      "path": "public/home-charging/assets/detail.jpg",
+      "sha1": "ad0bc99148001ae837b7e4042d7c479522e421b3"
+    },
+    {
+      "path": "public/home-charging/assets/detail.webp",
+      "sha1": "4f08f1fa6daf12e445c8c10dfec495491e2812f6"
+    },
+    {
+      "path": "public/home-charging/assets/favicon.svg",
+      "sha1": "6c663347bd210aef3b92b118707422d97cd921d5"
+    },
+    {
+      "path": "public/home-charging/assets/google-pay.svg",
+      "sha1": "fec575f31af9ae204610154bcf9417f126ae1559"
+    },
+    {
+      "path": "public/home-charging/assets/hero.jpg",
+      "sha1": "c9db58761c13c0ecda1b35d07f0fc6c88d1518db"
+    },
+    {
+      "path": "public/home-charging/assets/hero.webp",
+      "sha1": "6a5c13b2f14b469c106f813efd1d047343f2d3db"
+    },
+    {
+      "path": "public/home-charging/assets/home.jpg",
+      "sha1": "74bdad82e0356df575693676af6774291301067b"
+    },
+    {
+      "path": "public/home-charging/assets/home.webp",
+      "sha1": "08e4f40caaba9dd8cd93a92548fa14320d2d30a8"
+    },
+    {
+      "path": "public/home-charging/assets/lifestyle.jpg",
+      "sha1": "a4cac78b9a643f894641851278ae9dcd54e7ad55"
+    },
+    {
+      "path": "public/home-charging/assets/lifestyle.webp",
+      "sha1": "beeb774d901ce01db70a4f6fd39dadc22b7724a8"
+    },
+    {
+      "path": "public/home-charging/assets/logo.png",
+      "sha1": "35dbd67f0b84bbad1c73d88a6b156d6c473d9f73"
+    },
+    {
+      "path": "public/home-charging/assets/maestro.svg",
+      "sha1": "3cbacaf6cbae4a562c44ac0f46204d085dfb9e9c"
+    },
+    {
+      "path": "public/home-charging/assets/mastercard.svg",
+      "sha1": "d7593e838bd9ae4ad27e3c0690c36d74de213988"
+    },
+    {
+      "path": "public/home-charging/assets/revolut-pay.svg",
+      "sha1": "694b17f3046e8c9c2941d0884b91158556a9bd4b"
+    },
+    {
+      "path": "public/home-charging/assets/tethered.png",
+      "sha1": "f3c2e1de4aac342d65082721706aff92222f7c64"
+    },
+    {
+      "path": "public/home-charging/assets/tethered.webp",
+      "sha1": "6a76725b5a62aa158cfb3bb0d510eb41d48a642a"
+    },
+    {
+      "path": "public/home-charging/assets/type-2-socket.svg",
+      "sha1": "9b071671487bdc1a50bd66d6919b4d501a5a9f31"
+    },
+    {
+      "path": "public/home-charging/assets/untethered.png",
+      "sha1": "e71af67b7b7976f7338a3bdd2e829812204d07ed"
+    },
+    {
+      "path": "public/home-charging/assets/untethered.webp",
+      "sha1": "c0052e285506bd371d6e71c513e70c02ff91ac49"
+    },
+    {
+      "path": "public/home-charging/assets/visa.svg",
+      "sha1": "047e22a84fa37cf33a913668b178ad766781fe59"
+    },
+    {
+      "path": "public/home-charging/assets/works-with-octopus.png",
+      "sha1": "c3c8b6d59cbe0a43480cc2bfaccd3cf9d6b1ae21"
+    },
+    {
+      "path": "public/home-charging/analytics.css",
+      "sha1": "471136e3a639f2e4bc73fb23e58ce498af775eb7"
+    },
+    {
+      "path": "public/home-charging/analytics.js",
+      "sha1": "1a34c4eab773fb22fca83b3b4ac3e965dc22b777"
+    },
+    {
+      "path": "public/home-charging/app.js",
+      "sha1": "aa2ea71f6278ecd1a171254678381207f10effcf"
+    },
+    {
+      "path": "public/home-charging/index.html",
+      "sha1": "dc7a3c92dc43ff92470994b0f1564b0f9a13d104"
+    },
+    {
+      "path": "public/home-charging/styles.css",
+      "sha1": "bbec878ea0fa6b718096f9c31f576f9d7d16a79e"
+    },
+    {
+      "path": "public/favicon-32.png",
+      "sha1": "ae89e72dc19e30a7f4cd39115764f22df3e318e1"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha1": "cac66360a658e7139e6f1e06c9eeda07bfe613ac"
+    },
+    {
+      "path": "public/file.svg",
+      "sha1": "fb380eeffe87d50b597383664c02982964d0d28c"
+    },
+    {
+      "path": "public/globe.svg",
+      "sha1": "2eba23b01a46733bb8423e6d38ebf5f7e95abec5"
+    },
+    {
+      "path": "public/window.svg",
+      "sha1": "54c48e0daa6caa317fe1b4c419007fd93e948db9"
+    },
+    {
+      "path": "src/app/admin/changelog/page.tsx",
+      "sha1": "a3c8e3e0a56d355af400aef9a6e86eff66c36f0c"
+    },
+    {
+      "path": "src/app/admin/login/page.tsx",
+      "sha1": "66e0d6d03857b42efd6f8d541b955d00d50edaca"
+    },
+    {
+      "path": "src/app/admin/page.tsx",
+      "sha1": "74683584f18e03b5abf18f16c03fb81c73cda2d4"
+    },
+    {
+      "path": "src/app/api/additional-costs-email/send/route.ts",
+      "sha1": "c7381b26c85009da8a834a908c28e457dbd64241"
+    },
+    {
+      "path": "src/app/api/address-lookup/route.ts",
+      "sha1": "c7ebaf44aa8be246ee9c85b521c5cb2fe8e755c2"
+    },
+    {
+      "path": "src/app/api/admin/google/callback/route.ts",
+      "sha1": "1fdaec515138b1e5587510bebb7a2f771641a228"
+    },
+    {
+      "path": "src/app/api/admin/google/start/route.ts",
+      "sha1": "a2c09a79baf7b4dc3d30c8afe705618271d31a49"
+    },
+    {
+      "path": "src/app/api/admin/installers/route.ts",
+      "sha1": "4e944b6b7ee97383dbe344ceb3668a4b7104a023"
+    },
+    {
+      "path": "src/app/api/admin/logout/route.ts",
+      "sha1": "bb5659e41c3c8778ada668a9e10d0c6dd5c6a270"
+    },
+    {
+      "path": "src/app/api/admin/product-settings/route.ts",
+      "sha1": "1c46b9bb164985d7931562e93a62c7eac700134e"
+    },
+    {
+      "path": "src/app/api/admin/session/route.ts",
+      "sha1": "378e0dae1a61c1ff28a1833c453172f681cef1c2"
+    },
+    {
+      "path": "src/app/api/admin/users/route.ts",
+      "sha1": "6091cf4547ee6b5fd5fadb0d891918acf895ca82"
+    },
+    {
+      "path": "src/app/api/backoffice/email-preview/send-test/route.ts",
+      "sha1": "bcad05e831f1b35eb34f5e4c942a79ed824900ec"
+    },
+    {
+      "path": "src/app/api/backoffice/manual-payment/route.ts",
+      "sha1": "3df21514cb9de9678f96e4271cfbc9fd4598f211"
+    },
+    {
+      "path": "src/app/api/backoffice/post-survey/route.ts",
+      "sha1": "82a06ceb3ea7d6952ea264ef82e2b27d2eb01939"
+    },
+    {
+      "path": "src/app/api/backoffice/refunds/route.ts",
+      "sha1": "9db00ab611f5abaac6413d8107729b7f377a5e59"
+    },
+    {
+      "path": "src/app/api/backoffice/saved-views/route.ts",
+      "sha1": "456e126a22efaab531cfe85fe58652151b574c94"
+    },
+    {
+      "path": "src/app/api/backoffice/stage-alerts/route.ts",
+      "sha1": "d6a339d08907b3c431286dda559b272f1df65daf"
+    },
+    {
+      "path": "src/app/api/backoffice/state-version/route.ts",
+      "sha1": "466ee3e7bfe02442e4679d58585a19841ac336ed"
+    },
+    {
+      "path": "src/app/api/backoffice/unpaid-details-export/route.ts",
+      "sha1": "4d139103e788083e8645da445871c1b0e1664665"
+    },
+    {
+      "path": "src/app/api/backoffice/work-orders/[workflowId]/route.ts",
+      "sha1": "3c6fbc6de77b358eddeac929fda94f628710e4d2"
+    },
+    {
+      "path": "src/app/api/card-checkout/reconcile/route.ts",
+      "sha1": "25758f9ba088f127f99854145a69bd7650ea2c42"
+    },
+    {
+      "path": "src/app/api/card-checkout/session/route.ts",
+      "sha1": "ce8ae0bf2d9d760e60a7ff00bb9f890205ca1407"
+    },
+    {
+      "path": "src/app/api/card-checkout/square-payment/route.ts",
+      "sha1": "962094d9d621cbb4f10f58e7b87ae14e479c889f"
+    },
+    {
+      "path": "src/app/api/checkout-clicks/route.ts",
+      "sha1": "3c629bb1870ee74daad45624608fbcdc1116341a"
+    },
+    {
+      "path": "src/app/api/checkout-interactions/route.ts",
+      "sha1": "28ecd66d1b6d769421ae98fae171b27bb490a0b4"
+    },
+    {
+      "path": "src/app/api/checkout-quote/route.ts",
+      "sha1": "6ef53edaf130093bb7375cc275255282a2ae7fe3"
+    },
+    {
+      "path": "src/app/api/checkout-recovery/send-due/route.ts",
+      "sha1": "f958611aa03c272356e9ec45d2d0c9a82c9f1bf1"
+    },
+    {
+      "path": "src/app/api/checkout-session/route.ts",
+      "sha1": "cf0c252ce5c131eff329f144bd4eed7497f6c144"
+    },
+    {
+      "path": "src/app/api/customer-installation-preferences/route.ts",
+      "sha1": "3588fd3ad1684fb555ebbd6fcd87f09c53cb3e64"
+    },
+    {
+      "path": "src/app/api/frasers-plus/payment/[upr]/route.ts",
+      "sha1": "5cbf3bf83cbfbc54fea3b37c4d9dc140a612a4ad"
+    },
+    {
+      "path": "src/app/api/frasers-plus/payment/route.ts",
+      "sha1": "f98dd9a5bbfd11ce57193dfe54092c475ca5f07b"
+    },
+    {
+      "path": "src/app/api/frasers-plus/session/route.ts",
+      "sha1": "13b2f45e8c49937270845eb43e3cacd967bb5b00"
+    },
+    {
+      "path": "src/app/api/frasers-plus/webhook/authorization/route.ts",
+      "sha1": "ea1edee06a7a2a1509185e3f13c68489881e0732"
+    },
+    {
+      "path": "src/app/api/jumptech/webhook/route.ts",
+      "sha1": "ea7b7eaccc5d79099d11a2847374b36d3d96ab99"
+    },
+    {
+      "path": "src/app/api/landing-analytics/cleanup/route.ts",
+      "sha1": "602f35a38b874c8e940f87dc8f05e76555c6ec6f"
+    },
+    {
+      "path": "src/app/api/landing-analytics/route.ts",
+      "sha1": "8ad19751a4f3d6f0b9913f29e98bf61db38b289a"
+    },
+    {
+      "path": "src/app/api/mock-card-checkout/complete/route.ts",
+      "sha1": "0320dea5af321974978a08a749a76335927c8ff8"
+    },
+    {
+      "path": "src/app/api/mock-tymit/payment/[upr]/decision/route.ts",
+      "sha1": "6201ce4df922936a5e780356b1b3b34dd23b64e8"
+    },
+    {
+      "path": "src/app/api/mock-tymit/payment/[upr]/route.ts",
+      "sha1": "ed3bdaaad44b030bb5581b77c901146779a0c2fc"
+    },
+    {
+      "path": "src/app/api/mock-tymit/payment/route.ts",
+      "sha1": "068a79093282361b6113168e4acf26b39f848842"
+    },
+    {
+      "path": "src/app/api/revolut/webhook/route.ts",
+      "sha1": "ae12e6f90c74b35e02d652b1661ea0a332b54431"
+    },
+    {
+      "path": "src/app/api/square/webhook/route.ts",
+      "sha1": "ee6286f6cb7ed853fa1984fcfd999b797313346d"
+    },
+    {
+      "path": "src/app/api/survey-review/action/route.ts",
+      "sha1": "19c1c8b80d5a77021ce934896504ad6af61a6eb4"
+    },
+    {
+      "path": "src/app/api/survey-review/balance/complete/route.ts",
+      "sha1": "91fb1624a6232acdf294316e8dfe1087b373d240"
+    },
+    {
+      "path": "src/app/backoffice/changelog/page.tsx",
+      "sha1": "119d90d65dd0c0e5232b98913d699bf6ee7c6026"
+    },
+    {
+      "path": "src/app/backoffice/email-preview/page.tsx",
+      "sha1": "888665b669e73ed0dd448bceefb26eb1512bbb80"
+    },
+    {
+      "path": "src/app/backoffice/login/page.tsx",
+      "sha1": "49d16aca73558f5d11f2e94e753d4b68e3dd3beb"
+    },
+    {
+      "path": "src/app/backoffice/page.tsx",
+      "sha1": "2d6969d41b7a0b6602eed9c3e116de60bed197df"
+    },
+    {
+      "path": "src/app/card/handoff/handoff-client.tsx",
+      "sha1": "15d0c48b410945ca18f638856747245270a0e46d"
+    },
+    {
+      "path": "src/app/card/handoff/page.tsx",
+      "sha1": "4af5bb3ca9140b9c7f5a1b6389e6427d9a7f5354"
+    },
+    {
+      "path": "src/app/card/return/page.tsx",
+      "sha1": "71c27076f946cb8d8336059973cb7e7144f83598"
+    },
+    {
+      "path": "src/app/card/square/page.tsx",
+      "sha1": "1589a631d36a346fc70c49c06c5d4a49767b6f16"
+    },
+    {
+      "path": "src/app/card/square/square-card-checkout-client.tsx",
+      "sha1": "1f1bcb8635ee455fc7ad526e6eb4dbaff278aa3a"
+    },
+    {
+      "path": "src/app/checkout/recover/[token]/page.tsx",
+      "sha1": "bdb61e1f153e2dea5ff77322a9fe93f368738705"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "sha1": "cea18cdf2c376e70b97bb872f01eca4da523182e"
+    },
+    {
+      "path": "src/app/frasers-plus/handoff/handoff-client.tsx",
+      "sha1": "011389bfc2d8c4b11b911ee4e0375e46248cc3eb"
+    },
+    {
+      "path": "src/app/frasers-plus/handoff/page.tsx",
+      "sha1": "43f9cfcba0ce692fa7f610b0b890ee9bbfd77815"
+    },
+    {
+      "path": "src/app/frasers-plus/return/page.tsx",
+      "sha1": "6c6a2a3fea66bf6e517298a605f89f7070b39d96"
+    },
+    {
+      "path": "src/app/frasers-plus/return/return-client.tsx",
+      "sha1": "8bdc7671c45c644eef1b4128b14c96fa18e6c759"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha1": "ddc85a7defb262bc87ea3871d8db44488b7599bc"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha1": "b7467491fb66c0b9c78623044bf8a2bc1435db1c"
+    },
+    {
+      "path": "src/app/mock-card-checkout/mock-card-checkout-client.tsx",
+      "sha1": "b306491b2894487ab99f815e13f191fda495ae2e"
+    },
+    {
+      "path": "src/app/mock-card-checkout/page.tsx",
+      "sha1": "359affe7ca8d469a4586ecd8a64d9c3376317f88"
+    },
+    {
+      "path": "src/app/mock-hpp/hpp-client.tsx",
+      "sha1": "5a2cdd6509b6aba18ed577c467c069d84b4509c4"
+    },
+    {
+      "path": "src/app/mock-hpp/page.tsx",
+      "sha1": "5c2c98f69fce9ba2b0394d111febb06ff79b4122"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha1": "fb7c74c5144b613cd7068b2d3f38bfa1907d9765"
+    },
+    {
+      "path": "src/app/survey-review/[token]/page.tsx",
+      "sha1": "201daca42f8c2325135c424ef1d317419d49af3c"
+    },
+    {
+      "path": "src/app/survey-review/[token]/pay-balance/page.tsx",
+      "sha1": "d78b645c0ad1dd44d11e705f34128ff7f13e8e7b"
+    },
+    {
+      "path": "src/app/survey-review/[token]/success/page.tsx",
+      "sha1": "e1cbaec026a2f7c9808986931f2588a371055bbd"
+    },
+    {
+      "path": "src/components/backoffice-live-refresh.tsx",
+      "sha1": "f21088abbb3285d8dbd12579e3ef3215418497e7"
+    },
+    {
+      "path": "src/components/backoffice-order-search.tsx",
+      "sha1": "e15e0cca82552f02e3fab81b68d3f1aa5ec2acb2"
+    },
+    {
+      "path": "src/components/backoffice-refund-actions.tsx",
+      "sha1": "ca4bbdbfb1f14ed491110206916975951e7d9e46"
+    },
+    {
+      "path": "src/components/backoffice-scroll-restoration.tsx",
+      "sha1": "21aea2d460f1fc9f3c282342090d82b7db174c95"
+    },
+    {
+      "path": "src/components/cancel-order-request-dialog.tsx",
+      "sha1": "e45de39863e86131759b8919e8655e7ae2c646c6"
+    },
+    {
+      "path": "src/components/checkout-click-summary.tsx",
+      "sha1": "91e03bb9c1e2dcd7a7ba80ce615d810a5e82db27"
+    },
+    {
+      "path": "src/components/customer-status-link-panel.tsx",
+      "sha1": "152ef2c77c2543533e780b09a7707eba210ca906"
+    },
+    {
+      "path": "src/components/delete-workflow-button.tsx",
+      "sha1": "073d14e84ca395b47da2f21f814f80118c3dc786"
+    },
+    {
+      "path": "src/components/frasers-plus-promo-popup.module.css",
+      "sha1": "c8d007f317eec5d446420d8c3f7bbd4c156d54b8"
+    },
+    {
+      "path": "src/components/frasers-plus-promo-popup.tsx",
+      "sha1": "e864709bb12fd2f352017e674d53574e2cd69868"
+    },
+    {
+      "path": "src/components/integration-showcase-shell.tsx",
+      "sha1": "abec18ba14d50bba7b156f7771663445b8acec1a"
+    },
+    {
+      "path": "src/components/integration-showcase.tsx",
+      "sha1": "caf4a1575ff46ad993c14e76e1b11f1fad3dbe4b"
+    },
+    {
+      "path": "src/components/landing-analytics-summary.tsx",
+      "sha1": "2c900214a68f95da79ebb5685d494345f0ed2ab2"
+    },
+    {
+      "path": "src/components/payment-popup-return-bridge.tsx",
+      "sha1": "38c0486a167ce8f62a2d6fa0801218bb3d4d1bbe"
+    },
+    {
+      "path": "src/components/payment-popup-submit-bridge.tsx",
+      "sha1": "be07c795cd503a774f7015652ad035f7ff6fcf14"
+    },
+    {
+      "path": "src/components/preferred-installation-dates-panel.tsx",
+      "sha1": "b8a995f893da75acdbb4fd4a1b3bdc8af190b997"
+    },
+    {
+      "path": "src/components/trustpilot-widget.tsx",
+      "sha1": "d75ef2c7501e6d750c60b86c2061f3a90c6ab56f"
+    },
+    {
+      "path": "src/lib/additional-costs-email-sender.ts",
+      "sha1": "20e7f4facbb7b768344aca3f513afa3ce8724394"
+    },
+    {
+      "path": "src/lib/additional-costs-email.ts",
+      "sha1": "d6e015dc2a4ba697d8a516f11febb1f06a2ed3e5"
+    },
+    {
+      "path": "src/lib/admin-auth.ts",
+      "sha1": "c68c66d0af14226d08f7093cef26c37e9dbacf34"
+    },
+    {
+      "path": "src/lib/admin-security.ts",
+      "sha1": "cb79c0bbdb488a07577bfd0894051457deecbd12"
+    },
+    {
+      "path": "src/lib/admin-users.ts",
+      "sha1": "23a4b731fe6fb7057370026b03d9410a5f72582c"
+    },
+    {
+      "path": "src/lib/app-url.ts",
+      "sha1": "89454ffa908fbc50f4a808ca66bf78ef6709db33"
+    },
+    {
+      "path": "src/lib/backoffice-provider-refunds.ts",
+      "sha1": "5dbd92276abd044cb2310ee17058ea6c4020774f"
+    },
+    {
+      "path": "src/lib/backoffice-saved-views.ts",
+      "sha1": "49d14252cab3df63d4a4368fd4fde40624f3e1be"
+    },
+    {
+      "path": "src/lib/card-payment-completion.ts",
+      "sha1": "bd227763799ee65530481cf4b22320606a0a5baa"
+    },
+    {
+      "path": "src/lib/card-payment-reconciliation.ts",
+      "sha1": "cce23c699781ce558ad1bc60ce0dc50cc3ebe581"
+    },
+    {
+      "path": "src/lib/changelog.ts",
+      "sha1": "3d8b462e6756092b520a1a9c2f64e3cbd9f275ae"
+    },
+    {
+      "path": "src/lib/checkout-access.ts",
+      "sha1": "78668fc2c51b16fad376e81098224e824179e246"
+    },
+    {
+      "path": "src/lib/checkout-click-client.ts",
+      "sha1": "bb5848edf35640d5bdf983f0430e79adcc52d8b7"
+    },
+    {
+      "path": "src/lib/checkout-click-events.ts",
+      "sha1": "64c3dc1da55d95113e8453eb7d81c4298832a0a8"
+    },
+    {
+      "path": "src/lib/checkout-clicks.ts",
+      "sha1": "c5272e2d51ad2de1fa57f1f0a94d67d1b6b5aac9"
+    },
+    {
+      "path": "src/lib/checkout-interactions.ts",
+      "sha1": "0e0b56c7f522565f7871d0b49d34f7aa484b38bd"
+    },
+    {
+      "path": "src/lib/checkout-pricing.ts",
+      "sha1": "77adb99942e1320fb707ee23e3c955d0c1f39801"
+    },
+    {
+      "path": "src/lib/checkout-recovery-email.ts",
+      "sha1": "f9cf436e364225b4fe8ce193392b1f6de6f0e007"
+    },
+    {
+      "path": "src/lib/checkout-recovery-scheduler.ts",
+      "sha1": "fd0d60192f65aea1f26010202a82102e21f799e8"
+    },
+    {
+      "path": "src/lib/checkout-recovery-token.ts",
+      "sha1": "576b1b3e1e37098b08410da0333748be88a26cc2"
+    },
+    {
+      "path": "src/lib/checkout-request.ts",
+      "sha1": "a927552892cafb623fc137a0b26352110784eb1a"
+    },
+    {
+      "path": "src/lib/email-validation.ts",
+      "sha1": "7f9834571da91018f36a8f5da32557c446453427"
+    },
+    {
+      "path": "src/lib/frasers-plus-capture.ts",
+      "sha1": "b0f1c5ebc4e80658ddb0ec42e842220e1c63a100"
+    },
+    {
+      "path": "src/lib/frasers-plus-merchant-state.ts",
+      "sha1": "e2cabc1d64fa9a16ffd14e30543e95d3dfae47ea"
+    },
+    {
+      "path": "src/lib/frasers-plus-return-token.ts",
+      "sha1": "db82874f058c858af527799b747f06982beb8394"
+    },
+    {
+      "path": "src/lib/frasers-plus-webhook-auth.ts",
+      "sha1": "ec9611468e5217c7f057f0cbde6c030c848f60e9"
+    },
+    {
+      "path": "src/lib/frasers-plus.ts",
+      "sha1": "b79d3fa1f1fb54452973e719ab05e50cc0fa6169"
+    },
+    {
+      "path": "src/lib/gmail-sender.ts",
+      "sha1": "8a506353ece59f2744860bb66888b5f799c629ae"
+    },
+    {
+      "path": "src/lib/google-admin-auth.ts",
+      "sha1": "1d15985c2d33522e46439e93ec51bb33742735fe"
+    },
+    {
+      "path": "src/lib/google-chat-notifications.ts",
+      "sha1": "4fdc64f73619f26c2d30f22d6740707c54304442"
+    },
+    {
+      "path": "src/lib/installers.ts",
+      "sha1": "c397c88f7c661c4a1c3e06c9828495f193dad4c1"
+    },
+    {
+      "path": "src/lib/jumptech.ts",
+      "sha1": "077bfcc61866cb5947961345496cac2af60e6983"
+    },
+    {
+      "path": "src/lib/landing-analytics-events.ts",
+      "sha1": "b5ea663769b53b2263171c87a8ed5f2a484351cb"
+    },
+    {
+      "path": "src/lib/landing-analytics.ts",
+      "sha1": "ab0f125acc7ff0193d31edf0b14285543327a7a7"
+    },
+    {
+      "path": "src/lib/mock-route-guards.ts",
+      "sha1": "b4407e36b9f1af96a55bd9a83edc826b43b86e2a"
+    },
+    {
+      "path": "src/lib/mock-tymit.ts",
+      "sha1": "9a1742f6777a0022422ed3cce72583dc24f8145c"
+    },
+    {
+      "path": "src/lib/password-hash.ts",
+      "sha1": "3a82d822cf4fa5c30bee785318ffabc638b8a497"
+    },
+    {
+      "path": "src/lib/payment-handoff-target.ts",
+      "sha1": "c9f34ecdfd54d103ce892fdcdb4e9e05f59d3fa9"
+    },
+    {
+      "path": "src/lib/post-survey-payments.ts",
+      "sha1": "3a19d7c56d1cfe76b7951cda274b5fe1687eef43"
+    },
+    {
+      "path": "src/lib/post-survey-workflows.ts",
+      "sha1": "697db4a09714020dfae02d6f2b59a20affcc6b99"
+    },
+    {
+      "path": "src/lib/prebooking-stage-alerts.ts",
+      "sha1": "19ac2e4518e669ae11d755d2c77e6a837b99b950"
+    },
+    {
+      "path": "src/lib/preferred-installation-dates-policy.ts",
+      "sha1": "00c16d918b7d66cb9b6a1219ddea118c671d48a2"
+    },
+    {
+      "path": "src/lib/product-settings.ts",
+      "sha1": "d8190b7bb992b813b4f179d9c13c4b5a5652c2fb"
+    },
+    {
+      "path": "src/lib/request-guards.ts",
+      "sha1": "d7fe27f3eb13685640a256517f487289869b0ab6"
+    },
+    {
+      "path": "src/lib/revolut.ts",
+      "sha1": "cd37328bdfec09ce81d935b2c5c057edb17f09a3"
+    },
+    {
+      "path": "src/lib/server-data.ts",
+      "sha1": "812a34776db5845e32875ad973149af4142ca186"
+    },
+    {
+      "path": "src/lib/square.ts",
+      "sha1": "d900d916e03d9b363f27e427f406726b33eeccb8"
+    },
+    {
+      "path": "src/lib/survey-stage-clock.ts",
+      "sha1": "ba2e44ef6c89d4dff47051cc52c04596b7807040"
+    },
+    {
+      "path": "src/lib/totp.ts",
+      "sha1": "9f6727ab7646b838fcf780b4a43fbad28301447b"
+    },
+    {
+      "path": "src/lib/work-orders.ts",
+      "sha1": "58d7d72aa99099fcd8c14b4bb7dd628da2496c30"
+    },
+    {
+      "path": "src/lib/workflow-sync.ts",
+      "sha1": "affb325920556916018a85ba970658d01b489b99"
+    },
+    {
+      "path": "src/middleware.ts",
+      "sha1": "c33e138f6ae78df303aa2174776fe77b1fc0bb0e"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha1": "57031df00a6c319a0972372618e82da50b9afbf0"
+    },
+    {
+      "path": "vercel.json",
+      "sha1": "6d47a9428847abe9faa720674cdca9773032cdaa"
+    }
+  ],
+  "matched": 205,
+  "missing": [],
+  "different": []
+}

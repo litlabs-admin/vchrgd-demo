@@ -1,0 +1,29 @@
+VCHRGD / FRASERS PLUS SQUARESPACE TEST PACK
+
+1. Open VCHRGD-Frasers-Plus-Squarespace-Test-Pack.html in a browser to view all variants together.
+2. For inline cards and banners, add a Code block to the desired Squarespace page and paste the complete contents of the individual HTML file you want to test.
+3. Select HTML rather than displaying the code as text.
+4. The popup requires JavaScript for viewport positioning and its close button. Test the published page in a private browser window, not only the editor preview.
+
+POPUP PLACEMENT
+- Across the site: open Squarespace's site-wide Code Injection panel and add the complete individual popup embed to Footer. Preserve other code already in that field. Remove the old popup Code block to avoid duplicates.
+- One page only: use a Code block on that page, not the shared site footer. The updated script moves the popup outside the section so it floats against the browser window.
+- The popup starts hidden and appears five seconds after the page finishes loading. If inserted after load, it waits five seconds from insertion. Change displayDelayMs = 5000 in the script to adjust the delay (milliseconds).
+- The popup can be dismissed. Dismissal is not remembered across full page reloads; there is no once-per-session setting.
+- Code Injection requires a supported Squarespace plan and does not run on Squarespace checkout pages.
+- Use the individual popup embed, not the combined test pack, for installation.
+
+FILES
+- VCHRGD-Frasers-Plus-390x273-Embed.html
+- VCHRGD-Frasers-Plus-Cart-390x209-Embed.html
+- VCHRGD-Frasers-Plus-Product-360x470-Embed.html
+- VCHRGD-Frasers-Plus-Popup-375x439-Embed.html
+
+LINKS
+Read more buttons open the official Frasers Plus website in a new tab:
+https://frasersplus.com/
+
+Check eligibility opens the Frasers Plus application in a new tab:
+https://application.pay.frasers.plus/?partner=VCHRGD&template=online&location=frasersplus_webpage
+
+All CTA links use target="_blank" and rel="noopener noreferrer". The browser controls whether a new browsing context appears as a tab or window.
