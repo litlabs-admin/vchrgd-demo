@@ -44,9 +44,7 @@ if(sp&&!spReduce&&'IntersectionObserver' in window){
  featureBox.addEventListener('focusin',()=>pause(true));featureBox.addEventListener('focusout',()=>pause(false));
 }
 
-// Technical details: animated disclosure.
-const specToggle=document.querySelector('.sp-spec-toggle'),specPanel=document.querySelector('#sp-spec-panel');
-specToggle?.addEventListener('click',()=>{const open=specToggle.getAttribute('aria-expanded')!=='true';specToggle.setAttribute('aria-expanded',String(open));specPanel.classList.toggle('is-open',open);});
+// Technical details are always visible (no toggle).
 
 // Stage depth: slow scroll parallax on the product.
 const product=document.querySelector('.sp-product');
@@ -137,3 +135,36 @@ if('IntersectionObserver' in window&&!reduceMotion&&counters.length){
  }),{threshold:.6});
  counters.forEach(el=>countObserver.observe(el));
 }
+
+// Smoothly animate the finance <details> disclosures open/closed instead of snapping.
+document.querySelectorAll('details.finance-disclosure:not(.finance-example)').forEach(details=>{
+ const summary=details.querySelector('summary');
+ const body=details.querySelector('.fd-body');
+ if(!summary||!body)return;
+ summary.addEventListener('click',event=>{
+  if(reduceMotion)return; // let the browser toggle instantly
+  event.preventDefault();
+  if(details.dataset.animating)return;
+  const closing=details.open;
+  details.dataset.animating='1';
+  details.classList.add('is-animating');
+  document.documentElement.classList.add('fd-animating'); // pause header backdrop-filter re-render
+  if(!closing)details.open=true; // mount content before measuring
+  const target=body.scrollHeight;
+  const onEnd=e=>{
+   if(e.target!==body||e.propertyName!=='height')return;
+   body.removeEventListener('transitionend',onEnd);
+   if(closing)details.open=false;
+   body.style.height='';
+   details.classList.remove('is-animating');
+   document.documentElement.classList.remove('fd-animating');
+   delete details.dataset.animating;
+  };
+  const safety=setTimeout(()=>onEnd({target:body,propertyName:'height'}),450); // fallback if transitionend never fires
+  body.addEventListener('transitionend',()=>clearTimeout(safety),{once:true});
+  body.addEventListener('transitionend',onEnd);
+  body.style.height=(closing?target:0)+'px';
+  void body.offsetHeight; // commit the start height before transitioning
+  requestAnimationFrame(()=>{body.style.height=(closing?0:target)+'px';});
+ });
+});
