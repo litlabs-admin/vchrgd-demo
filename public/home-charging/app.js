@@ -56,11 +56,26 @@ if(sp&&product&&!spReduce){
  new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible)parallax();}).observe(sp);
  window.addEventListener('scroll',()=>{if(visible&&!ticking){ticking=true;requestAnimationFrame(parallax);}},{passive:true});
 }
-document.querySelectorAll('.app-feature').forEach(button=>button.addEventListener('click',()=>{
- const expand=button.getAttribute('aria-expanded')!=='true';
- document.querySelectorAll('.app-feature').forEach(b=>{b.setAttribute('aria-expanded','false');b.classList.remove('active');b.querySelector('p').hidden=true;b.querySelector('b').textContent='+';});
- if(expand){button.setAttribute('aria-expanded','true');button.classList.add('active');button.querySelector('p').hidden=false;button.querySelector('b').textContent='−';}
-}));
+// App section: one feature open at a time. Rotates every 4.5s (progress line end), starting once the section is in view.
+const apSection=document.querySelector('.ap'),apItems=[...document.querySelectorAll('.ap-item')];
+function selectApItem(index){
+ apItems.forEach((item,i)=>item.setAttribute('aria-expanded',String(i===index)));
+ const bar=apItems[index]?.querySelector('.ap-progress');if(bar){bar.style.animation='none';void bar.offsetWidth;bar.style.animation='';}
+}
+apItems.forEach((item,i)=>{
+ item.addEventListener('click',()=>selectApItem(i));
+ item.querySelector('.ap-progress')?.addEventListener('animationend',()=>selectApItem((i+1)%apItems.length));
+});
+if(apSection&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver' in window){
+ const apList=document.querySelector('.ap-list');let started=false;
+ const pause=on=>apSection.classList.toggle('is-paused',on);
+ new IntersectionObserver(([entry])=>{
+  if(entry.isIntersecting&&!started){started=true;selectApItem(0);apSection.classList.add('is-cycling');}
+  pause(!entry.isIntersecting);
+ },{threshold:.4}).observe(apSection);
+ apList.addEventListener('pointerenter',()=>pause(true));apList.addEventListener('pointerleave',()=>pause(false));
+ apList.addEventListener('focusin',()=>pause(true));apList.addEventListener('focusout',()=>pause(false));
+}
 
 const energy=document.querySelector('#energy'),standard=document.querySelector('#standard-rate'),offpeak=document.querySelector('#offpeak-rate');
 const money=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'});
