@@ -26,6 +26,7 @@
     const model=target.closest('[data-model]')?.dataset.model;if(model==='tethered'||model==='untethered')action('product_'+model);
     if(a){try{const u=new URL(a.href);if(u.origin===location.origin&&u.hash==='#payment')action('frasers_explore');if(u.hostname==='l.ead.me')action('guide_click');if(u.hostname==='frasersplus.com'||u.hostname==='fgsupporthelp.zendesk.com')action('frasers_info_click');if(u.hostname==='octopus.energy')action('octopus_click');}catch{}}
   },{capture:true});
-  document.querySelectorAll('.specs,.faq-list details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)action(d.classList.contains('specs')?'technical_open':'faq_open');}));
+  document.querySelectorAll('.faq-list details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)action('faq_open');}));
+  document.querySelector('.sp-spec-toggle')?.addEventListener('click',e=>{if(e.currentTarget.getAttribute('aria-expanded')==='true')action('technical_open');});
   updateControl();view();
 })();

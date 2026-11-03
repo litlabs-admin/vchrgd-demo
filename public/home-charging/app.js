@@ -5,14 +5,57 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 navigation.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
 
-const models={tethered:{heading:'7.5m Type 2 cable.',description:'Convenient home charging with an integrated cable. Just park, plug in and charge.',price:'Installed from £935',alt:'Seven Pro tethered charger with its integrated Type 2 cable'},untethered:{heading:'Type 2 socket. Compact design.',description:'A compact home charging solution with an optional cable-lock setting, so you can keep your cable stored in the charger between charges.',price:'Installed from £895',alt:'Seven Pro untethered charger with a Type 2 socket'}};
-document.querySelectorAll('[data-model]').forEach(button=>button.addEventListener('click',()=>{
- const model=button.dataset.model;const content=models[model];
- document.querySelectorAll('[data-model]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
- document.querySelector('#model-heading').textContent=content.heading;document.querySelector('#model-description').textContent=content.description;
- document.querySelector('#model-price').textContent=content.price;
- const image=document.querySelector('#product-image');image.src=`/home-charging/assets/${model}.webp`;image.alt=content.alt;
-}));
+const models={tethered:{kind:'Tethered',heading:'7.5m Type 2 cable.',description:'Convenient home charging with an integrated cable. Just park, plug in and charge.',price:'£935',alt:'Seven Pro tethered charger with its integrated Type 2 cable'},untethered:{kind:'Untethered',heading:'Type 2 socket. Compact design.',description:'A compact home charging solution with an optional cable-lock setting, so you can keep your cable stored in the charger between charges.',price:'£895',alt:'Seven Pro untethered charger with a Type 2 socket'}};
+const spReduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const modelButtons=[...document.querySelectorAll('[data-model]')];
+function selectModel(button){
+ const model=button.dataset.model,content=models[model];
+ if(button.getAttribute('aria-pressed')==='true')return;
+ modelButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ button.closest('.sp-switch')?.style.setProperty('--i',String(modelButtons.indexOf(button)));
+ document.querySelectorAll('[data-model-img]').forEach(img=>{const on=img.dataset.modelImg===model;img.classList.toggle('is-active',on);img.alt=on?content.alt:'';img.toggleAttribute('aria-hidden',!on);});
+ const panel=document.querySelector('.sp-model');
+ const swap=()=>{document.querySelector('#model-kind').textContent=content.kind;document.querySelector('#model-heading').textContent=content.heading;document.querySelector('#model-description').textContent=content.description;document.querySelector('#model-price').textContent=content.price;panel?.classList.remove('is-swapping');};
+ if(panel&&!spReduce){panel.classList.add('is-swapping');setTimeout(swap,180);}else swap();
+}
+modelButtons.forEach((button,i)=>{
+ button.addEventListener('click',()=>selectModel(button));
+ button.addEventListener('keydown',e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;e.preventDefault();const next=modelButtons[(i+(e.key==='ArrowRight'?1:-1)+modelButtons.length)%modelButtons.length];next.focus();selectModel(next);});
+});
+
+// Seven Pro features: one active at a time.
+// Auto-advances (progress line animation end) while the section is in view, unless reduced motion is on.
+const sp=document.querySelector('.sp');
+const features=[...document.querySelectorAll('.sp-feature')];
+function selectFeature(index){
+ features.forEach((f,i)=>f.setAttribute('aria-pressed',String(i===index)));
+ // restart the progress animation on the new active row
+ const bar=features[index]?.querySelector('.sp-f-progress');if(bar){bar.style.animation='none';void bar.offsetWidth;bar.style.animation='';}
+}
+features.forEach((f,i)=>{
+ f.addEventListener('click',()=>selectFeature(i));
+ f.querySelector('.sp-f-progress')?.addEventListener('animationend',()=>selectFeature((i+1)%features.length));
+});
+if(sp&&!spReduce&&'IntersectionObserver' in window){
+ const featureBox=document.querySelector('.sp-features');
+ const pause=on=>sp.classList.toggle('is-paused',on);
+ new IntersectionObserver(([entry])=>{sp.classList.toggle('is-cycling',true);pause(!entry.isIntersecting);},{threshold:.35}).observe(sp);
+ featureBox.addEventListener('pointerenter',()=>pause(true));featureBox.addEventListener('pointerleave',()=>pause(false));
+ featureBox.addEventListener('focusin',()=>pause(true));featureBox.addEventListener('focusout',()=>pause(false));
+}
+
+// Technical details: animated disclosure.
+const specToggle=document.querySelector('.sp-spec-toggle'),specPanel=document.querySelector('#sp-spec-panel');
+specToggle?.addEventListener('click',()=>{const open=specToggle.getAttribute('aria-expanded')!=='true';specToggle.setAttribute('aria-expanded',String(open));specPanel.classList.toggle('is-open',open);});
+
+// Stage depth: slow scroll parallax on the product.
+const product=document.querySelector('.sp-product');
+if(sp&&product&&!spReduce){
+ let visible=false,ticking=false;
+ const parallax=()=>{ticking=false;const r=sp.getBoundingClientRect(),progress=(r.top+r.height/2-innerHeight/2)/innerHeight;product.style.setProperty('--py',`${Math.max(-1,Math.min(1,progress))*30}px`);};
+ new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;if(visible)parallax();}).observe(sp);
+ window.addEventListener('scroll',()=>{if(visible&&!ticking){ticking=true;requestAnimationFrame(parallax);}},{passive:true});
+}
 document.querySelectorAll('.app-feature').forEach(button=>button.addEventListener('click',()=>{
  const expand=button.getAttribute('aria-expanded')!=='true';
  document.querySelectorAll('.app-feature').forEach(b=>{b.setAttribute('aria-expanded','false');b.classList.remove('active');b.querySelector('p').hidden=true;b.querySelector('b').textContent='+';});
@@ -43,3 +86,29 @@ document.querySelectorAll('a.checkout').forEach(link=>{
  for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']){const value=incoming.get(key);if(value&&value.length<=180)target.searchParams.set(key,value);}
  link.href=target.toString();
 });
+
+// Navbar sits transparently over the hero, then turns solid once the page scrolls.
+const header=document.querySelector('.header');
+const syncHeader=()=>header.classList.toggle('scrolled',window.scrollY>8);
+syncHeader();window.addEventListener('scroll',syncHeader,{passive:true});
+
+// Scroll reveal: fade sections in once as they enter view. Reduced-motion users see everything immediately (CSS gates the effect).
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const revealItems=document.querySelectorAll('[data-reveal]');
+const reveal=el=>{el.classList.add('in');setTimeout(()=>el.removeAttribute('data-reveal'),1200);};
+if('IntersectionObserver' in window&&!reduceMotion){
+ const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){reveal(entry.target);revealObserver.unobserve(entry.target);}}),{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+ revealItems.forEach(el=>revealObserver.observe(el));
+}else revealItems.forEach(reveal);
+
+// Count the numeric stats up once when they come into view.
+const counters=document.querySelectorAll('[data-count]');
+if('IntersectionObserver' in window&&!reduceMotion&&counters.length){
+ const countObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(!entry.isIntersecting)return;countObserver.unobserve(entry.target);
+  const el=entry.target,target=Number(el.dataset.count),decimals=Number(el.dataset.decimals||0),start=performance.now(),duration=1100;
+  const tick=now=>{const t=Math.min((now-start)/duration,1),eased=1-Math.pow(1-t,3);el.textContent=(target*eased).toFixed(decimals);if(t<1)requestAnimationFrame(tick);};
+  el.textContent=(0).toFixed(decimals);requestAnimationFrame(tick);
+ }),{threshold:.6});
+ counters.forEach(el=>countObserver.observe(el));
+}
