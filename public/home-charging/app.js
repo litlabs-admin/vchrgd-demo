@@ -77,6 +77,16 @@ if(apSection&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'I
  apList.addEventListener('focusin',()=>pause(true));apList.addEventListener('focusout',()=>pause(false));
 }
 
+// FAQ: single-open accordion. Only one answer open at a time; clicking an open question closes it.
+const faqButtons=[...document.querySelectorAll('.faq-list .faq-q')];
+faqButtons.forEach(btn=>{
+ btn.addEventListener('click',()=>{
+  const isOpen=btn.getAttribute('aria-expanded')==='true';
+  faqButtons.forEach(b=>b.setAttribute('aria-expanded','false'));
+  btn.setAttribute('aria-expanded',String(!isOpen));
+ });
+});
+
 const energy=document.querySelector('#energy'),standard=document.querySelector('#standard-rate'),offpeak=document.querySelector('#offpeak-rate');
 const money=new Intl.NumberFormat('en-GB',{style:'currency',currency:'GBP'});
 function calculate(){
