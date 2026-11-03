@@ -456,3 +456,35 @@
 }
 @media(max-width:420px){.sp-spec-grid{grid-template-columns:minmax(0,1fr)}}
 .sp-spec-toggle .sp-plus::before,.sp-spec-toggle .sp-plus::after{left:6px;right:6px}
+
+/* ---------- Pay in full ---------- */
+.pm.section{padding-top:72px;padding-bottom:68px;text-align:center;overflow:hidden}
+.card-payment.pm.theme-light{background:#fff;border-bottom:0}
+.pm-head .eyebrow{font-size:11px;letter-spacing:.2em}
+.pm-head h2{margin-top:12px;font-size:clamp(36px,4.2vw,58px);line-height:1;letter-spacing:-.055em;font-weight:600;color:#101212}
+.pm-head h2 span{color:#9aa3a2}
+.pm-head>p:last-child{max-width:720px;margin:14px auto 0;font-size:18px;line-height:1.55;color:#4d5655}
+.pm-marquee{position:relative;margin-top:36px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.pm-track{display:flex;width:max-content}
+.pm-group{display:flex;align-items:center;gap:64px;margin:0;padding:0 32px;list-style:none}
+.pm-logo{height:52px;display:flex;align-items:center;justify-content:center;flex:none}
+.pm-logo img{display:block;width:auto}
+.pm-logo--card img{height:50px}
+.pm-logo--amex img{height:32px;border-radius:4px}
+.pm-logo--revolut img{height:22px;filter:brightness(0)}
+.pm-logo--wallet img{height:46px}
+.pm-foot{display:flex;flex-direction:column;align-items:center;margin-top:32px}
+.theme-light .pm-cta{gap:18px;min-height:52px;padding:13px 28px;border-radius:999px;background:#101212;color:#fff;font-size:16px;font-weight:600;box-shadow:0 14px 30px -16px #10121299}
+.theme-light .pm-cta:hover{background:#000;color:#fff;transform:translateY(-2px);box-shadow:0 20px 36px -16px #101212b3}
+.pm-cta .arrow-icon{transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.pm-cta:hover .arrow-icon{transform:translate(3px,-3px)}
+.pm-foot>.fine{margin-top:14px;max-width:560px;font-size:13px;line-height:1.6}
+@media(prefers-reduced-motion:no-preference){
+@keyframes pmMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.pm-track{animation:pmMarquee 42s linear infinite}
+}
+@media(prefers-reduced-motion:reduce){.pm-track{width:auto;justify-content:center}.pm-group{flex-wrap:wrap;justify-content:center;gap:28px 48px}.pm-group[aria-hidden]{display:none}.pm-marquee{-webkit-mask-image:none;mask-image:none}}
+@media(max-width:800px){.pm.section{padding-top:60px;padding-bottom:56px}.pm-marquee{margin-top:30px}.pm-group{gap:48px;padding:0 24px}.pm-foot{margin-top:28px}}
+@media(max-width:560px){.pm-head h2{font-size:clamp(32px,8.6vw,40px)}.pm-head>p:last-child{font-size:16px}.pm-logo{height:52px}.pm-logo--card img{height:48px}.pm-logo--amex img{height:30px}.pm-logo--revolut img{height:21px}.pm-logo--wallet img{height:46px}.pm-group{gap:36px;padding:0 18px}.pm-cta{width:100%;justify-content:center}.pm-marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}}
+.pm-logo--gpay img{height:54px}
+@media(max-width:560px){.pm-logo--gpay img{height:54px}}
