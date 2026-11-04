@@ -1,267 +1,2016 @@
 <!doctype html>
 <html lang="en-GB">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Discover Seven Pro home EV charging. Smart scheduling, solar charging and the free VCHRGD Home app, with Frasers Plus available at checkout.">
-  <meta name="robots" content="index,follow"><link rel="canonical" href="https://payments.vchrgd.app/home-charging"><meta name="theme-color" content="#101212">
-  <title>Home charging, beautifully simple. | VCHRGD</title>
-  <link rel="icon" href="/home-charging/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="/home-charging/assets/hero.webp">
-  <link rel="preload" as="font" type="font/woff2" href="/home-charging/assets/inter-latin.woff2" crossorigin>
-  <script>document.documentElement.classList.add('js')</script><link rel="stylesheet" href="/home-charging/styles.css"><script src="/home-charging/app.js" defer></script>
-  <script src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-<link rel="stylesheet" href="/home-charging/analytics.css"><script src="/home-charging/analytics.js" defer></script></head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="header">
-  <a class="brand" href="/home-charging/" aria-label="VCHRGD home charging"><img src="/home-charging/assets/logo.png" alt="VCHRGD" width="146" height="32"></a>
-  <nav aria-label="Main navigation" id="navigation"><a href="#seven-pro">Seven Pro</a><a href="#app">The app</a><a href="#costs">Charging costs</a><a href="#payment">Payment</a></nav>
-  <a class="button small checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-  <button class="menu" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
-</header>
-<main id="main">
-<section class="hero" aria-labelledby="hero-heading">
-  <img class="hero-photo" src="/home-charging/assets/hero.webp" alt="Seven Pro installed beside an electric car on a home driveway" width="1500" height="1000" fetchpriority="high">
-  <div class="hero-shade"></div>
-  <div class="hero-copy wrap">
-    <div class="hero-rating" aria-label="VCHRGD customer rating"><div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="6470e16cdbc8260df976a0ae" data-theme="dark" data-style-height="20px" data-style-width="100%"><a href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">See our reviews on Trustpilot</a></div></div>
-    <h1 id="hero-heading">Plug in.<br class="hero-lead-break"> Sit back.<br><span>Take charge<br class="hero-home-break"> at home.</span></h1>
-    <p class="hero-intro">Meet the Seven Pro. Smart EV charging that fits your home, your routine and your next adventure.</p>
-    <div class="hero-price"><p><span>Installed from</span><strong>£895</strong></p></div>
-    <ul class="hero-install" aria-label="What standard installation includes"><li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Up to 10m of cable included</li><li><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>No extra work charged until you approve your survey quote</li></ul>
-    <div class="hero-actions"><a href="/" class="button checkout">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><a class="button button-ghost" href="#installation">What&rsquo;s included in installation? <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></span></a></div>
-    <p class="hero-note">Untethered Seven Pro with standard installation. Subject to survey. Tethered from £935.</p>
-  </div>
-</section>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Discover Seven Pro home EV charging. Smart scheduling, solar charging and the free VCHRGD Home app, with Frasers Plus available at checkout."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://payments.vchrgd.app/home-charging" />
+    <meta name="theme-color" content="#101212" />
+    <title>Home charging, beautifully simple. | VCHRGD</title>
+    <link
+      rel="icon"
+      href="/home-charging/assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preload" as="image" href="/home-charging/assets/hero.webp" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/home-charging/assets/inter-latin.woff2"
+      crossorigin
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="/home-charging/styles.css" />
+    <script src="/home-charging/app.js" defer></script>
+    <script
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+    <link rel="stylesheet" href="/home-charging/analytics.css" />
+    <script src="/home-charging/analytics.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="brand" href="/home-charging/" aria-label="VCHRGD home charging"
+        ><img
+          src="/home-charging/assets/logo.png"
+          alt="VCHRGD"
+          width="146"
+          height="32"
+      /></a>
+      <nav aria-label="Main navigation" id="navigation">
+        <a href="#seven-pro">Seven Pro</a><a href="#app">The app</a
+        ><a href="#costs">Charging costs</a><a href="#payment">Payment</a>
+      </nav>
+      <a class="button small checkout" href="/"
+        >Choose your Seven Pro
+        <span aria-hidden="true"
+          ><svg
+            class="arrow-icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" /></svg></span
+      ></a>
+      <button
+        class="menu"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <img
+          class="hero-photo"
+          src="/home-charging/assets/hero.webp"
+          alt="Seven Pro installed beside an electric car on a home driveway"
+          width="1500"
+          height="1000"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-copy wrap">
+          <div class="hero-rating" aria-label="VCHRGD customer rating">
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="dark"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See our reviews on Trustpilot</a
+              >
+            </div>
+          </div>
+          <h1 id="hero-heading">
+            Plug in.<br class="hero-lead-break" />
+            Sit back.<br /><span
+              >Take charge<br class="hero-home-break" />
+              at home.</span
+            >
+          </h1>
+          <p class="hero-intro">
+            Meet the Seven Pro. Smart EV charging that fits your home, your
+            routine and your next adventure.
+          </p>
+          <div class="hero-price">
+            <p><span>Installed from</span><strong>£895</strong></p>
+          </div>
+          <ul
+            class="hero-install"
+            aria-label="What standard installation includes"
+          >
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+              >Up to 10m of cable included
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+              >No extra work charged until you approve your survey quote
+            </li>
+          </ul>
+          <div class="hero-actions">
+            <a href="/" class="button checkout"
+              >Choose your Seven Pro
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="button button-ghost" href="#installation"
+              >What&rsquo;s included in installation?
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 4v16m-6-6 6 6 6-6" /></svg></span
+            ></a>
+          </div>
+          <p class="hero-note">
+            Untethered Seven Pro with standard installation. Subject to survey.
+            Tethered from £935.
+          </p>
+        </div>
+      </section>
 
-<aside id="frasers-offer" class="finance-intro fp-ribbon" hidden aria-label="Frasers Plus payment plans">
- <div class="wrap">
-  <div class="fp-ribbon-card">
-   <div class="fp-ribbon-lead">
-    <img src="/home-charging/assets/frasersplus.svg" alt="Frasers Plus" width="245" height="42">
-    <h2 class="fp-ribbon-title">Spread the cost, or pay in full.</h2>
-    <p>Frasers Plus is an optional way to pay monthly. Prefer to pay once? You can still pay the full installed price.</p>
-    <a class="fp-ribbon-cta" href="#payment">Explore the plans <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-   </div>
-   <div class="fp-ribbon-detail">
-    <div class="fp-ribbon-offers">
-     <div class="fp-offer"><strong>3 months, interest free</strong><span>When you choose a 3 month plan.</span></div>
-     <div class="fp-offer"><strong>From £36.27 <span class="per-month">/ month</span></strong><span>Up to 36 months. Illustrative 36 month plan, with interest.</span></div>
-    </div>
-    <details class="finance-disclosure"><summary><strong>Representative 29.9% APR (variable).</strong><span class="fd-plus" aria-hidden="true"></span></summary><div class="fd-body"><p>Illustrative example: untethered Seven Pro with standard installation. Cash price and credit £895. Interest rate 29.9% p.a. (variable). 35 monthly payments of £36.27 and a final payment of £36.39. Total repayable £1,305.84; cost of credit £410.84. Installation subject to survey. Your rate, plan and payments are confirmed in the Frasers Plus app.</p><p>Credit subject to status and approval. Terms apply. Missed payments may affect your credit score and mean your 0% interest plans end.</p></div></details>
-   </div>
-  </div>
- </div>
-</aside>
-<div class="facts wrap" aria-label="Seven Pro at a glance" hidden><div><strong>7.4<span> kW</span></strong><span>Smart home charging</span></div><div><strong>3<span> years</span></strong><span>Charger warranty</span></div><div><strong>Solar<span> ready</span></strong><span>Solar charging capable</span></div><div><strong>Free<span> app</span></strong><span>Power in your pocket</span></div></div>
-
-<section id="charge-scheduling" class="everyday section theme-light" aria-labelledby="everyday-heading"><div class="wrap">
-  <div class="sched-head" data-reveal><p class="eyebrow">CHARGE ON YOUR SCHEDULE</p><h2 id="everyday-heading">Charge Scheduling.<br><span class="muted">Simply smarter charging.</span></h2><p>Set charging times around your routine and tariff. Plug in at home and let your schedule do the rest.</p></div>
-  <div class="sched-grid">
-    <article class="sched-card" data-reveal style="--d:0s"><img src="/home-charging/assets/home.webp" alt="Driver plugging in an electric car at home" width="700" height="1000" loading="lazy"><div class="sched-card-body"><span class="sched-label">01 &middot; Convenience</span><h3>Home is where the charge is.</h3><p>Top up at home, ready for wherever the day takes you.</p></div></article>
-    <article class="sched-card sched-card--solar" data-reveal style="--d:.1s"><img src="/home-charging/assets/solar.webp" alt="Seven Pro charging a car on a sunny driveway beside a home with solar panels" width="1400" height="788" loading="lazy"><div class="sched-card-body"><span class="sched-label">02 &middot; Solar</span><h3>A brighter use for your solar.</h3><p>Use surplus solar generation to help charge your car.*</p></div></article>
-    <article class="sched-card sched-card--night" data-reveal style="--d:.2s"><img src="/home-charging/assets/night.webp" alt="Seven Pro charging a car overnight on a rainy driveway" width="1400" height="788" loading="lazy"><div class="sched-card-body"><span class="sched-label">03 &middot; Smarter timing</span><h3>Charge while you sleep.</h3><p>Schedule charging for your off-peak window while you sleep.</p></div></article>
-  </div>
-  <div class="sched-cta-row" data-reveal><a class="button" href="#costs">See what you could save <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><p class="fine">*Solar charging needs suitable solar monitoring, configured by your installer.</p></div>
-  <div class="sched-stats" aria-label="Seven Pro at a glance">
-    <div class="sched-stat" data-reveal style="--d:0s"><span class="sched-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span><div><strong><span class="sched-num" data-count="7.4" data-decimals="1">7.4</span><small> kW</small></strong><span>Smart home charging</span></div></div>
-    <div class="sched-stat" data-reveal style="--d:.08s"><span class="sched-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><strong><span class="sched-num" data-count="3" data-decimals="0">3</span><small> years</small></strong><span>Charger warranty</span></div></div>
-    <div class="sched-stat" data-reveal style="--d:.16s"><span class="sched-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><div><strong>Solar<small> ready</small></strong><span>Solar charging capable</span></div></div>
-    <div class="sched-stat" data-reveal style="--d:.24s"><span class="sched-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><div><strong>Free<small> app</small></strong><span>Power in your pocket</span></div></div>
-  </div>
-  <div class="sched-octopus" data-reveal><img src="/home-charging/assets/works-with-octopus.png" alt="Works with Octopus" width="280" height="101" loading="lazy"><p><strong>Intelligent Octopus Go compatible.</strong> Check charger, vehicle and tariff eligibility with Octopus first.</p><a class="button sched-octopus-cta" href="https://octopus.energy/smart/intelligent-octopus-go/" target="_blank" rel="noopener noreferrer">Check compatibility <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
-</div></section>
-
-<section id="seven-pro" class="sp section" aria-labelledby="sp-heading">
- <div class="sp-backdrop" aria-hidden="true"></div>
- <div class="wrap">
-  <header class="sp-head" data-reveal>
-   <p class="eyebrow cyan">MEET YOUR SEVEN PRO</p>
-   <h2 id="sp-heading">Beautifully simple.<br><span>Thoughtfully smart.</span></h2>
-   <p>A compact charger with smart scheduling, solar integration and a finish that feels at home on your wall.</p>
-  </header>
-
-  <div class="sp-layout">
-   <div class="sp-features" role="group" aria-label="Seven Pro features" data-reveal style="--d:.15s">
-    <button type="button" class="sp-feature" data-feature="0" aria-pressed="true" aria-controls="sp-f0"><span class="sp-f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="sp-f-text"><strong>Charge to your schedule</strong><span class="sp-f-desc" id="sp-f0"><span>Set charging times around your routine and tariff.</span></span></span><i class="sp-f-progress" aria-hidden="true"></i></button>
-    <button type="button" class="sp-feature" data-feature="1" aria-pressed="false" aria-controls="sp-f1"><span class="sp-f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 12h3l2-5 4 10 2-5h7"/></svg></span><span class="sp-f-text"><strong>Look after your home supply</strong><span class="sp-f-desc" id="sp-f1"><span>Dynamic load management adjusts charging as your home’s demand changes.</span></span></span><i class="sp-f-progress" aria-hidden="true"></i></button>
-    <button type="button" class="sp-feature" data-feature="2" aria-pressed="false" aria-controls="sp-f2"><span class="sp-f-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14.5v2.5"/></svg></span><span class="sp-f-text"><strong>Control who can charge</strong><span class="sp-f-desc" id="sp-f2"><span>Authorise sessions using the app or RFID cards.</span></span></span><i class="sp-f-progress" aria-hidden="true"></i></button>
-   </div>
-
-   <div class="sp-stage" data-reveal>
-    <div class="sp-tilt">
-     <div class="sp-spot" aria-hidden="true"></div>
-     <div class="sp-product">
-      <div class="sp-float">
-       <img class="sp-img is-active" data-model-img="tethered" src="/home-charging/assets/tethered.webp" alt="Seven Pro tethered charger with its integrated Type 2 cable" width="900" height="1000" loading="lazy">
-       <img class="sp-img" data-model-img="untethered" src="/home-charging/assets/untethered.webp" alt="" aria-hidden="true" width="900" height="1000" loading="lazy">
+      <aside
+        id="frasers-offer"
+        class="finance-intro fp-ribbon"
+        hidden
+        aria-label="Frasers Plus payment plans"
+      >
+        <div class="wrap">
+          <div class="fp-ribbon-card">
+            <div class="fp-ribbon-lead">
+              <img
+                src="/home-charging/assets/frasersplus.svg"
+                alt="Frasers Plus"
+                width="245"
+                height="42"
+              />
+              <h2 class="fp-ribbon-title">Spread the cost, or pay in full.</h2>
+              <p>
+                Frasers Plus is an optional way to pay monthly. Prefer to pay
+                once? You can still pay the full installed price.
+              </p>
+              <a class="fp-ribbon-cta" href="#payment"
+                >Explore the plans
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg
+              ></a>
+            </div>
+            <div class="fp-ribbon-detail">
+              <div class="fp-ribbon-offers">
+                <div class="fp-offer">
+                  <strong>3 months, interest free</strong
+                  ><span>When you choose a 3 month plan.</span>
+                </div>
+                <div class="fp-offer">
+                  <strong
+                    >From £36.27 <span class="per-month">/ month</span></strong
+                  ><span
+                    >Up to 36 months. Illustrative 36 month plan, with
+                    interest.</span
+                  >
+                </div>
+              </div>
+              <details class="finance-disclosure">
+                <summary>
+                  <strong>Representative 29.9% APR (variable).</strong
+                  ><span class="fd-plus" aria-hidden="true"></span>
+                </summary>
+                <div class="fd-body">
+                  <p>
+                    Illustrative example: untethered Seven Pro with standard
+                    installation. Cash price and credit £895. Interest rate
+                    29.9% p.a. (variable). 35 monthly payments of £36.27 and a
+                    final payment of £36.39. Total repayable £1,305.84; cost of
+                    credit £410.84. Installation subject to survey. Your rate,
+                    plan and payments are confirmed in the Frasers Plus app.
+                  </p>
+                  <p>
+                    Credit subject to status and approval. Terms apply. Missed
+                    payments may affect your credit score and mean your 0%
+                    interest plans end.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="facts wrap" aria-label="Seven Pro at a glance" hidden>
+        <div>
+          <strong>7.4<span> kW</span></strong
+          ><span>Smart home charging</span>
+        </div>
+        <div>
+          <strong>3<span> years</span></strong
+          ><span>Charger warranty</span>
+        </div>
+        <div>
+          <strong>Solar<span> ready</span></strong
+          ><span>Solar charging capable</span>
+        </div>
+        <div>
+          <strong>Free<span> app</span></strong
+          ><span>Power in your pocket</span>
+        </div>
       </div>
-     </div>
+
+      <section
+        id="charge-scheduling"
+        class="everyday section theme-light"
+        aria-labelledby="everyday-heading"
+      >
+        <div class="wrap">
+          <div class="sched-head" data-reveal>
+            <p class="eyebrow">CHARGE ON YOUR SCHEDULE</p>
+            <h2 id="everyday-heading">
+              Charge Scheduling.<br /><span class="muted"
+                >Simply smarter charging.</span
+              >
+            </h2>
+            <p>
+              Set charging times around your routine and tariff. Plug in at home
+              and let your schedule do the rest.
+            </p>
+          </div>
+          <div class="sched-grid">
+            <article class="sched-card" data-reveal style="--d: 0s">
+              <img
+                src="/home-charging/assets/home.webp"
+                alt="Driver plugging in an electric car at home"
+                width="700"
+                height="1000"
+                loading="lazy"
+              />
+              <div class="sched-card-body">
+                <span class="sched-label">01 &middot; Convenience</span>
+                <h3>Home is where the charge is.</h3>
+                <p>Top up at home, ready for wherever the day takes you.</p>
+              </div>
+            </article>
+            <article
+              class="sched-card sched-card--solar"
+              data-reveal
+              style="--d: 0.1s"
+            >
+              <img
+                src="/home-charging/assets/solar.webp"
+                alt="Seven Pro charging a car on a sunny driveway beside a home with solar panels"
+                width="1400"
+                height="788"
+                loading="lazy"
+              />
+              <div class="sched-card-body">
+                <span class="sched-label">02 &middot; Solar</span>
+                <h3>A brighter use for your solar.</h3>
+                <p>Use surplus solar generation to help charge your car.</p>
+              </div>
+            </article>
+            <article
+              class="sched-card sched-card--night"
+              data-reveal
+              style="--d: 0.2s"
+            >
+              <img
+                src="/home-charging/assets/night.webp"
+                alt="Seven Pro charging a car overnight on a rainy driveway"
+                width="1400"
+                height="788"
+                loading="lazy"
+              />
+              <div class="sched-card-body">
+                <span class="sched-label">03 &middot; Smarter timing</span>
+                <h3>Charge while you sleep.</h3>
+                <p>
+                  Schedule charging for your off-peak window while you sleep.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="sched-cta-row" data-reveal>
+            <a class="button" href="#costs"
+              >See what you could save
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg
+            ></a>
+            <p class="fine">
+              *Solar charging needs suitable solar monitoring, configured by
+              your installer.
+            </p>
+          </div>
+          <div class="sched-stats" aria-label="Seven Pro at a glance">
+            <div class="sched-stat" data-reveal style="--d: 0s">
+              <span class="sched-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  focusable="false"
+                >
+                  <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></svg
+              ></span>
+              <div>
+                <strong
+                  ><span class="sched-num" data-count="7.4" data-decimals="1"
+                    >7.4</span
+                  ><small> kW</small></strong
+                ><span>Smart home charging</span>
+              </div>
+            </div>
+            <div class="sched-stat" data-reveal style="--d: 0.08s">
+              <span class="sched-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  focusable="false"
+                >
+                  <path
+                    d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"
+                  />
+                  <path d="m9 12 2 2 4-4" /></svg
+              ></span>
+              <div>
+                <strong
+                  ><span class="sched-num" data-count="3" data-decimals="0"
+                    >3</span
+                  ><small> years</small></strong
+                ><span>Charger warranty</span>
+              </div>
+            </div>
+            <div class="sched-stat" data-reveal style="--d: 0.16s">
+              <span class="sched-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  focusable="false"
+                >
+                  <circle cx="12" cy="12" r="4" />
+                  <path
+                    d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                  /></svg
+              ></span>
+              <div>
+                <strong>Solar<small> ready</small></strong
+                ><span>Solar charging capable</span>
+              </div>
+            </div>
+            <div class="sched-stat" data-reveal style="--d: 0.24s">
+              <span class="sched-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  focusable="false"
+                >
+                  <rect x="7" y="2.5" width="10" height="19" rx="2.5" />
+                  <path d="M11 18h2" /></svg
+              ></span>
+              <div>
+                <strong>Free<small> app</small></strong
+                ><span>Power in your pocket</span>
+              </div>
+            </div>
+          </div>
+          <div class="sched-octopus" data-reveal>
+            <img
+              src="/home-charging/assets/works-with-octopus.png"
+              alt="Works with Octopus"
+              width="280"
+              height="101"
+              loading="lazy"
+            />
+            <p>
+              <strong>Intelligent Octopus Go compatible.</strong> Check charger,
+              vehicle and tariff eligibility with Octopus first.
+            </p>
+            <a
+              class="button sched-octopus-cta"
+              href="https://octopus.energy/smart/intelligent-octopus-go/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Check compatibility
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="seven-pro" class="sp section" aria-labelledby="sp-heading">
+        <div class="sp-backdrop" aria-hidden="true"></div>
+        <div class="wrap">
+          <header class="sp-head" data-reveal>
+            <p class="eyebrow cyan">MEET YOUR SEVEN PRO</p>
+            <h2 id="sp-heading">
+              Beautifully simple.<br /><span>Thoughtfully smart.</span>
+            </h2>
+            <p>
+              A compact charger with smart scheduling, solar integration and a
+              finish that feels at home on your wall.
+            </p>
+          </header>
+
+          <div class="sp-layout">
+            <div
+              class="sp-features"
+              role="group"
+              aria-label="Seven Pro features"
+              data-reveal
+              style="--d: 0.15s"
+            >
+              <button
+                type="button"
+                class="sp-feature"
+                data-feature="0"
+                aria-pressed="true"
+                aria-controls="sp-f0"
+              >
+                <span class="sp-f-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    focusable="false"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" /></svg></span
+                ><span class="sp-f-text"
+                  ><strong>Charge to your schedule</strong
+                  ><span class="sp-f-desc" id="sp-f0"
+                    ><span
+                      >Set charging times around your routine and tariff.</span
+                    ></span
+                  ></span
+                ><i class="sp-f-progress" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="sp-feature"
+                data-feature="1"
+                aria-pressed="false"
+                aria-controls="sp-f1"
+              >
+                <span class="sp-f-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    focusable="false"
+                  >
+                    <path d="M3 12h3l2-5 4 10 2-5h7" /></svg></span
+                ><span class="sp-f-text"
+                  ><strong>Look after your home supply</strong
+                  ><span class="sp-f-desc" id="sp-f1"
+                    ><span
+                      >Dynamic load management adjusts charging as your home’s
+                      demand changes.</span
+                    ></span
+                  ></span
+                ><i class="sp-f-progress" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="sp-feature"
+                data-feature="2"
+                aria-pressed="false"
+                aria-controls="sp-f2"
+              >
+                <span class="sp-f-icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    focusable="false"
+                  >
+                    <rect x="4" y="10" width="16" height="11" rx="2.5" />
+                    <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                    <path d="M12 14.5v2.5" /></svg></span
+                ><span class="sp-f-text"
+                  ><strong>Control who can charge</strong
+                  ><span class="sp-f-desc" id="sp-f2"
+                    ><span
+                      >Authorise sessions using the app or RFID cards.</span
+                    ></span
+                  ></span
+                ><i class="sp-f-progress" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="sp-stage" data-reveal>
+              <div class="sp-tilt">
+                <div class="sp-spot" aria-hidden="true"></div>
+                <div class="sp-product">
+                  <div class="sp-float">
+                    <img
+                      class="sp-img is-active"
+                      data-model-img="tethered"
+                      src="/home-charging/assets/tethered.webp"
+                      alt="Seven Pro tethered charger with its integrated Type 2 cable"
+                      width="900"
+                      height="1000"
+                      loading="lazy"
+                    />
+                    <img
+                      class="sp-img"
+                      data-model-img="untethered"
+                      src="/home-charging/assets/untethered.webp"
+                      alt=""
+                      aria-hidden="true"
+                      width="900"
+                      height="1000"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="sp-switch"
+                role="group"
+                aria-label="Choose your charger version"
+                style="--i: 0"
+              >
+                <span class="sp-switch-pill" aria-hidden="true"></span>
+                <button type="button" data-model="tethered" aria-pressed="true">
+                  <img
+                    src="/home-charging/assets/coiled-cable.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />Tethered
+                </button>
+                <button
+                  type="button"
+                  data-model="untethered"
+                  aria-pressed="false"
+                >
+                  <img
+                    src="/home-charging/assets/type-2-socket.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                  />Untethered
+                </button>
+              </div>
+            </div>
+
+            <div class="sp-panel" data-reveal style="--d: 0.25s">
+              <p class="sp-kicker">
+                Seven Pro &middot; <span id="model-kind">Tethered</span>
+              </p>
+              <div class="sp-model" aria-live="polite">
+                <h3 id="model-heading">7.5m Type 2 cable.</h3>
+                <p id="model-description">
+                  Convenient home charging with an integrated cable. Just park,
+                  plug in and charge.
+                </p>
+                <p class="sp-price">
+                  <span>Installed from</span
+                  ><strong id="model-price">£935</strong>
+                </p>
+              </div>
+              <p class="sp-price-note">Subject to installation survey.</p>
+              <a class="button checkout" href="/"
+                >Choose your Seven Pro
+                <span aria-hidden="true"
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg></span
+              ></a>
+              <p class="sp-under">
+                Compare here. Choose your model and confirm current pricing in
+                the next step.
+              </p>
+            </div>
+          </div>
+
+          <div class="sp-specs" data-reveal>
+            <div class="sp-spec-bar">
+              <ul class="sp-keyspecs" aria-label="Key specifications">
+                <li>
+                  <strong>7.4<small>kW</small></strong
+                  ><span>Single phase</span>
+                </li>
+                <li><strong>Type 2</strong><span>Cable or socket</span></li>
+                <li>
+                  <strong>3<small>years</small></strong
+                  ><span>Charger warranty</span>
+                </li>
+                <li>
+                  <strong>Matte &amp; gloss</strong><span>Black finish</span>
+                </li>
+              </ul>
+              <p class="sp-spec-toggle sp-spec-heading">Technical details</p>
+            </div>
+            <div class="sp-spec-panel is-open" id="sp-spec-panel">
+              <div class="sp-spec-inner">
+                <dl class="sp-spec-grid">
+                  <div>
+                    <dt>Charging</dt>
+                    <dd>Up to 7.4kW, single phase</dd>
+                  </div>
+                  <div>
+                    <dt>Connection</dt>
+                    <dd>Type 2 cable or socket</dd>
+                  </div>
+                  <div>
+                    <dt>Connectivity</dt>
+                    <dd>Wi-Fi, Bluetooth &amp; OCPP 1.6J</dd>
+                  </div>
+                  <div>
+                    <dt>Protection</dt>
+                    <dd>PEN protection &amp; inbuilt 6mA RCD</dd>
+                  </div>
+                  <div>
+                    <dt>Warranty</dt>
+                    <dd>3-year charger warranty</dd>
+                  </div>
+                </dl>
+                <div class="sp-fullinfo-wrap">
+                  <a
+                    class="button sp-fullinfo-cta"
+                    href="https://www.vchrgd.com/seven-pro"
+                    target="_blank"
+                    rel="noopener"
+                    >Full product information
+                    <span aria-hidden="true"
+                      ><svg
+                        class="arrow-icon"
+                        viewBox="0 0 24 24"
+                        width="18"
+                        height="18"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path d="M6 18 18 6M6 6h12v12" /></svg></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="installation"
+        class="install section theme-light"
+        aria-labelledby="install-heading"
+      >
+        <div class="wrap install-grid">
+          <div class="install-copy">
+            <div class="install-head" data-reveal>
+              <p class="eyebrow">WHAT YOUR INSTALLED PRICE COVERS</p>
+              <h2 id="install-heading">
+                What&rsquo;s included in standard installation?
+              </h2>
+              <p class="install-intro">
+                Your installed price includes a standard home installation with
+                up to 10 metres of cable.
+              </p>
+            </div>
+            <ul class="install-list" data-reveal style="--d: 0.08s">
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                ><span>Seven Pro charger and standard home installation</span>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                ><span>Up to 10 metres of cable</span>
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                ><span
+                  >Digital survey to confirm the final installation setup</span
+                >
+              </li>
+              <li>
+                <svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                ><span
+                  >Any additional work is quoted before it is carried out</span
+                >
+              </li>
+            </ul>
+            <p class="install-reassure" data-reveal style="--d: 0.12s">
+              If extra work is needed, the final cost will be confirmed after
+              the digital survey and nothing additional is charged until you
+              approve it.
+            </p>
+          </div>
+          <figure class="install-media" data-reveal style="--d: 0.1s">
+            <img
+              src="/home-charging/assets/night.jpg"
+              alt="VCHRGD Seven Pro charger mounted on a home wall, charging an electric car in the evening"
+              width="1400"
+              height="787"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="section journey theme-light"
+        aria-labelledby="journey-heading"
+      >
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">HOW INSTALLATION WORKS</p>
+            <h2 id="journey-heading">A clear next step.</h2>
+            <p>
+              Explore at your pace. When you’re ready, our online journey brings
+              your charger and installation options together.
+            </p>
+          </div>
+          <ol class="journey-steps">
+            <li data-reveal style="--d: 0s">
+              <span>01</span>
+              <h3>Choose your Seven Pro</h3>
+              <p>
+                Find the cable setup that suits you and review current pricing.
+              </p>
+            </li>
+            <li data-reveal style="--d: 0.08s">
+              <span>02</span>
+              <h3>Tell us about your home</h3>
+              <p>
+                Complete the installation pre-check and review your estimate.
+              </p>
+            </li>
+            <li data-reveal style="--d: 0.16s">
+              <span>03</span>
+              <h3>Choose how to pay</h3>
+              <p>
+                Pay by card or continue with Frasers Plus, subject to approval.
+              </p>
+            </li>
+            <li data-reveal style="--d: 0.24s">
+              <span>04</span>
+              <h3>Plan your installation</h3>
+              <p>
+                Complete your digital survey. The team reviews it before
+                confirming the installation.
+              </p>
+            </li>
+          </ol>
+          <p class="fine">
+            Installation is subject to survey review and property suitability.
+            Any extra work or changes to your quote are confirmed with you.
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="payment"
+        class="paychoice section"
+        aria-labelledby="paychoice-heading"
+      >
+        <div class="wrap">
+          <div class="paychoice-head" data-reveal>
+            <p class="eyebrow cyan">SIMPLE, FLEXIBLE PAYMENT</p>
+            <h2 id="paychoice-heading">Choose how you&rsquo;d like to pay.</h2>
+            <p>
+              Pay the full installed price, or spread the cost monthly with
+              Frasers Plus. Either way, you start with the same quick pre-check.
+            </p>
+          </div>
+          <div class="paychoice-grid">
+            <article class="paycard" data-reveal>
+              <span class="paycard-badge">Pay in full</span>
+              <p class="paycard-figure">£895<span>untethered</span></p>
+              <p class="paycard-sub">
+                £935 tethered &middot; Subject to survey
+              </p>
+              <p class="paycard-desc">
+                Pay once, securely through Revolut. Debit or credit card,
+                Revolut Pay, Apple Pay or Google Pay.
+              </p>
+              <ul class="paycard-logos" aria-label="Accepted payment methods">
+                <li>
+                  <img
+                    src="/home-charging/assets/visa.svg"
+                    alt="Visa"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="/home-charging/assets/mastercard.svg"
+                    alt="Mastercard"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="paycard-logo--amex">
+                  <img
+                    src="/home-charging/assets/american-express.svg"
+                    alt="American Express"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="paycard-logo--revolut">
+                  <img
+                    src="/home-charging/assets/revolut-pay.svg"
+                    alt="Revolut Pay"
+                    loading="lazy"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="/home-charging/assets/apple-pay.svg"
+                    alt="Apple Pay"
+                    loading="lazy"
+                  />
+                </li>
+                <li class="paycard-logo--gpay">
+                  <img
+                    src="/home-charging/assets/google-pay.svg"
+                    alt="Google Pay"
+                    loading="lazy"
+                  />
+                </li>
+              </ul>
+              <a class="button paycard-cta checkout" href="/"
+                >Choose your Seven Pro
+                <span aria-hidden="true"
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg></span
+              ></a>
+              <p class="paycard-fine">
+                Available methods are shown at checkout and depend on your
+                device and browser.
+              </p>
+            </article>
+            <article class="paycard" data-reveal style="--d: 0.1s">
+              <span class="paycard-badge">Pay monthly</span>
+              <img
+                class="paycard-fplogo"
+                src="/home-charging/assets/frasersplus.svg"
+                width="180"
+                height="31"
+                alt="Frasers Plus"
+                loading="lazy"
+              />
+              <p class="paycard-figure">0%<span>for 3 months</span></p>
+              <p class="paycard-sub">
+                Interest free when you choose a 3 month plan.
+              </p>
+              <p class="paycard-desc">
+                Or spread from £36.27 / month up to 36 months. 6, 12, 24 or 36
+                month plans available; plans of 6 months or longer charge
+                interest.
+              </p>
+              <a class="button paycard-cta checkout" href="/"
+                >Choose your Seven Pro
+                <span aria-hidden="true"
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg></span
+              ></a>
+              <div class="paycard-apr">
+                <strong>Representative 29.9% APR (variable).</strong>
+                <details class="finance-example finance-disclosure">
+                  <summary>
+                    <span class="eyebrow">ILLUSTRATIVE 36 MONTH EXAMPLE</span
+                    ><span class="fd-plus" aria-hidden="true"></span>
+                  </summary>
+                  <div class="fd-body">
+                    <dl>
+                      <div>
+                        <dt>Cash price / credit</dt>
+                        <dd>£895</dd>
+                      </div>
+                      <div>
+                        <dt>Monthly payments</dt>
+                        <dd>35 × £36.27 + £36.39 final payment</dd>
+                      </div>
+                      <div>
+                        <dt>Total repayable</dt>
+                        <dd>£1,305.84</dd>
+                      </div>
+                      <div>
+                        <dt>Cost of credit</dt>
+                        <dd>£410.84</dd>
+                      </div>
+                    </dl>
+                    <p>
+                      Interest rate 29.9% p.a. (variable). Based on an
+                      untethered Seven Pro with standard installation, subject
+                      to survey. Illustrative estimate; your rate, plan and
+                      payments are confirmed in the Frasers Plus app.
+                    </p>
+                  </div>
+                </details>
+              </div>
+              <p class="paycard-fine">
+                Credit subject to status and approval. Terms apply. Missed
+                payments may affect your credit score and mean your 0% interest
+                plans end. Select Frasers Plus at checkout, then choose your
+                plan in the app.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="card-payment"
+        class="card-payment pm section theme-light"
+        aria-labelledby="pm-heading"
+      >
+        <div class="wrap pm-head" data-reveal>
+          <p class="eyebrow">PAY IN FULL &middot; CARD &amp; WALLET PAYMENTS</p>
+          <h2 id="pm-heading">Pay in full. <span>Your way.</span></h2>
+          <p>
+            Debit or credit card, Revolut Pay, Apple Pay or Google Pay. Securely
+            through Revolut.
+          </p>
+        </div>
+        <div class="pm-marquee" data-reveal style="--d: 0.1s">
+          <div class="pm-track">
+            <ul class="pm-group" aria-label="Accepted payment methods">
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/visa.svg"
+                  alt="Visa"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/mastercard.svg"
+                  alt="Mastercard"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/maestro.svg"
+                  alt="Maestro"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--amex">
+                <img
+                  src="/home-charging/assets/american-express.svg"
+                  alt="American Express"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--revolut">
+                <img
+                  src="/home-charging/assets/revolut-pay.svg"
+                  alt="Revolut Pay"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--wallet">
+                <img
+                  src="/home-charging/assets/apple-pay.svg"
+                  alt="Apple Pay"
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--wallet pm-logo--gpay">
+                <img
+                  src="/home-charging/assets/google-pay.svg"
+                  alt="Google Pay"
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+            <ul class="pm-group" aria-hidden="true">
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/visa.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/mastercard.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--card">
+                <img
+                  src="/home-charging/assets/maestro.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--amex">
+                <img
+                  src="/home-charging/assets/american-express.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--revolut">
+                <img
+                  src="/home-charging/assets/revolut-pay.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--wallet">
+                <img
+                  src="/home-charging/assets/apple-pay.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+              <li class="pm-logo pm-logo--wallet pm-logo--gpay">
+                <img
+                  src="/home-charging/assets/google-pay.svg"
+                  alt=""
+                  loading="lazy"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap pm-foot" data-reveal style="--d: 0.2s">
+          <a class="button pm-cta checkout" href="/"
+            >Choose your Seven Pro
+            <span aria-hidden="true"
+              ><svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg></span
+          ></a>
+          <p class="fine">
+            Available methods are shown at checkout and depend on your device
+            and browser.
+          </p>
+        </div>
+      </section>
+
+      <section id="app" class="ap section" aria-labelledby="ap-heading">
+        <div class="wrap ap-grid">
+          <div class="ap-copy" data-reveal>
+            <p class="eyebrow cyan">
+              VCHRGD HOME &middot; FREE TO DOWNLOAD. FREE TO USE.
+            </p>
+            <h2 id="ap-heading">
+              More power.<br /><span>In the palm of your hand.</span>
+            </h2>
+            <p class="ap-intro">
+              Set it up your way, check in from your phone and see where your
+              energy goes.
+            </p>
+            <a
+              class="button app-guide-cta"
+              href="https://l.ead.me/VCH_HOME"
+              target="_blank"
+              rel="noopener"
+              >Explore the app user guide
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg
+            ></a>
+            <div
+              class="ap-list"
+              role="group"
+              aria-label="VCHRGD Home app features"
+            >
+              <button
+                type="button"
+                class="ap-item"
+                aria-expanded="true"
+                aria-controls="ap-d0"
+              >
+                <strong>Make time for smarter charging</strong
+                ><span class="ap-desc" id="ap-d0"
+                  ><span
+                    >Set charging windows, enter your day and night rates, or
+                    use supported tariff presets. Boost a charge when you need
+                    to.</span
+                  ></span
+                ><i class="ap-progress" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="ap-item"
+                aria-expanded="false"
+                aria-controls="ap-d1"
+              >
+                <strong>See the bigger energy picture</strong
+                ><span class="ap-desc" id="ap-d1"
+                  ><span
+                    >Monitor live power and energy delivered. Review previous
+                    sessions and estimated costs using the rates you
+                    enter.</span
+                  ></span
+                ><i class="ap-progress" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="ap-item"
+                aria-expanded="false"
+                aria-controls="ap-d2"
+              >
+                <strong>Keep your charger yours</strong
+                ><span class="ap-desc" id="ap-d2"
+                  ><span
+                    >Enable session authentication, register RFID cards and
+                    review security events. Socket models also offer a
+                    cable-lock setting.</span
+                  ></span
+                ><i class="ap-progress" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                class="ap-item"
+                aria-expanded="false"
+                aria-controls="ap-d3"
+              >
+                <strong>A little help, close to hand</strong
+                ><span class="ap-desc" id="ap-d3"
+                  ><span
+                    >Open LiveChat, FAQs and the user guide from the app.
+                    Support enquiries outside opening hours are followed up when
+                    the team is available.</span
+                  ></span
+                ><i class="ap-progress" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+          <div class="ap-visual" data-reveal style="--d: 0.15s">
+            <img
+              class="ap-img"
+              src="/home-charging/assets/app-showcase.webp"
+              alt="Two phones showing the VCHRGD Home app: its App Store page and the charging screen"
+              width="1100"
+              height="1025"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="costs" class="section costs-section theme-light">
+        <div class="wrap costs-grid">
+          <div class="costs-copy" data-reveal>
+            <p class="eyebrow cyan">WHEN YOU CHARGE CAN MAKE A DIFFERENCE</p>
+            <h2>Same car.<br />Different charging cost.</h2>
+            <p>
+              Pair smart scheduling with an off-peak EV tariff and you could pay
+              less for the energy that goes into your car.
+            </p>
+            <p>
+              Try the example, then enter your own electricity rates to see the
+              difference.
+            </p>
+            <a
+              class="button costs-guide-cta"
+              href="https://www.vchrgd.com/articles-how-much-does-it-cost-to-charge-an-electric-car-at-home"
+              target="_blank"
+              rel="noopener"
+              >Read our home-charging cost guide
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span
+            ></a>
+          </div>
+          <div class="calculator" data-reveal style="--d: 0.1s">
+            <div class="calculator-top">
+              <span class="eyebrow">YOUR CHARGING COST EXAMPLE</span
+              ><span class="pill">ILLUSTRATIVE</span>
+            </div>
+            <div class="energy-input">
+              <label for="energy">Energy added per charge</label
+              ><output id="energy-output" for="energy">60 kWh</output>
+            </div>
+            <input
+              id="energy"
+              type="range"
+              min="10"
+              max="100"
+              value="60"
+              step="5"
+            />
+            <div class="range-labels">
+              <span>10 kWh</span><span>100 kWh</span>
+            </div>
+            <div class="rate-grid">
+              <label for="standard-rate"
+                >Standard rate
+                <div class="number-input">
+                  <input
+                    id="standard-rate"
+                    type="number"
+                    min="0"
+                    max="200"
+                    step="0.01"
+                    value="26.11"
+                    inputmode="decimal"
+                  /><span>p/kWh</span>
+                </div></label
+              ><label for="offpeak-rate"
+                >Off-peak rate
+                <div class="number-input">
+                  <input
+                    id="offpeak-rate"
+                    type="number"
+                    min="0"
+                    max="200"
+                    step="0.01"
+                    value="7.5"
+                    inputmode="decimal"
+                  /><span>p/kWh</span>
+                </div></label
+              >
+            </div>
+            <div class="cost-comparison" aria-live="polite" aria-atomic="true">
+              <div>
+                <span>Standard-rate charge</span
+                ><strong id="standard-cost">£15.67</strong>
+                <div class="bar"><i id="standard-bar"></i></div>
+              </div>
+              <div class="offpeak">
+                <span>Off-peak charge</span
+                ><strong id="offpeak-cost">£4.50</strong>
+                <div class="bar"><i id="offpeak-bar"></i></div>
+              </div>
+              <p id="difference">£11.17 less for this charge</p>
+            </div>
+            <p class="fine">
+              Starting rates are the historical example in our August 2026
+              article, not a current tariff offer. Energy × unit rate; excludes
+              charging losses, standing charges, installation and finance costs.
+              Actual savings depend on your tariff, off-peak window and usage.
+              Check eligibility and the whole-home cost of any tariff.
+            </p>
+            <button class="reset" id="reset-calculator">Reset example ↺</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partner" aria-labelledby="partner-heading">
+        <div class="wrap">
+          <div class="partner-grid">
+            <div class="partner-content" data-reveal>
+              <p class="eyebrow cyan">
+                GREAT HARDWARE. GREAT PEOPLE BEHIND IT.
+              </p>
+              <h2 id="partner-heading">Support is part of the story.</h2>
+              <p class="partner-intro">
+                From choosing a charger to getting it installed, a knowledgeable
+                team makes a difference. VCHRGD works with installation and
+                energy partners to help bring home charging together.
+              </p>
+              <hr class="partner-divider" />
+              <figure class="partner-quote">
+                <blockquote>
+                  “It’s a really competitively priced charger that’s got the
+                  right kind of aesthetic that we know customers like.”
+                </blockquote>
+                <figcaption class="quote-source">
+                  <strong>Chris Fitzpatrick</strong
+                  ><span>General Manager, Ascent Energy Services</span>
+                </figcaption>
+              </figure>
+              <a
+                class="button partner-cta"
+                href="https://www.vchrgd.com/partners-news-partner-spotlight-ascent"
+                target="_blank"
+                rel="noopener"
+                >Meet our installation partners
+                <span aria-hidden="true"
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg></span
+              ></a>
+            </div>
+            <figure class="partner-figure" data-reveal style="--d: 0.12s">
+              <img
+                src="/home-charging/assets/ascent.webp"
+                alt="A VCHRGD charger installation carried out by Ascent Energy Services"
+                width="850"
+                height="1100"
+                loading="lazy"
+              />
+              <figcaption class="partner-spotlight">
+                FROM OUR PARTNER SPOTLIGHT / ASCENT
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section wrap">
+        <div class="faq-intro" data-reveal>
+          <p class="eyebrow">A FEW THINGS YOU MIGHT BE WONDERING</p>
+          <h2>Before you<br />plug in.</h2>
+          <p class="faq-contact">
+            <span class="faq-contact-label">Talk to the team</span
+            ><a href="tel:01494370525"
+              >01494 370525
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg
+            ></a>
+          </p>
+        </div>
+        <div class="faq-list" data-reveal style="--d: 0.1s">
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b1"
+              aria-expanded="false"
+              aria-controls="faq-a1"
+            >
+              <span>Which cable setup is right for me?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a1"
+              role="region"
+              aria-labelledby="faq-b1"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  Tethered gives you a permanently attached cable for quick
+                  daily use. Untethered lets you use your own Type 2 cable. Both
+                  offer smart home charging; the choice comes down to your
+                  parking setup and preference.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b2"
+              aria-expanded="false"
+              aria-controls="faq-a2"
+            >
+              <span>Will it work with my electric car?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a2"
+              role="region"
+              aria-labelledby="faq-b2"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  Seven Pro uses Type 2 AC charging. Check your vehicle’s
+                  connector and onboard AC charging limit. The speed you get
+                  depends on the car as well as your home’s electrical supply.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b3"
+              aria-expanded="false"
+              aria-controls="faq-a3"
+            >
+              <span>Do I need solar panels or an EV tariff?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a3"
+              role="region"
+              aria-labelledby="faq-b3"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  No. You can charge using a standard electricity tariff. Solar
+                  integration and off-peak scheduling give you additional
+                  options when your home setup and tariff support them. Solar
+                  monitoring needs to be configured by your installer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b4"
+              aria-expanded="false"
+              aria-controls="faq-a4"
+            >
+              <span>What can I do in the VCHRGD Home app?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a4"
+              role="region"
+              aria-labelledby="faq-b4"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  Schedule and authorise charging, monitor live sessions, review
+                  charging history and estimated costs, manage solar settings
+                  and access help. The app is free to download and use.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b5"
+              aria-expanded="false"
+              aria-controls="faq-a5"
+            >
+              <span>Do I have to use Frasers Plus?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a5"
+              role="region"
+              aria-labelledby="faq-b5"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  No. You can pay in full through Revolut using your debit or
+                  credit card, Revolut Pay, Apple Pay or Google Pay, with
+                  available methods shown at checkout. Frasers Plus is an
+                  optional credit product; approval is subject to status. Choose
+                  a 3 month plan for 0% interest, or 6, 12, 24 or 36 months with
+                  interest. Review the terms and select your plan in the Frasers
+                  Plus app.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button
+              type="button"
+              class="faq-q"
+              id="faq-b6"
+              aria-expanded="false"
+              aria-controls="faq-a6"
+            >
+              <span>How is my installation confirmed?</span
+              ><i class="faq-icon" aria-hidden="true"></i>
+            </button>
+            <div
+              class="faq-a"
+              id="faq-a6"
+              role="region"
+              aria-labelledby="faq-b6"
+            >
+              <div class="faq-a-inner">
+                <p>
+                  Your pre-check gives an initial estimate. After checkout,
+                  complete the digital survey so the team can review your
+                  property and confirm the installation scope. Any additional
+                  work or revised costs are discussed with you before
+                  installation goes ahead.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <img
+          src="/home-charging/assets/detail.webp"
+          alt="Seven Pro installed on a brick wall with its cable ready to use"
+          width="1000"
+          height="1500"
+          loading="lazy"
+        />
+        <div class="wrap">
+          <p class="eyebrow cyan">HOME CHARGING STARTS HERE</p>
+          <h2>Your home.<br /><span>Ready to charge.</span></h2>
+          <a class="button checkout" href="/"
+            >Choose your Seven Pro
+            <span aria-hidden="true"
+              ><svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg></span
+          ></a>
+          <p class="closing-support">
+            Need help with your installation?
+            <a href="tel:01494370525">Call VCHRGD</a> or
+            <a
+              href="https://www.vchrgd.com/#footer-sections"
+              target="_blank"
+              rel="noopener noreferrer"
+              >request a callback</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="site-footer">
+      <div class="wrap">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <a href="https://www.vchrgd.com/" aria-label="VCHRGD website"
+              ><img
+                src="/home-charging/assets/logo.png"
+                alt="VCHRGD"
+                width="190"
+                height="50"
+                loading="lazy"
+            /></a>
+            <h2>VCHRGD<br />Technologies<br />Ltd.</h2>
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="light"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Trustpilot</a
+              >
+            </div>
+          </div>
+          <nav class="site-footer-links" aria-label="Explore VCHRGD">
+            <h3>Explore</h3>
+            <a href="https://fgsupporthelp.zendesk.com/hc/en-gb">Frasers Plus</a
+            ><a href="https://www.vchrgd.com/home-charging">Home Charging</a
+            ><a href="https://www.vchrgd.com/commercial">Commercial</a
+            ><a href="https://www.vchrgd.com/home-charging#installers"
+              >Installers</a
+            ><a href="https://www.vchrgd.com/partners-news">Partners</a
+            ><a href="https://www.vchrgd.com/about">About Us</a
+            ><a href="https://www.vchrgd.com/contact">Contact Us</a
+            ><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a
+            ><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy"
+              >Home Privacy Policy</a
+            ><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy"
+              >Install Privacy Policy</a
+            ><a href="https://www.vchrgd.com/privacy-policy"
+              >Website Privacy Policy</a
+            >
+          </nav>
+          <nav class="site-footer-links" aria-label="VCHRGD products">
+            <h3>Products</h3>
+            <a href="https://www.vchrgd.com/seven-pro">Seven Pro</a
+            ><a href="https://www.vchrgd.com/twentytwo-pro">TwentyTwo Pro</a
+            ><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a
+            ><a href="https://www.vchrgd.com/responsible-recycling"
+              >WEEE Recycling</a
+            >
+          </nav>
+          <nav
+            class="site-footer-links site-footer-social"
+            aria-label="Follow VCHRGD"
+          >
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/vchrgd_technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="19"
+                  height="19"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07Zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.28 1.71.32 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.2-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 1.98a2.51 2.51 0 1 0 0 5.02 2.51 2.51 0 0 0 0-5.02Zm5.72-2.16a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"
+                  /></svg></a
+              ><a
+                href="https://www.youtube.com/@vchrgd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Youtube"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"
+                  /></svg></a
+              ><a
+                href="https://www.linkedin.com/company/vchrgd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.76V1.74C24 .78 23.2 0 22.22 0Z"
+                  /></svg
+              ></a>
+            </div>
+          </nav>
+          <div class="site-footer-callback">
+            <h3>Let’s talk charging.</h3>
+            <p>
+              Have a question about your home charger? Request a call from the
+              VCHRGD team.
+            </p>
+            <a
+              class="callback-button"
+              href="https://www.vchrgd.com/#footer-sections"
+              target="_blank"
+              rel="noopener noreferrer"
+              >REQUEST CALL
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="footer-phone" href="tel:01494370525">01494 370525</a>
+          </div>
+        </div>
+        <div class="site-footer-company">
+          <p>
+            VCHRGD is a trading name of VCHRGD TECHNOLOGIES LTD, a UK registered
+            company number 13264142
+          </p>
+          <p>
+            Registered Address: 1a Eghams Court, Boston Drive, Bourne-End,
+            Buckinghamshire, SL8 5YS
+          </p>
+        </div>
+        <details class="legal-disclosure">
+          <summary>
+            Regulatory information<span
+              class="legal-plus"
+              aria-hidden="true"
+            ></span>
+          </summary>
+          <p class="site-footer-lender">
+            VCHRGD Technologies Limited (FRN: 1062133), trading as ‘VCHRGD’, is
+            an introducer appointed representative of Frasers Group Financial
+            Services Limited (Registered Company no. 00718151) which is
+            authorised and regulated by the Financial Conduct Authority (FRN
+            311908) for consumer credit and general insurance and a member of
+            the Finance and Leasing Association. For regulated payment services,
+            Frasers Group Financial Services Limited is a payment agent of
+            Transact Payments Limited, a company authorised and regulated by the
+            Gibraltar Financial Services Commission as an electronic money
+            institution.
+            <strong
+              >Missed payments may affect your credit score and mean your 0%
+              interest plans end.</strong
+            >
+          </p>
+        </details>
+        <details class="site-statistics">
+          <summary>Site statistics</summary>
+          <p>
+            We count page views and button interactions to improve this website.
+            These statistics do not use cookies or identify you across visits.
+            We keep daily totals for 90 days and random delivery keys for up to
+            two days to prevent double counting. Your browser privacy signals
+            are respected. You can turn statistics off below; only that
+            preference is remembered on this browser for 180 days.
+          </p>
+          <p id="statistics-status"></p>
+          <button type="button" id="statistics-toggle">
+            Turn off statistics
+          </button>
+        </details>
+      </div>
+    </footer>
+    <div class="mobile-cta">
+      <span>Seven Pro<span>Home charging, made simple.</span></span
+      ><a href="/" class="button small checkout"
+        >Choose your Seven Pro
+        <svg
+          class="arrow-icon"
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M6 18 18 6M6 6h12v12" /></svg
+      ></a>
     </div>
-    <div class="sp-switch" role="group" aria-label="Choose your charger version" style="--i:0">
-     <span class="sp-switch-pill" aria-hidden="true"></span>
-     <button type="button" data-model="tethered" aria-pressed="true"><img src="/home-charging/assets/coiled-cable.svg" alt="" width="20" height="20">Tethered</button>
-     <button type="button" data-model="untethered" aria-pressed="false"><img src="/home-charging/assets/type-2-socket.svg" alt="" width="20" height="20">Untethered</button>
-    </div>
-   </div>
-
-   <div class="sp-panel" data-reveal style="--d:.25s">
-    <p class="sp-kicker">Seven Pro &middot; <span id="model-kind">Tethered</span></p>
-    <div class="sp-model" aria-live="polite">
-     <h3 id="model-heading">7.5m Type 2 cable.</h3>
-     <p id="model-description">Convenient home charging with an integrated cable. Just park, plug in and charge.</p>
-     <p class="sp-price"><span>Installed from</span><strong id="model-price">£935</strong></p>
-    </div>
-    <p class="sp-price-note">Subject to installation survey.</p>
-    <a class="button checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-    <p class="sp-under">Compare here. Choose your model and confirm current pricing in the next step.</p>
-   </div>
-  </div>
-
-  <div class="sp-specs" data-reveal>
-   <div class="sp-spec-bar">
-    <ul class="sp-keyspecs" aria-label="Key specifications"><li><strong>7.4<small>kW</small></strong><span>Single phase</span></li><li><strong>Type 2</strong><span>Cable or socket</span></li><li><strong>3<small>years</small></strong><span>Charger warranty</span></li><li><strong>Matte &amp; gloss</strong><span>Black finish</span></li></ul>
-    <p class="sp-spec-toggle sp-spec-heading">Technical details</p>
-   </div>
-   <div class="sp-spec-panel is-open" id="sp-spec-panel">
-    <div class="sp-spec-inner">
-     <dl class="sp-spec-grid">
-      <div><dt>Charging</dt><dd>Up to 7.4kW, single phase</dd></div>
-      <div><dt>Connection</dt><dd>Type 2 cable or socket</dd></div>
-      <div><dt>Connectivity</dt><dd>Wi-Fi, Bluetooth &amp; OCPP 1.6J</dd></div>
-      <div><dt>Protection</dt><dd>PEN protection &amp; inbuilt 6mA RCD</dd></div>
-      <div><dt>Warranty</dt><dd>3-year charger warranty</dd></div>
-     </dl>
-     <div class="sp-fullinfo-wrap"><a class="button sp-fullinfo-cta" href="https://www.vchrgd.com/seven-pro" target="_blank" rel="noopener">Full product information <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
-    </div>
-   </div>
-  </div>
- </div>
-</section>
-
-<section id="installation" class="install section theme-light" aria-labelledby="install-heading"><div class="wrap install-grid">
- <div class="install-copy">
- <div class="install-head" data-reveal><p class="eyebrow">WHAT YOUR INSTALLED PRICE COVERS</p><h2 id="install-heading">What&rsquo;s included in standard installation?</h2><p class="install-intro">Your installed price includes a standard home installation with up to 10 metres of cable.</p></div>
- <ul class="install-list" data-reveal style="--d:.08s">
-  <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Seven Pro charger and standard home installation</span></li>
-  <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Up to 10 metres of cable</span></li>
-  <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Digital survey to confirm the final installation setup</span></li>
-  <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Any additional work is quoted before it is carried out</span></li>
- </ul>
- <p class="install-reassure" data-reveal style="--d:.12s">If extra work is needed, the final cost will be confirmed after the digital survey and nothing additional is charged until you approve it.</p>
- </div>
- <figure class="install-media" data-reveal style="--d:.1s"><img src="/home-charging/assets/night.jpg" alt="VCHRGD Seven Pro charger mounted on a home wall, charging an electric car in the evening" width="1400" height="787" loading="lazy"></figure>
-</div></section>
-
-<section class="section journey theme-light" aria-labelledby="journey-heading"><div class="wrap"><div class="section-head" data-reveal><p class="eyebrow">HOW INSTALLATION WORKS</p><h2 id="journey-heading">A clear next step.</h2><p>Explore at your pace. When you’re ready, our online journey brings your charger and installation options together.</p></div><ol class="journey-steps"><li data-reveal style="--d:0.00s"><span>01</span><h3>Choose your Seven Pro</h3><p>Find the cable setup that suits you and review current pricing.</p></li><li data-reveal style="--d:0.08s"><span>02</span><h3>Tell us about your home</h3><p>Complete the installation pre-check and review your estimate.</p></li><li data-reveal style="--d:0.16s"><span>03</span><h3>Choose how to pay</h3><p>Pay by card or continue with Frasers Plus, subject to approval.</p></li><li data-reveal style="--d:0.24s"><span>04</span><h3>Plan your installation</h3><p>Complete your digital survey. The team reviews it before confirming the installation.</p></li></ol><p class="fine">Installation is subject to survey review and property suitability. Any extra work or changes to your quote are confirmed with you.</p></div></section>
-
-<section id="payment" class="paychoice section" aria-labelledby="paychoice-heading"><div class="wrap">
- <div class="paychoice-head" data-reveal><p class="eyebrow cyan">SIMPLE, FLEXIBLE PAYMENT</p><h2 id="paychoice-heading">Choose how you&rsquo;d like to pay.</h2><p>Pay the full installed price, or spread the cost monthly with Frasers Plus. Either way, you start with the same quick pre-check.</p></div>
- <div class="paychoice-grid">
-  <article class="paycard" data-reveal>
-   <span class="paycard-badge">Pay in full</span>
-   <p class="paycard-figure">£895<span>untethered</span></p>
-   <p class="paycard-sub">£935 tethered &middot; Subject to survey</p>
-   <p class="paycard-desc">Pay once, securely through Revolut. Debit or credit card, Revolut Pay, Apple Pay or Google Pay.</p>
-   <ul class="paycard-logos" aria-label="Accepted payment methods"><li><img src="/home-charging/assets/visa.svg" alt="Visa" loading="lazy"></li><li><img src="/home-charging/assets/mastercard.svg" alt="Mastercard" loading="lazy"></li><li class="paycard-logo--amex"><img src="/home-charging/assets/american-express.svg" alt="American Express" loading="lazy"></li><li class="paycard-logo--revolut"><img src="/home-charging/assets/revolut-pay.svg" alt="Revolut Pay" loading="lazy"></li><li><img src="/home-charging/assets/apple-pay.svg" alt="Apple Pay" loading="lazy"></li><li class="paycard-logo--gpay"><img src="/home-charging/assets/google-pay.svg" alt="Google Pay" loading="lazy"></li></ul>
-   <a class="button paycard-cta checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-   <p class="paycard-fine">Available methods are shown at checkout and depend on your device and browser.</p>
-  </article>
-  <article class="paycard" data-reveal style="--d:.1s">
-   <span class="paycard-badge">Pay monthly</span>
-   <img class="paycard-fplogo" src="/home-charging/assets/frasersplus.svg" width="180" height="31" alt="Frasers Plus" loading="lazy">
-   <p class="paycard-figure">0%<span>for 3 months</span></p>
-   <p class="paycard-sub">Interest free when you choose a 3 month plan.</p>
-   <p class="paycard-desc">Or spread from £36.27 / month up to 36 months. 6, 12, 24 or 36 month plans available; plans of 6 months or longer charge interest.</p>
-   <a class="button paycard-cta checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-   <div class="paycard-apr">
-    <strong>Representative 29.9% APR (variable).</strong>
-    <details class="finance-example finance-disclosure"><summary><span class="eyebrow">ILLUSTRATIVE 36 MONTH EXAMPLE</span><span class="fd-plus" aria-hidden="true"></span></summary><div class="fd-body"><dl><div><dt>Cash price / credit</dt><dd>£895</dd></div><div><dt>Monthly payments</dt><dd>35 × £36.27 + £36.39 final payment</dd></div><div><dt>Total repayable</dt><dd>£1,305.84</dd></div><div><dt>Cost of credit</dt><dd>£410.84</dd></div></dl><p>Interest rate 29.9% p.a. (variable). Based on an untethered Seven Pro with standard installation, subject to survey. Illustrative estimate; your rate, plan and payments are confirmed in the Frasers Plus app.</p></div></details>
-   </div>
-   <p class="paycard-fine">Credit subject to status and approval. Terms apply. Missed payments may affect your credit score and mean your 0% interest plans end. Select Frasers Plus at checkout, then choose your plan in the app.</p>
-  </article>
- </div>
-</div></section>
-
-<section id="card-payment" class="card-payment pm section theme-light" aria-labelledby="pm-heading">
- <div class="wrap pm-head" data-reveal>
-  <p class="eyebrow">PAY IN FULL &middot; CARD &amp; WALLET PAYMENTS</p>
-  <h2 id="pm-heading">Pay in full. <span>Your way.</span></h2>
-  <p>Debit or credit card, Revolut Pay, Apple Pay or Google Pay. Securely through Revolut.</p>
- </div>
- <div class="pm-marquee" data-reveal style="--d:.1s"><div class="pm-track"><ul class="pm-group" aria-label="Accepted payment methods"><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/visa.svg" alt="Visa" loading="lazy"></li><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/mastercard.svg" alt="Mastercard" loading="lazy"></li><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/maestro.svg" alt="Maestro" loading="lazy"></li><li class="pm-logo pm-logo--amex"><img src="/home-charging/assets/american-express.svg" alt="American Express" loading="lazy"></li><li class="pm-logo pm-logo--revolut"><img src="/home-charging/assets/revolut-pay.svg" alt="Revolut Pay" loading="lazy"></li><li class="pm-logo pm-logo--wallet"><img src="/home-charging/assets/apple-pay.svg" alt="Apple Pay" loading="lazy"></li><li class="pm-logo pm-logo--wallet pm-logo--gpay"><img src="/home-charging/assets/google-pay.svg" alt="Google Pay" loading="lazy"></li></ul><ul class="pm-group" aria-hidden="true"><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/visa.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/mastercard.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--card"><img src="/home-charging/assets/maestro.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--amex"><img src="/home-charging/assets/american-express.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--revolut"><img src="/home-charging/assets/revolut-pay.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--wallet"><img src="/home-charging/assets/apple-pay.svg" alt="" loading="lazy"></li><li class="pm-logo pm-logo--wallet pm-logo--gpay"><img src="/home-charging/assets/google-pay.svg" alt="" loading="lazy"></li></ul></div></div>
- <div class="wrap pm-foot" data-reveal style="--d:.2s">
-  <a class="button pm-cta checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-  <p class="fine">Available methods are shown at checkout and depend on your device and browser.</p>
- </div>
-</section>
-
-<section id="app" class="ap section" aria-labelledby="ap-heading">
- <div class="wrap ap-grid">
-  <div class="ap-copy" data-reveal>
-   <p class="eyebrow cyan">VCHRGD HOME &middot; FREE TO DOWNLOAD. FREE TO USE.</p>
-   <h2 id="ap-heading">More power.<br><span>In the palm of your hand.</span></h2>
-   <p class="ap-intro">Set it up your way, check in from your phone and see where your energy goes.</p>
-   <a class="button app-guide-cta" href="https://l.ead.me/VCH_HOME" target="_blank" rel="noopener">Explore the app user guide <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
-   <div class="ap-list" role="group" aria-label="VCHRGD Home app features">
-    <button type="button" class="ap-item" aria-expanded="true" aria-controls="ap-d0"><strong>Make time for smarter charging</strong><span class="ap-desc" id="ap-d0"><span>Set charging windows, enter your day and night rates, or use supported tariff presets. Boost a charge when you need to.</span></span><i class="ap-progress" aria-hidden="true"></i></button>
-    <button type="button" class="ap-item" aria-expanded="false" aria-controls="ap-d1"><strong>See the bigger energy picture</strong><span class="ap-desc" id="ap-d1"><span>Monitor live power and energy delivered. Review previous sessions and estimated costs using the rates you enter.</span></span><i class="ap-progress" aria-hidden="true"></i></button>
-    <button type="button" class="ap-item" aria-expanded="false" aria-controls="ap-d2"><strong>Keep your charger yours</strong><span class="ap-desc" id="ap-d2"><span>Enable session authentication, register RFID cards and review security events. Socket models also offer a cable-lock setting.</span></span><i class="ap-progress" aria-hidden="true"></i></button>
-    <button type="button" class="ap-item" aria-expanded="false" aria-controls="ap-d3"><strong>A little help, close to hand</strong><span class="ap-desc" id="ap-d3"><span>Open LiveChat, FAQs and the user guide from the app. Support enquiries outside opening hours are followed up when the team is available.</span></span><i class="ap-progress" aria-hidden="true"></i></button>
-   </div>
-  </div>
-  <div class="ap-visual" data-reveal style="--d:.15s"><img class="ap-img" src="/home-charging/assets/app-showcase.webp" alt="Two phones showing the VCHRGD Home app: its App Store page and the charging screen" width="1100" height="1025" loading="lazy"></div>
- </div>
-</section>
-
-<section id="costs" class="section costs-section theme-light"><div class="wrap costs-grid">
- <div class="costs-copy" data-reveal><p class="eyebrow cyan">WHEN YOU CHARGE CAN MAKE A DIFFERENCE</p><h2>Same car.<br>Different charging cost.</h2><p>Pair smart scheduling with an off-peak EV tariff and you could pay less for the energy that goes into your car.</p><p>Try the example, then enter your own electricity rates to see the difference.</p><a class="button costs-guide-cta" href="https://www.vchrgd.com/articles-how-much-does-it-cost-to-charge-an-electric-car-at-home" target="_blank" rel="noopener">Read our home-charging cost guide <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
- <div class="calculator" data-reveal style="--d:.1s"><div class="calculator-top"><span class="eyebrow">YOUR CHARGING COST EXAMPLE</span><span class="pill">ILLUSTRATIVE</span></div>
-   <div class="energy-input"><label for="energy">Energy added per charge</label><output id="energy-output" for="energy">60 kWh</output></div><input id="energy" type="range" min="10" max="100" value="60" step="5"><div class="range-labels"><span>10 kWh</span><span>100 kWh</span></div>
-   <div class="rate-grid"><label for="standard-rate">Standard rate <div class="number-input"><input id="standard-rate" type="number" min="0" max="200" step="0.01" value="26.11" inputmode="decimal"><span>p/kWh</span></div></label><label for="offpeak-rate">Off-peak rate <div class="number-input"><input id="offpeak-rate" type="number" min="0" max="200" step="0.01" value="7.5" inputmode="decimal"><span>p/kWh</span></div></label></div>
-   <div class="cost-comparison" aria-live="polite" aria-atomic="true"><div><span>Standard-rate charge</span><strong id="standard-cost">£15.67</strong><div class="bar"><i id="standard-bar"></i></div></div><div class="offpeak"><span>Off-peak charge</span><strong id="offpeak-cost">£4.50</strong><div class="bar"><i id="offpeak-bar"></i></div></div><p id="difference">£11.17 less for this charge</p></div>
-   <p class="fine">Starting rates are the historical example in our August 2026 article, not a current tariff offer. Energy × unit rate; excludes charging losses, standing charges, installation and finance costs. Actual savings depend on your tariff, off-peak window and usage. Check eligibility and the whole-home cost of any tariff.</p><button class="reset" id="reset-calculator">Reset example ↺</button>
- </div>
-</div></section>
-
-<section class="section partner" aria-labelledby="partner-heading"><div class="wrap">
- <div class="partner-grid">
-  <div class="partner-content" data-reveal>
-   <p class="eyebrow cyan">GREAT HARDWARE. GREAT PEOPLE BEHIND IT.</p>
-   <h2 id="partner-heading">Support is part of the story.</h2>
-   <p class="partner-intro">From choosing a charger to getting it installed, a knowledgeable team makes a difference. VCHRGD works with installation and energy partners to help bring home charging together.</p>
-   <hr class="partner-divider">
-   <figure class="partner-quote"><blockquote>“It’s a really competitively priced charger that’s got the right kind of aesthetic that we know customers like.”</blockquote><figcaption class="quote-source"><strong>Chris Fitzpatrick</strong><span>General Manager, Ascent Energy Services</span></figcaption></figure>
-   <a class="button partner-cta" href="https://www.vchrgd.com/partners-news-partner-spotlight-ascent" target="_blank" rel="noopener">Meet our installation partners <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a>
-  </div>
-  <figure class="partner-figure" data-reveal style="--d:.12s"><img src="/home-charging/assets/ascent.webp" alt="A VCHRGD charger installation carried out by Ascent Energy Services" width="850" height="1100" loading="lazy"><figcaption class="partner-spotlight">FROM OUR PARTNER SPOTLIGHT / ASCENT</figcaption></figure>
- </div>
-</div></section>
-
-
-
-<section class="faq section wrap"><div class="faq-intro" data-reveal><p class="eyebrow">A FEW THINGS YOU MIGHT BE WONDERING</p><h2>Before you<br>plug in.</h2><p class="faq-contact"><span class="faq-contact-label">Talk to the team</span><a href="tel:01494370525">01494 370525 <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></p></div><div class="faq-list" data-reveal style="--d:.1s">
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b1" aria-expanded="false" aria-controls="faq-a1"><span>Which cable setup is right for me?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-b1"><div class="faq-a-inner"><p>Tethered gives you a permanently attached cable for quick daily use. Untethered lets you use your own Type 2 cable. Both offer smart home charging; the choice comes down to your parking setup and preference.</p></div></div></div>
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b2" aria-expanded="false" aria-controls="faq-a2"><span>Will it work with my electric car?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-b2"><div class="faq-a-inner"><p>Seven Pro uses Type 2 AC charging. Check your vehicle’s connector and onboard AC charging limit. The speed you get depends on the car as well as your home’s electrical supply.</p></div></div></div>
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b3" aria-expanded="false" aria-controls="faq-a3"><span>Do I need solar panels or an EV tariff?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-b3"><div class="faq-a-inner"><p>No. You can charge using a standard electricity tariff. Solar integration and off-peak scheduling give you additional options when your home setup and tariff support them. Solar monitoring needs to be configured by your installer.</p></div></div></div>
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b4" aria-expanded="false" aria-controls="faq-a4"><span>What can I do in the VCHRGD Home app?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-b4"><div class="faq-a-inner"><p>Schedule and authorise charging, monitor live sessions, review charging history and estimated costs, manage solar settings and access help. The app is free to download and use.</p></div></div></div>
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b5" aria-expanded="false" aria-controls="faq-a5"><span>Do I have to use Frasers Plus?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-b5"><div class="faq-a-inner"><p>No. You can pay in full through Revolut using your debit or credit card, Revolut Pay, Apple Pay or Google Pay, with available methods shown at checkout. Frasers Plus is an optional credit product; approval is subject to status. Choose a 3 month plan for 0% interest, or 6, 12, 24 or 36 months with interest. Review the terms and select your plan in the Frasers Plus app.</p></div></div></div>
- <div class="faq-item"><button type="button" class="faq-q" id="faq-b6" aria-expanded="false" aria-controls="faq-a6"><span>How is my installation confirmed?</span><i class="faq-icon" aria-hidden="true"></i></button><div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-b6"><div class="faq-a-inner"><p>Your pre-check gives an initial estimate. After checkout, complete the digital survey so the team can review your property and confirm the installation scope. Any additional work or revised costs are discussed with you before installation goes ahead.</p></div></div></div>
-</div></section>
-
-<section class="closing"><img src="/home-charging/assets/detail.webp" alt="Seven Pro installed on a brick wall with its cable ready to use" width="1000" height="1500" loading="lazy"><div class="wrap"><p class="eyebrow cyan">HOME CHARGING STARTS HERE</p><h2>Your home.<br><span>Ready to charge.</span></h2><a class="button checkout" href="/">Choose your Seven Pro <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><p class="closing-support">Need help with your installation? <a href="tel:01494370525">Call VCHRGD</a> or <a href="https://www.vchrgd.com/#footer-sections" target="_blank" rel="noopener noreferrer">request a callback</a>.</p></div></section>
-</main>
-<footer class="site-footer" id="site-footer"><div class="wrap">
- <div class="site-footer-grid">
-  <div class="site-footer-brand"><a href="https://www.vchrgd.com/" aria-label="VCHRGD website"><img src="/home-charging/assets/logo.png" alt="VCHRGD" width="190" height="50" loading="lazy"></a><h2>VCHRGD<br>Technologies<br>Ltd.</h2><div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b637fa0340045cd0c936" data-businessunit-id="6470e16cdbc8260df976a0ae" data-theme="light" data-style-height="20px" data-style-width="100%"><a href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">Trustpilot</a></div></div>
-  <nav class="site-footer-links" aria-label="Explore VCHRGD"><h3>Explore</h3><a href="https://fgsupporthelp.zendesk.com/hc/en-gb">Frasers Plus</a><a href="https://www.vchrgd.com/home-charging">Home Charging</a><a href="https://www.vchrgd.com/commercial">Commercial</a><a href="https://www.vchrgd.com/home-charging#installers">Installers</a><a href="https://www.vchrgd.com/partners-news">Partners</a><a href="https://www.vchrgd.com/about">About Us</a><a href="https://www.vchrgd.com/contact">Contact Us</a><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy">Home Privacy Policy</a><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy">Install Privacy Policy</a><a href="https://www.vchrgd.com/privacy-policy">Website Privacy Policy</a></nav>
-  <nav class="site-footer-links" aria-label="VCHRGD products"><h3>Products</h3><a href="https://www.vchrgd.com/seven-pro">Seven Pro</a><a href="https://www.vchrgd.com/twentytwo-pro">TwentyTwo Pro</a><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a><a href="https://www.vchrgd.com/responsible-recycling">WEEE Recycling</a></nav>
-  <nav class="site-footer-links site-footer-social" aria-label="Follow VCHRGD"><h3>Follow us</h3><div class="social-icons"><a href="https://www.instagram.com/vchrgd_technologies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07Zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.28 1.71.32 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.2-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 1.98a2.51 2.51 0 1 0 0 5.02 2.51 2.51 0 0 0 0-5.02Zm5.72-2.16a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"/></svg></a><a href="https://www.youtube.com/@vchrgd" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"/></svg></a><a href="https://www.linkedin.com/company/vchrgd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.76V1.74C24 .78 23.2 0 22.22 0Z"/></svg></a></div></nav>
-  <div class="site-footer-callback"><h3>Let’s talk charging.</h3><p>Have a question about your home charger? Request a call from the VCHRGD team.</p><a class="callback-button" href="https://www.vchrgd.com/#footer-sections" target="_blank" rel="noopener noreferrer">REQUEST CALL <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><a class="footer-phone" href="tel:01494370525">01494 370525</a></div>
- </div>
- <div class="site-footer-company"><p>VCHRGD is a trading name of VCHRGD TECHNOLOGIES LTD, a UK registered company number 13264142</p><p>Registered Address: 1a Eghams Court, Boston Drive, Bourne-End, Buckinghamshire, SL8 5YS</p></div>
- <details class="legal-disclosure"><summary>Regulatory information<span class="legal-plus" aria-hidden="true"></span></summary><p class="site-footer-lender">VCHRGD Technologies Limited (FRN: 1062133), trading as ‘VCHRGD’, is an introducer appointed representative of Frasers Group Financial Services Limited (Registered Company no. 00718151) which is authorised and regulated by the Financial Conduct Authority (FRN 311908) for consumer credit and general insurance and a member of the Finance and Leasing Association. For regulated payment services, Frasers Group Financial Services Limited is a payment agent of Transact Payments Limited, a company authorised and regulated by the Gibraltar Financial Services Commission as an electronic money institution. <strong>Missed payments may affect your credit score and mean your 0% interest plans end.</strong></p></details>
-<details class="site-statistics"><summary>Site statistics</summary><p>We count page views and button interactions to improve this website. These statistics do not use cookies or identify you across visits. We keep daily totals for 90 days and random delivery keys for up to two days to prevent double counting. Your browser privacy signals are respected. You can turn statistics off below; only that preference is remembered on this browser for 180 days.</p><p id="statistics-status"></p><button type="button" id="statistics-toggle">Turn off statistics</button></details>
-</div></footer>
-<div class="mobile-cta"><span>Seven Pro<span>Home charging, made simple.</span></span><a href="/" class="button small checkout">Choose your Seven Pro <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
-</body></html>
+  </body>
+</html>
