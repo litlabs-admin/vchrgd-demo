@@ -1,0 +1,722 @@
+[
+  {
+    "name": "Able Electrical",
+    "address": "Unit 9 Ariane, Tamworth, B79 7XF",
+    "phone": "01827 230999",
+    "postcode": "B79 7XF",
+    "lat": 52.644195,
+    "lng": -1.718229
+  },
+  {
+    "name": "ALCO",
+    "address": "Penn St, Penn Street, Amersham HP7 0PX, UK",
+    "phone": "07788 289849",
+    "postcode": "HP7 0PX",
+    "lat": 51.653133,
+    "lng": -0.667475
+  },
+  {
+    "name": "AMETS Electrical Solutions",
+    "address": "Barons Court Road, Cardiff, CF23 9DG",
+    "phone": "07436 227460",
+    "postcode": "CF23 9DG",
+    "lat": 51.500364,
+    "lng": -3.155101
+  },
+  {
+    "name": "API Electrical Ltd",
+    "address": "Chaddock Ln, Worsley, Manchester M28 1DP, UK",
+    "phone": "01942 870397",
+    "postcode": "M28 1DP",
+    "lat": 53.505101,
+    "lng": -2.438067
+  },
+  {
+    "name": "Ascent Energy Services",
+    "address": "113 Chain House Lane, Whitestake, Preston, PR4 4LB",
+    "phone": "01772 970155",
+    "postcode": "PR4 4LB",
+    "lat": 53.723184,
+    "lng": -2.723486
+  },
+  {
+    "name": "AWD Electrical Services",
+    "address": "15 Wolverhampton Rd, Pelsall, Walsall WS3 4AA, UK",
+    "phone": "07950 775620",
+    "postcode": "WS3 4AA",
+    "lat": 52.633899,
+    "lng": -1.970547
+  },
+  {
+    "name": "AYP Electrical Ltd",
+    "address": "Unit 11-13, Scott Road, Sundon Park, Luton, LU3 3BF",
+    "phone": "01908 108507",
+    "postcode": "LU3 3BF",
+    "lat": 51.917166,
+    "lng": -0.47342
+  },
+  {
+    "name": "Balint Marton",
+    "address": "Bracknell RG12 2GN, UK",
+    "phone": "07477 212259",
+    "postcode": "RG12 2GN",
+    "lat": 51.41554,
+    "lng": -0.737772
+  },
+  {
+    "name": "Barlows EV",
+    "address": "Malpas SY14 8LU, UK",
+    "phone": "01948 822178",
+    "postcode": "SY14 8LU",
+    "lat": 53.038194,
+    "lng": -2.752278
+  },
+  {
+    "name": "Blueco Electrical ltd",
+    "address": "Robin Ct, Kidderminster DY10 4UJ, UK",
+    "phone": "01562 261005",
+    "postcode": "DY10 4UJ",
+    "lat": 52.370307,
+    "lng": -2.234571
+  },
+  {
+    "name": "Bravo Engineers Limited",
+    "address": "Shakespeare St, Southport PR8 5AB, UK",
+    "phone": "07827 017247",
+    "postcode": "PR8 5AB",
+    "lat": 53.640146,
+    "lng": -3.003083
+  },
+  {
+    "name": "Bright Electrical Engineering Ltd",
+    "address": "Unit 3, 3-7 Woodbridge Rd, Leicester LE4 7RH",
+    "phone": "01165 074555",
+    "postcode": "LE4 7RH",
+    "lat": 52.659736,
+    "lng": -1.117074
+  },
+  {
+    "name": "Charge EV North West Ltd",
+    "address": "OL10 1AQ",
+    "phone": "447411306698",
+    "postcode": "OL10 1AQ",
+    "lat": 53.591604,
+    "lng": -2.219445
+  },
+  {
+    "name": "Charge My Car",
+    "address": "1 Queen Square, Bath, BA1 2HA",
+    "phone": "01225 941198",
+    "postcode": "BA1 2HA",
+    "lat": 51.383517,
+    "lng": -2.362767
+  },
+  {
+    "name": "Charge UP UK",
+    "address": "Highfield Road, Cheadle Hulme, Cheshire, SK8 6EN",
+    "phone": "07971 018651",
+    "postcode": "SK8 6EN",
+    "lat": 53.371805,
+    "lng": -2.2019
+  },
+  {
+    "name": "ChargePoint Solutions",
+    "address": "2 Empire Ave, Cwmgwrach, Neath SA11 5ST, UK",
+    "phone": "07795 106893",
+    "postcode": "SA11 5ST",
+    "lat": 51.73655,
+    "lng": -3.637295
+  },
+  {
+    "name": "Clean Wave Energy",
+    "address": "Cross Close, Newquay, Cornwall TR7 3LD",
+    "phone": "07782 163733",
+    "postcode": "TR7 3LD",
+    "lat": 50.419171,
+    "lng": -5.052732
+  },
+  {
+    "name": "Colchester EV Chargers Ltd",
+    "address": "Bromley Rd, Ardleigh, Colchester CO7 7SE, UK",
+    "phone": "01206 591031",
+    "postcode": "CO7 7SE",
+    "lat": 51.897987,
+    "lng": 0.954586
+  },
+  {
+    "name": "DNA Electrical Contractors Ltd",
+    "address": "Camden St, Walsall Wood, Walsall WS9 9BQ, UK",
+    "phone": "07534 975315",
+    "postcode": "WS9 9BQ",
+    "lat": 52.631178,
+    "lng": -1.934085
+  },
+  {
+    "name": "Downlight Electrical Ltd",
+    "address": "16 Northfield Road, Fleet, GU52 6ED",
+    "phone": "01252 265094",
+    "postcode": "GU52 6ED",
+    "lat": 51.266061,
+    "lng": -0.825865
+  },
+  {
+    "name": "Drake Electrical Contractors Ltd",
+    "address": "Unit G, Shakestones Farm, Writtle, Chelmsford CM1 3RL",
+    "phone": "01245 604755",
+    "postcode": "CM1 3RL",
+    "lat": 51.721675,
+    "lng": 0.440111
+  },
+  {
+    "name": "E-Verve Energy Ltd",
+    "address": "Saint Helens WA9 4TR, UK",
+    "phone": "01925 873155",
+    "postcode": "WA9 4TR",
+    "lat": 53.41879,
+    "lng": -2.742264
+  },
+  {
+    "name": "Earth Electrical Southern Ltd",
+    "address": "1 Stanyards Courtyard Stanyards Farm, Chertsey Road, Chobham, Surrey, GU24 8JE",
+    "phone": "01252 856498",
+    "postcode": "GU24 8JE",
+    "lat": 51.354861,
+    "lng": -0.565908
+  },
+  {
+    "name": "Ecomotive Renewables",
+    "address": "6 Rosemarkie Grove, Newarthill, Motherwell, ML1 5UQ",
+    "phone": "01416 738159",
+    "postcode": "ML1 5UQ",
+    "lat": 55.819094,
+    "lng": -3.9542
+  },
+  {
+    "name": "Elecology",
+    "address": "Woolgrove Rd, Hitchin SG4 0AT, UK",
+    "phone": "07595 718112",
+    "postcode": "SG4 0AT",
+    "lat": 51.957515,
+    "lng": -0.258621
+  },
+  {
+    "name": "Electricallaws",
+    "address": "Crossgate Moor Gardens, Crossgate Moor, Durham DH1 4HT, UK",
+    "phone": "07999 115215",
+    "postcode": "DH1 4HT",
+    "lat": 54.779787,
+    "lng": -1.598643
+  },
+  {
+    "name": "ElectroFix Group ltd",
+    "address": "Unit 8 Prestwood Court, Leacroft Road, Birchwood, Warrington, WA3 6SB",
+    "phone": "03335 770079",
+    "postcode": "WA3 6SB",
+    "lat": 53.433883,
+    "lng": -2.506528
+  },
+  {
+    "name": "ElectroPoint UK",
+    "address": "97 Main Street, Uddingston, Glasgow, G71 7EW",
+    "phone": "01416 735738",
+    "postcode": "G71 7EW",
+    "lat": 55.820562,
+    "lng": -4.08319
+  },
+  {
+    "name": "Electrum Engineering Ltd",
+    "address": "WA3 2RW",
+    "phone": "447803161261",
+    "postcode": "WA3 2RW",
+    "lat": 53.472144,
+    "lng": -2.583908
+  },
+  {
+    "name": "Elex UK Ltd",
+    "address": "490 Green Lanes, London, N13 5PA",
+    "phone": "08000 834492",
+    "postcode": "N13 5PA",
+    "lat": 51.62331,
+    "lng": -0.103948
+  },
+  {
+    "name": "Essex Vehicle Charging",
+    "address": "50A London Rd, Colchester CO3 4DF, UK",
+    "phone": "07397 893137",
+    "postcode": "CO3 4DF",
+    "lat": 51.889631,
+    "lng": 0.853746
+  },
+  {
+    "name": "EV Charging Systems",
+    "address": "Esk House, Hawkswood Road, Downham, CM11 1JZ",
+    "phone": "01268 710459",
+    "postcode": "CM11 1JZ",
+    "lat": 51.644081,
+    "lng": 0.501654
+  },
+  {
+    "name": "EV Heroes",
+    "address": "4 East Terrace Business Park, Euxton, Chorley, PR7 6TB",
+    "phone": "01257 826604",
+    "postcode": "PR7 6TB",
+    "lat": 53.672199,
+    "lng": -2.666742
+  },
+  {
+    "name": "EV Made Easy",
+    "address": "61 Richmond Road, Ipswich, Suffolk IP1 4DW",
+    "phone": "01245 526275",
+    "postcode": "IP1 4DW",
+    "lat": 52.067112,
+    "lng": 1.13489
+  },
+  {
+    "name": "EV Wales",
+    "address": "Llanmorlais, Swansea SA4 3UQ, UK",
+    "phone": "03301 225273",
+    "postcode": "SA4 3UQ",
+    "lat": 51.619901,
+    "lng": -4.132077
+  },
+  {
+    "name": "EVC Electrical Installations",
+    "address": "Hall Place Crescent, Dartford, Bexley DA5 1PR",
+    "phone": "01322 761101",
+    "postcode": "DA5 1PR",
+    "lat": 51.451201,
+    "lng": 0.164421
+  },
+  {
+    "name": "EVC Solutions",
+    "address": "Cannock Rd, Brocton, Stafford ST17 0SU, UK",
+    "phone": "03300 100463",
+    "postcode": "ST17 0SU",
+    "lat": 52.772424,
+    "lng": -2.064283
+  },
+  {
+    "name": "EVCS - Electric Vehicle Charging Solutions",
+    "address": "Sunderland SR5 3TX, UK",
+    "phone": "01915 920808",
+    "postcode": "SR5 3TX",
+    "lat": 54.921785,
+    "lng": -1.413723
+  },
+  {
+    "name": "EVelec",
+    "address": "The Brow, Brighton and Hove, Brighton BN2 6LP, UK",
+    "phone": "01273 983951",
+    "postcode": "BN2 6LP",
+    "lat": 50.835432,
+    "lng": -0.07223
+  },
+  {
+    "name": "First Light Electrical Services",
+    "address": "Boston Dr, Wooburn Green, Bourne End SL8 5DH",
+    "phone": "01753 290141",
+    "postcode": "SL8 5DH",
+    "lat": 51.57339,
+    "lng": -0.70981
+  },
+  {
+    "name": "Flash Electrics",
+    "address": "Prestwood, Great Missenden HP16 0QL, UK",
+    "phone": "07475 957523",
+    "postcode": "HP16 0QL",
+    "lat": 51.695452,
+    "lng": -0.730257
+  },
+  {
+    "name": "Flix Electrics Limited",
+    "address": "Hurst Avenue, Camberley, GU17 9EZ",
+    "phone": "07392 294453",
+    "postcode": "GU17 9EZ",
+    "lat": 51.305956,
+    "lng": -0.793515
+  },
+  {
+    "name": "Fusion Electrical and Civils",
+    "address": "81d Main St, Calderbank, Airdrie, ML6 9SG",
+    "phone": "01236 767665",
+    "postcode": "ML6 9SG",
+    "lat": 55.844965,
+    "lng": -3.965608
+  },
+  {
+    "name": "Go Electric",
+    "address": "Oakhill Road, Dronfield S18 2EF, UK",
+    "phone": "03031 004101",
+    "postcode": "S18 2EF",
+    "lat": 53.30831,
+    "lng": -1.453534
+  },
+  {
+    "name": "Greatest on Earth Ltd",
+    "address": "Court Road, Bedlington, Northumberland, NE22 7LD",
+    "phone": "07747 618867",
+    "postcode": "NE22 7LD",
+    "lat": 55.135112,
+    "lng": -1.596097
+  },
+  {
+    "name": "Green Plug UK",
+    "address": "1 Fennels Lodge, St Peters Close, High Wycombe, HP11 1JT",
+    "phone": "01494 840607",
+    "postcode": "HP11 1JT",
+    "lat": 51.606032,
+    "lng": -0.702646
+  },
+  {
+    "name": "Hall Weir Electrical Ltd",
+    "address": "Skeldyke Road, Kirton, Boston PE20 1LP",
+    "phone": "03335 778558",
+    "postcode": "PE20 1LP",
+    "lat": 52.92725,
+    "lng": -0.051633
+  },
+  {
+    "name": "HDS Solar",
+    "address": "Beechtree Ave, Marlow SL7 3NH, UK",
+    "phone": "01628 302203",
+    "postcode": "SL7 3NH",
+    "lat": 51.588266,
+    "lng": -0.779037
+  },
+  {
+    "name": "Impra Charge",
+    "address": "28-29 Maxwell Road, Peterborough, PE2 7JE",
+    "phone": "03333 355740",
+    "postcode": "PE2 7JE",
+    "lat": 52.557417,
+    "lng": -0.260347
+  },
+  {
+    "name": "JBRaine Electrical",
+    "address": "9 St Marks Drive, Wellington, Telford, TF1 3GA",
+    "phone": "07783 572892",
+    "postcode": "TF1 3GA",
+    "lat": 52.712106,
+    "lng": -2.519319
+  },
+  {
+    "name": "JEC Electrical",
+    "address": "29 Broad Leys Rd, Barnwood, Gloucester GL4 3YW, UK",
+    "phone": "01452 764333",
+    "postcode": "GL4 3YW",
+    "lat": 51.855079,
+    "lng": -2.205847
+  },
+  {
+    "name": "L J M Electrical Norwich",
+    "address": "Mentmore Way, Poringland, Norwich NR14 7XN, UK",
+    "phone": "01603 381015",
+    "postcode": "NR14 7XN",
+    "lat": 52.564235,
+    "lng": 1.343105
+  },
+  {
+    "name": "Leicestershire Electrical Services",
+    "address": "22 Chesterfield Way, Barwell, LE9 8BH",
+    "phone": "07809 479713",
+    "postcode": "LE9 8BH",
+    "lat": 52.571437,
+    "lng": -1.333222
+  },
+  {
+    "name": "Lighthouse Electrical & Renewables Ltd",
+    "address": "11 Warren House Road, Wokingham RG40 5PN",
+    "phone": "07436 003624",
+    "postcode": "RG40 5PN",
+    "lat": 51.421259,
+    "lng": -0.824165
+  },
+  {
+    "name": "Lyons Electrical",
+    "address": "7 Deacon Trading Estate, Knight Road, Strood, Kent ME2 2AU",
+    "phone": "01634 290000",
+    "postcode": "ME2 2AU",
+    "lat": 51.393232,
+    "lng": 0.491151
+  },
+  {
+    "name": "MAISUM Renewable Energy Ltd",
+    "address": "Unit 4, Borough Court, Grammar School Lane, Halesowen B63 3SW, UK",
+    "phone": "01212 969512",
+    "postcode": "B63 3SW",
+    "lat": 52.452222,
+    "lng": -2.052968
+  },
+  {
+    "name": "Mango EV Ltd",
+    "address": "Corby Enterprise Centre, London Road, Corby, NN17 5EU",
+    "phone": "01536 560500",
+    "postcode": "NN17 5EU",
+    "lat": 52.5059,
+    "lng": -0.641741
+  },
+  {
+    "name": "McNally EV",
+    "address": "Acres House, Berry Lane, Keighley, BD21 1DN",
+    "phone": "01535 444101",
+    "postcode": "BD21 1DN",
+    "lat": 53.861288,
+    "lng": -1.913285
+  },
+  {
+    "name": "MMC Electrical Services",
+    "address": "135 Skippetts Gardens, Basingstoke RG21 3FB",
+    "phone": "07861 801624",
+    "postcode": "RG21 3FB",
+    "lat": 51.250875,
+    "lng": -1.082735
+  },
+  {
+    "name": "MME Electrical Service Ltd",
+    "address": "Seedhill Rd, Paisley PA1 1QU, UK",
+    "phone": "01415 732298",
+    "postcode": "PA1 1QU",
+    "lat": 55.843066,
+    "lng": -4.401558
+  },
+  {
+    "name": "MOVR Solar",
+    "address": "5, The Parade, Oldfields Road, Sutton SM1 2NA",
+    "phone": "02030 111111",
+    "postcode": "SM1 2NA",
+    "lat": 51.371969,
+    "lng": -0.208286
+  },
+  {
+    "name": "Mr Charger",
+    "address": "Main Rd, Sidcup DA14 6PD, UK",
+    "phone": "08006 696159",
+    "postcode": "DA14 6PD",
+    "lat": 51.42804,
+    "lng": 0.093339
+  },
+  {
+    "name": "Mulcahy EV",
+    "address": "25 Printshop Ln, Darwen BB3 2QF, UK",
+    "phone": "01254 497918",
+    "postcode": "BB3 2QF",
+    "lat": 53.681209,
+    "lng": -2.466538
+  },
+  {
+    "name": "NDEL Ltd",
+    "address": "Wooburn Industrial Park, Unit 24 Thomas Rd, Wooburn Green, High Wycombe HP10 0PE",
+    "phone": "01628 524057",
+    "postcode": "HP10 0PE",
+    "lat": 51.582713,
+    "lng": -0.691836
+  },
+  {
+    "name": "NDH Electrical",
+    "address": "Wexford Court, Oldfield Rd, Maidenhead SL6 1TD, UK",
+    "phone": "07879 842413",
+    "postcode": "SL6 1TD",
+    "lat": 51.522506,
+    "lng": -0.707602
+  },
+  {
+    "name": "Now EV",
+    "address": "46 Harris Meadow, Leighton Buzzard, LU7 3SH",
+    "phone": "01296 841108",
+    "postcode": "LU7 3SH",
+    "lat": 51.932499,
+    "lng": -0.639955
+  },
+  {
+    "name": "Oliver Smith Electrical",
+    "address": "Hall Croft, Skipton BD23 1PG, UK",
+    "phone": "07508 755123",
+    "postcode": "BD23 1PG",
+    "lat": 53.960524,
+    "lng": -2.024582
+  },
+  {
+    "name": "Onyx Electrical",
+    "address": "16 Second Street Crookhall, Consett, County Durham DH8 7LU",
+    "phone": "07771 542886",
+    "postcode": "DH8 7LU",
+    "lat": 54.850586,
+    "lng": -1.817602
+  },
+  {
+    "name": "P4 Solar",
+    "address": "Unit 9 & 11, Newbridge Industrial Estate, Pitt Street, Keighley BD21 4PQ",
+    "phone": "03333 446369",
+    "postcode": "BD21 4PQ",
+    "lat": 53.86702,
+    "lng": -1.898416
+  },
+  {
+    "name": "Plug it in Group Ltd",
+    "address": "Unit 6 Briar Rhydding Industrial Estate, Otley Road, Baildon, Shipley, BD17 7JW",
+    "phone": "01274 594665",
+    "postcode": "BD17 7JW",
+    "lat": 53.844656,
+    "lng": -1.753703
+  },
+  {
+    "name": "Powersurge",
+    "address": "Unit 16, West Calder Business Centre, West Calder, West Lothian, EH55 8DZ",
+    "phone": "07359 723901",
+    "postcode": "EH55 8DZ",
+    "lat": 55.849419,
+    "lng": -3.574279
+  },
+  {
+    "name": "Pretium EV",
+    "address": "10a High St, Chislehurst BR7 5AN, UK",
+    "phone": "03301 334060",
+    "postcode": "BR7 5AN",
+    "lat": 51.418186,
+    "lng": 0.067877
+  },
+  {
+    "name": "Quality Heating Services Limited",
+    "address": "Unit 2, Marlborough Trading Estate, West Wycombe Road, High Wycombe, HP11 2LB",
+    "phone": "447785630380",
+    "postcode": "HP11 2LB",
+    "lat": 51.633931,
+    "lng": -0.763202
+  },
+  {
+    "name": "Quickfit Car Chargers",
+    "address": "Unit 5 Newhall Works, Newhall Road, Sheffield, S9 2QL",
+    "phone": "01144 372712",
+    "postcode": "S9 2QL",
+    "lat": 53.397533,
+    "lng": -1.432541
+  },
+  {
+    "name": "Qvanta",
+    "address": "Wulvern House, Electra Way, Crewe, Cheshire, CW1 6GW",
+    "phone": "0333 049 4459",
+    "postcode": "CW1 6GW",
+    "lat": 53.091781,
+    "lng": -2.417193
+  },
+  {
+    "name": "Qwinteq Solutions Ltd",
+    "address": "65-67 Church St, Sutton-in-Ashfield NG17 1FE, UK",
+    "phone": "01628 477839",
+    "postcode": "NG17 1FE",
+    "lat": 53.123683,
+    "lng": -1.270145
+  },
+  {
+    "name": "Riviera Electrical",
+    "address": "176 Union St, Torquay TQ2 5QP, UK",
+    "phone": "01803 678101",
+    "postcode": "TQ2 5QP",
+    "lat": 50.468923,
+    "lng": -3.533892
+  },
+  {
+    "name": "RMD Electrical & Renewables",
+    "address": "7 Maylands Road, Bedhampton, Havant, PO9 3NP",
+    "phone": "02392 780885",
+    "postcode": "PO9 3NP",
+    "lat": 50.855028,
+    "lng": -1.007851
+  },
+  {
+    "name": "Safe-Electric (Nationwide) Ltd",
+    "address": "22 Drayhorse Rd, Ramsey, Huntingdon PE26 1SD",
+    "phone": "01487 813600",
+    "postcode": "PE26 1SD",
+    "lat": 52.442091,
+    "lng": -0.116105
+  },
+  {
+    "name": "Selfcharge Ltd",
+    "address": "Unit 29 Highcroft Industrial Estate, Enterprise Road, Waterlooville, PO8 0BT",
+    "phone": "01225 683533",
+    "postcode": "PO8 0BT",
+    "lat": 50.918455,
+    "lng": -0.999347
+  },
+  {
+    "name": "Severn Sparks",
+    "address": "47 Orchard Way, Churchdown, Gloucester GL3 2AP, UK",
+    "phone": "01452 447030",
+    "postcode": "GL3 2AP",
+    "lat": 51.889252,
+    "lng": -2.179746
+  },
+  {
+    "name": "Smart Home Charge",
+    "address": "36 Thorpe Wood Business Park, Thorpe Wood, Peterborough, PE3 6SR",
+    "phone": "03333 449234",
+    "postcode": "PE3 6SR",
+    "lat": 52.569946,
+    "lng": -0.296549
+  },
+  {
+    "name": "Smarter Utility ltd",
+    "address": "Hamilton ML3 9AZ, UK",
+    "phone": "01698 294444",
+    "postcode": "ML3 9AZ",
+    "lat": 55.78005,
+    "lng": -4.06068
+  },
+  {
+    "name": "South Coast EV",
+    "address": "Aerodrome Studios, 2-8 Airfield Way, Christchurch BH23 3TS, UK",
+    "phone": "07714 667471",
+    "postcode": "BH23 3TS",
+    "lat": 50.736548,
+    "lng": -1.748851
+  },
+  {
+    "name": "Swytch",
+    "address": "Carisbrooke Ave, Fareham PO14 3PS, UK",
+    "phone": "07590 256841",
+    "postcode": "PO14 3PS",
+    "lat": 50.821095,
+    "lng": -1.230155
+  },
+  {
+    "name": "Three One Energy Ltd",
+    "address": "Catlin Crescent, Shepperton, Surrey TW17 8EU",
+    "phone": "03332 726512",
+    "postcode": "TW17 8EU",
+    "lat": 51.397881,
+    "lng": -0.43993
+  },
+  {
+    "name": "Veselin Andreev",
+    "address": "44 Clapton Approach, Wooburn Green, High Wycombe, HP10 0DP",
+    "phone": "07981 153051",
+    "postcode": "HP10 0DP",
+    "lat": 51.600125,
+    "lng": -0.689718
+  },
+  {
+    "name": "Virtus Energy",
+    "address": "Unit 1, Longfield Farm, Nash Ln, Keston BR2 6AP, UK",
+    "phone": "02038 711000",
+    "postcode": "BR2 6AP",
+    "lat": 51.357368,
+    "lng": 0.01527
+  },
+  {
+    "name": "We Power Your Car",
+    "address": "Airedale House, Dowley Gap Lane, Bingley, BD16 1WA",
+    "phone": "03301 796868",
+    "postcode": "BD16 1WA",
+    "lat": 53.840734,
+    "lng": -1.823055
+  },
+  {
+    "name": "Weev",
+    "address": "8 Edgewater Rd, Belfast BT3 9JQ",
+    "phone": "02890 313031",
+    "postcode": "BT3 9JQ",
+    "lat": 54.631956,
+    "lng": -5.893791
+  }
+]
