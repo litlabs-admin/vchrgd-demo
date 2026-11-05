@@ -50,6 +50,10 @@ const nextConfig: NextConfig = {
       // links like /home-charging#payment resolve instead of 404ing.
       { source: "/home-charging", destination: "/home-charging/index.html" },
       { source: "/home-charging/", destination: "/home-charging/index.html" },
+      // Rebuilt VCHRGD homepage, built on the same design system as the
+      // home-charging page. Clean URL -> static file.
+      { source: "/home-page", destination: "/home-page/index.html" },
+      { source: "/home-page/", destination: "/home-page/index.html" },
     ];
   },
   async headers() {

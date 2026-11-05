@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="VCHRGD designs smart, reliable EV chargers for homes, workplaces and fleets. Get your home charger installed from £895, with nationwide installation and Frasers Plus available at checkout."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://payments.vchrgd.app/home-page" />
+    <meta name="theme-color" content="#101212" />
+    <title>VCHRGD | Smart EV charging, beautifully simple.</title>
+    <link
+      rel="icon"
+      href="/home-charging/assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preload" as="image" href="/home-charging/assets/hero.webp" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/home-page/inter-latin.woff2"
+      crossorigin
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="/home-charging/styles.css" />
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/MarkerCluster.css" />
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="/home-page/home-page.css" />
+    <script src="/home-page/home-page.js" defer></script>
+    <script src="/home-page/vendor/leaflet/leaflet.js" defer></script>
+    <script src="/home-page/vendor/leaflet/markercluster.js" defer></script>
+    <script src="/home-page/installers.js" defer></script>
+    <script
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- ===================== Header ===================== -->
+    <header class="header">
+      <a class="brand" href="/home-page" aria-label="VCHRGD home"
+        ><img
+          src="/home-charging/assets/logo.png"
+          alt="VCHRGD"
+          width="146"
+          height="32"
+      /></a>
+      <nav aria-label="Main navigation" id="navigation">
+        <a href="#home-charging">Home Charging</a
+        ><a href="#products">Products</a><a href="#commercial">Commercial</a
+        ><a href="#explore">Partners</a
+        ><a href="https://www.vchrgd.com/about">About</a>
+      </nav>
+      <a class="button small checkout" href="/home-charging"
+        >Get your home charger
+        <span aria-hidden="true"
+          ><svg
+            class="arrow-icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" /></svg></span
+      ></a>
+      <button
+        class="menu"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ===================== Brand hero ===================== -->
+      <section class="hero home-hero" aria-labelledby="hero-heading">
+        <video
+          class="hero-photo hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="/home-charging/assets/hero.webp"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="/home-page/seven-pro-short.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-copy wrap">
+          <div class="hero-rating" aria-label="VCHRGD customer rating">
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="dark"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See our reviews on Trustpilot</a
+              >
+            </div>
+          </div>
+          <h1 id="hero-heading">
+            Smart EV charging.<br /><span>Beautifully simple.</span>
+          </h1>
+          <p class="hero-intro">
+            Premium home and commercial EV chargers, designed and delivered by
+            VCHRGD. Smart, reliable and backed by nationwide installation and
+            expert support.
+          </p>
+          <div class="hero-actions">
+            <a href="/home-charging" class="button checkout"
+              >Get your home charger
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="button button-ghost" href="#products"
+              >Explore the range
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 4v16m-6-6 6 6 6-6" /></svg></span
+            ></a>
+          </div>
+          <p class="hero-note">
+            Seven Pro installed from £895. Standard installation included.
+            Subject to survey.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== Proof facts ===================== -->
+      <div class="facts home-facts wrap" aria-label="Why drivers choose VCHRGD">
+        <div>
+          <strong
+            ><span data-count="4.7" data-decimals="1">4.7</span
+            ><span> / 5</span></strong
+          ><span>Rated Excellent on Trustpilot</span>
+        </div>
+        <div>
+          <strong>UK<span> wide</span></strong
+          ><span>Nationwide approved installers</span>
+        </div>
+        <div>
+          <strong>3<span> years</span></strong
+          ><span>Charger warranty as standard</span>
+        </div>
+      </div>
+
+      <!-- ===================== Product range ===================== -->
+      <section id="products" class="section" aria-labelledby="products-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">THE VCHRGD RANGE</p>
+            <h2 id="products-heading">One charger for every driveway, workplace and site.</h2>
+            <p>
+              From smart home charging to high-traffic commercial sites, every
+              VCHRGD charger is built on the same promise: simple, reliable and
+              beautifully designed.
+            </p>
+          </div>
+
+          <div class="range-grid">
+            <!-- Seven Pro -->
+            <article class="range-card" data-reveal style="--d: 0s">
+              <div class="range-media">
+                <span class="range-tag"><span>Home charging</span></span>
+                <img
+                  src="/home-charging/assets/tethered.webp"
+                  alt="VCHRGD Seven Pro home charger"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                />
+              </div>
+              <div class="range-body">
+                <h3>Seven Pro.</h3>
+                <p class="range-kw">7.4 kW &middot; Home charging</p>
+                <p>
+                  Reliable performance, smart scheduling and the free VCHRGD
+                  Home app to support your everyday charging.
+                </p>
+                <div class="range-actions">
+                  <a class="button small checkout" href="/home-charging"
+                    >Get your home charger
+                    <svg
+                      class="arrow-icon"
+                      viewBox="0 0 24 24"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M6 18 18 6M6 6h12v12" /></svg
+                  ></a>
+                  <a class="text-link" href="https://www.vchrgd.com/seven-pro"
+                    >Discover Seven Pro <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- TwentyTwo Pro (placeholder image) -->
+            <article class="range-card" data-reveal style="--d: 0.1s">
+              <div class="range-media">
+                <span class="range-tag"><span class="alt">Workplace</span></span>
+                <img
+                  src="/home-charging/assets/untethered.webp"
+                  alt="VCHRGD TwentyTwo Pro workplace charger"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                />
+              </div>
+              <div class="range-body">
+                <h3>TwentyTwo Pro.</h3>
+                <p class="range-kw">22 kW &middot; Workplace charging</p>
+                <p>
+                  Powerful 22kW single-socket charging, perfect for workplace
+                  and fleet environments.
+                </p>
+                <div class="range-actions">
+                  <a
+                    class="text-link"
+                    href="https://www.vchrgd.com/twentytwo-pro"
+                    >Discover TwentyTwo Pro
+                    <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- TwentyTwo Dual (placeholder image) -->
+            <article class="range-card" data-reveal style="--d: 0.2s">
+              <div class="range-media is-placeholder">
+                <span class="range-tag"
+                  ><span class="alt">Commercial</span></span
+                >
+                <div class="range-ph">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="m21 15-5-5L5 21" />
+                  </svg>
+                  <span>Product image coming soon</span>
+                </div>
+              </div>
+              <div class="range-body">
+                <h3>TwentyTwo Dual.</h3>
+                <p class="range-kw">22 kW x2 &middot; Public &amp; commercial</p>
+                <p>
+                  Powerful, reliable dual-socket 22kW charging in a single unit,
+                  ideal for high-traffic commercial and fleet sites.
+                </p>
+                <div class="range-actions">
+                  <a
+                    class="text-link"
+                    href="https://www.vchrgd.com/twentytwo-dual1"
+                    >Discover TwentyTwo Dual
+                    <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Frasers Plus payment callout ===================== -->
+      <section class="fp-banner-section" aria-label="Frasers Plus payment plans">
+        <div class="wrap">
+          <div class="fp-banner" data-reveal>
+            <div class="fp-banner-copy">
+              <h2 class="fp-banner-title">
+                0% interest for 3 months<br />when you choose a 3 month plan
+              </h2>
+              <p class="fp-banner-apr">
+                Representative 29.9% APR variable for longer terms
+              </p>
+              <p class="fp-banner-fine">
+                Credit subject to status. Missed payments may affect your credit
+                score and mean your 0% interest plans end. Terms apply.
+              </p>
+            </div>
+            <div class="fp-banner-logo">
+              <img
+                src="/home-charging/assets/frasersplus.svg"
+                alt="Frasers Plus"
+                width="300"
+                height="52"
+              />
+            </div>
+            <a
+              class="fp-banner-btn"
+              href="https://frasersplus.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Residential home-charging route ===================== -->
+      <section
+        id="home-charging"
+        class="section home-route theme-light"
+        aria-labelledby="route-heading"
+      >
+        <div class="wrap">
+          <div class="home-route-grid">
+            <div class="home-route-copy" data-reveal>
+              <p class="eyebrow cyan">HOME CHARGING</p>
+              <h2 id="route-heading">
+                Charging at home,<br /><span>made simple.</span>
+              </h2>
+              <p>
+                Meet the Seven Pro. Smart scheduling, solar charging and the
+                free VCHRGD Home app, with installed pricing shown up front and
+                flexible ways to pay.
+              </p>
+              <ul class="home-route-list">
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Clear installed pricing, from £895
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Standard installation and survey included
+                </li>
+                <li>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Pay in full or spread the cost with Frasers Plus
+                </li>
+              </ul>
+              <div class="home-route-actions">
+                <a class="button checkout" href="/home-charging"
+                  >Get your home charger
+                  <svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg
+                ></a>
+              </div>
+            </div>
+            <figure class="home-route-figure" data-reveal style="--d: 0.1s">
+              <img
+                src="/home-charging/assets/home.webp"
+                alt="Driver plugging in an electric car at home with the Seven Pro charger"
+                width="700"
+                height="1000"
+                loading="lazy"
+              />
+              <figcaption>
+                Seven Pro
+                <span class="price-chip">Installed from £895</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Values ===================== -->
+      <section
+        class="section theme-light"
+        aria-labelledby="values-heading"
+      >
+        <div class="wrap">
+          <div class="home-values-grid">
+            <div class="home-values-copy" data-reveal>
+              <p class="eyebrow cyan">POWERING THE FUTURE, SIMPLY</p>
+              <h2 id="values-heading">
+                Simplicity.<span class="muted">Sustainability.</span
+                ><span class="muted">Support.</span>
+              </h2>
+            </div>
+            <div class="home-values-points" data-reveal style="--d: 0.1s">
+              <article>
+                <h3>Simplicity</h3>
+                <p>
+                  Beautifully designed chargers with intuitive apps and a
+                  buying journey that shows the installed price up front.
+                </p>
+              </article>
+              <article>
+                <h3>Sustainability</h3>
+                <p>
+                  Smart, solar-ready charging that helps you use cleaner,
+                  cheaper energy — at home, at work and across your fleet.
+                </p>
+              </article>
+              <article>
+                <h3>Support</h3>
+                <p>
+                  Nationwide installation, warranty coverage and a UK support
+                  team, backing you every step of the way.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Installer map (placeholder) ===================== -->
+      <section
+        id="installers"
+        class="section"
+        aria-labelledby="installers-heading"
+      >
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">NATIONWIDE INSTALLATION</p>
+            <h2 id="installers-heading">We believe in local.</h2>
+            <p>
+              Find an approved installer near you who will go the extra mile, so
+              you don&rsquo;t have to.
+            </p>
+          </div>
+          <div class="installer-finder" data-reveal>
+            <div class="installer-panel">
+              <div class="installer-search">
+                <svg
+                  class="installer-search-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input
+                  id="installer-search"
+                  type="search"
+                  autocomplete="off"
+                  placeholder="Search by name, town or postcode"
+                  aria-label="Search installers by name, town or postcode"
+                />
+              </div>
+              <p class="installer-count" id="installer-count" aria-live="polite"></p>
+              <ul class="installer-list" id="installer-list"></ul>
+            </div>
+            <div class="installer-map-wrap">
+              <div id="installer-map" role="application" aria-label="Map of VCHRGD approved installers"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== EV tariff calculator (placeholder) ===================== -->
+      <section class="section" aria-labelledby="calculator-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">EV TARIFF CALCULATOR</p>
+            <h2 id="calculator-heading">See what you could save at home.</h2>
+            <p>
+              A quick, easy calculator to see how much you could save by
+              charging at home on a smart tariff.
+            </p>
+          </div>
+          <div class="calc" data-reveal>
+            <div class="calc-inputs">
+              <div class="calc-field">
+                <div class="calc-field-top">
+                  <label for="calc-battery">Battery capacity</label>
+                  <output id="calc-battery-out" for="calc-battery">66 kWh</output>
+                </div>
+                <input id="calc-battery" type="range" min="1" max="150" step="1" value="66" />
+                <div class="calc-range-labels"><span>1 kWh</span><span>150 kWh</span></div>
+              </div>
+              <div class="calc-field">
+                <div class="calc-field-top">
+                  <label for="calc-miles">Average miles driven / year</label>
+                  <output id="calc-miles-out" for="calc-miles">8,000 miles</output>
+                </div>
+                <input id="calc-miles" type="range" min="1000" max="30000" step="500" value="8000" />
+                <div class="calc-range-labels"><span>1,000</span><span>30,000</span></div>
+              </div>
+              <div class="calc-field">
+                <div class="calc-field-top">
+                  <label for="calc-tariff">EV tariff</label>
+                </div>
+                <select id="calc-tariff">
+                  <option value="6.5" selected>So Energy So EV</option>
+                  <option value="7">Ovo Charge Anytime</option>
+                  <option value="6.7">EoN Next Drive</option>
+                  <option value="8">EDF GoElectric</option>
+                  <option value="8.9">British Gas Electric Driver v16</option>
+                  <option value="6.5">Scottish Power EV Optimise</option>
+                  <option value="7">Intelligent Octopus Go</option>
+                  <option value="8.5">Octopus Go</option>
+                  <option value="6.5">Scottish Power EV Saver</option>
+                </select>
+                <p class="calc-hint">Choose your off-peak EV tariff.</p>
+              </div>
+              <div class="calc-field">
+                <div class="calc-field-top">
+                  <label for="calc-eff">Vehicle miles per kWh</label>
+                  <output id="calc-eff-out" for="calc-eff">3.5</output>
+                </div>
+                <input id="calc-eff" type="range" min="1" max="5.5" step="0.1" value="3.5" />
+                <div class="calc-range-labels"><span>1</span><span>5.5</span></div>
+              </div>
+              <p class="calc-note">
+                Rates are indicative only and do not constitute financial
+                advice. VCHRGD is not affiliated with the tariffs listed.
+              </p>
+            </div>
+            <div class="calc-result" aria-live="polite">
+              <div class="calc-stat">
+                <span class="calc-stat-label">Average hours charging per week</span>
+                <strong id="calc-hours" class="ck-num">6.3 hours</strong>
+                <span class="calc-stat-sub">Time a week to meet your annual mileage on a 7kW home charger.</span>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-stat">
+                <span class="calc-stat-label">Weekly charging cost</span>
+                <strong id="calc-weekly" class="ck-num">£2.86</strong>
+                <span class="calc-stat-sub">Estimated off-peak charging cost per week.</span>
+              </div>
+              <div class="calc-divider"></div>
+              <div class="calc-stat calc-highlight">
+                <span class="calc-stat-label">Potential annual saving</span>
+                <strong id="calc-savings" class="ck-num">£439.37</strong>
+                <span class="calc-stat-sub">Versus a single rate of 25.72p/kWh (source USwitch 08/2025).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Routes grid ===================== -->
+      <section id="explore" class="section theme-light" aria-labelledby="explore-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">EXPLORE VCHRGD</p>
+            <h2 id="explore-heading">Wherever you&rsquo;re charging, there&rsquo;s a route for you.</h2>
+            <p>
+              Residential drivers, businesses, installers and partners — find
+              the right path through VCHRGD.
+            </p>
+          </div>
+          <div class="route-grid">
+            <a
+              id="commercial"
+              class="route-card"
+              href="https://www.vchrgd.com/commercial"
+              data-reveal
+              style="--d: 0s"
+            >
+              <p class="eyebrow">FOR BUSINESS</p>
+              <h3>Commercial.</h3>
+              <p>Scalable workplace, fleet and public charging.</p>
+              <span class="text-link"
+                >Discover 22
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg
+              ></span>
+            </a>
+
+            <a
+              class="route-card"
+              href="https://www.vchrgd.com/home-charging#installers"
+              data-reveal
+              style="--d: 0.08s"
+            >
+              <p class="eyebrow">NATIONWIDE</p>
+              <h3>Installers.</h3>
+              <p>Approved local installers across the UK.</p>
+              <span class="text-link"
+                >Find an installer
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg
+              ></span>
+            </a>
+
+            <a
+              class="route-card"
+              href="https://www.vchrgd.com/partners-news"
+              data-reveal
+              style="--d: 0.16s"
+            >
+              <p class="eyebrow">WORK WITH US</p>
+              <h3>Partners.</h3>
+              <p>Partner with VCHRGD and read the latest news.</p>
+              <span class="text-link"
+                >Our partners
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg
+              ></span>
+            </a>
+
+            <a
+              class="route-card"
+              href="https://www.vchrgd.com/about"
+              data-reveal
+              style="--d: 0.24s"
+            >
+              <p class="eyebrow">THE COMPANY</p>
+              <h3>About &amp; support.</h3>
+              <p>Who we are, and how to get help when you need it.</p>
+              <span class="text-link"
+                >Let us help
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg
+              ></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Home App ===================== -->
+      <section class="section home-app" aria-labelledby="app-heading">
+        <div class="wrap">
+          <div class="home-app-grid">
+            <div class="home-app-copy" data-reveal>
+              <p class="eyebrow cyan">THE VCHRGD HOME APP</p>
+              <h2 id="app-heading">
+                Power in your pocket.<br /><span>Free with every charger.</span>
+              </h2>
+              <p>
+                Schedule charging around your tariff, track your energy use and
+                control your charger from anywhere &mdash; all from the free
+                VCHRGD Home app.
+              </p>
+              <ul class="home-app-points">
+                <li>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Smart scheduling around your off-peak window
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Live charging stats and energy monitoring
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" /></svg
+                  >Control and secure your charger from anywhere
+                </li>
+              </ul>
+              <div class="home-app-badges">
+                <a
+                  class="store-badge"
+                  href="https://apps.apple.com/gb/app/vchrgd-home/id6446091845"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Download on the App Store"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 1.43c.09 1-.31 1.98-.95 2.69-.68.76-1.79 1.34-2.86 1.26-.11-.98.37-2 .98-2.65.69-.74 1.87-1.29 2.83-1.3ZM19.6 17.3c-.52 1.2-.77 1.73-1.44 2.79-.93 1.48-2.25 3.33-3.88 3.34-1.45.02-1.82-.94-3.78-.93-1.96.01-2.37.95-3.82.94-1.63-.01-2.88-1.67-3.81-3.15C.26 16.1-.02 11.3 1.78 8.74c1.03-1.49 2.65-2.37 4.17-2.37 1.55 0 2.53.95 3.81.95 1.24 0 2-.95 3.79-.95 1.36 0 2.8.74 3.83 2.02-3.36 1.84-2.82 6.64.42 7.9Z" /></svg>
+                  <span><small>Download on the</small><b>App Store</b></span>
+                </a>
+                <a
+                  class="store-badge"
+                  href="https://play.google.com/store/apps/details?id=com.vchrgd.home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get it on Google Play"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.1c-.3.3-.5.8-.5 1.4v17c0 .6.2 1.1.5 1.4l.1.1 9.5-9.5v-.2L3.6 2.1Zm12.8 6.2L4.9 1.8c-.4-.2-.8-.2-1.1-.1l9.4 9.4 3.2-2.8ZM20.5 11l-2.8-1.6-3.3 3.3 3.3 3.3L20.5 14c.9-.5.9-1.9 0-2.9v-.1ZM3.8 22.3l12.6-7.2-3.2-3.2-9.4 9.4c.3.1.7.1 1 0Z" /></svg>
+                  <span><small>Get it on</small><b>Google Play</b></span>
+                </a>
+              </div>
+            </div>
+            <figure class="home-app-figure" data-reveal style="--d: 0.1s">
+              <img
+                src="/home-charging/assets/app-showcase.webp"
+                alt="The VCHRGD Home app shown on a smartphone"
+                width="800"
+                height="1000"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Learn more / YouTube ===================== -->
+      <section class="section theme-light" aria-labelledby="videos-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">PLUG &amp; PLAY</p>
+            <h2 id="videos-heading">Want to learn more about EV charging?</h2>
+            <p>
+              Our Plug &amp; Play series breaks down EV charging, tariffs and
+              installation in plain English.
+            </p>
+          </div>
+          <div class="videos-channel" data-reveal>
+            <span class="videos-channel-logo">
+              <img src="/home-charging/assets/logo.png" alt="VCHRGD" width="34" height="18" loading="lazy" />
+            </span>
+            <span class="videos-channel-meta">
+              <strong>VCHRGD</strong>
+              <span>945 subscribers &middot; 12 videos &middot; 104K views</span>
+            </span>
+            <a
+              class="button small videos-channel-cta"
+              href="https://www.youtube.com/@vchrgd"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit our channel
+              <svg class="arrow-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg
+            ></a>
+          </div>
+          <div class="video-grid">
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=0IaMmkb_DmY"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-reveal
+              style="--d: 0s"
+            >
+              <div class="video-thumb">
+                <img src="/home-page/thumbs/0IaMmkb_DmY.jpg" alt="" width="480" height="360" loading="lazy" />
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+                <span class="video-duration">21:46</span>
+              </div>
+              <div class="video-body">
+                <h3>Electric vehicles can be CONFUSING! Here&rsquo;s what you need to know &mdash; Plug &amp; Play EP 7</h3>
+                <p>At the end of your tether with all this EV jargon? We&rsquo;re here to help.</p>
+              </div>
+            </a>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=fDnxkqzQ7qk"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-reveal
+              style="--d: 0.1s"
+            >
+              <div class="video-thumb">
+                <img src="/home-page/thumbs/fDnxkqzQ7qk.jpg" alt="" width="480" height="360" loading="lazy" />
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+                <span class="video-duration">15:08</span>
+              </div>
+              <div class="video-body">
+                <h3>Intelligent Octopus: everything you need to know for vehicle integration &mdash; Plug &amp; Play #6</h3>
+                <p>Switching to the Intelligent Octopus EV tariff? A full setup walkthrough.</p>
+              </div>
+            </a>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=t1RFDXIwtKU"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-reveal
+              style="--d: 0.2s"
+            >
+              <div class="video-thumb">
+                <img src="/home-page/thumbs/t1RFDXIwtKU.jpg" alt="" width="480" height="360" loading="lazy" />
+                <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
+                <span class="video-duration">12:22</span>
+              </div>
+              <div class="video-body">
+                <h3>Home charger installation EXPLAINED &mdash; Plug &amp; Play #5</h3>
+                <p>A live installation walkthrough and what a best-in-class install looks like.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Closing CTA ===================== -->
+      <section class="closing">
+        <img
+          src="/home-charging/assets/detail.webp"
+          alt="VCHRGD charger installed on a brick wall with its cable ready to use"
+          width="1000"
+          height="1500"
+          loading="lazy"
+        />
+        <div class="wrap">
+          <p class="eyebrow cyan">READY WHEN YOU ARE</p>
+          <h2>Your home.<br /><span>Ready to charge.</span></h2>
+          <a class="button checkout" href="/home-charging"
+            >Get your home charger
+            <span aria-hidden="true"
+              ><svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg></span
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== Footer (shared design) ===================== -->
+    <footer class="site-footer" id="site-footer">
+      <div class="wrap">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <a href="/home-page" aria-label="VCHRGD home"
+              ><img
+                src="/home-charging/assets/logo.png"
+                alt="VCHRGD"
+                width="190"
+                height="50"
+                loading="lazy"
+            /></a>
+            <h2>VCHRGD<br />Technologies<br />Ltd.</h2>
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="light"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Trustpilot</a
+              >
+            </div>
+          </div>
+          <nav class="site-footer-links" aria-label="Explore VCHRGD">
+            <h3>Explore</h3>
+            <a href="/home-charging">Home Charging</a
+            ><a href="https://www.vchrgd.com/commercial">Commercial</a
+            ><a href="https://www.vchrgd.com/home-charging#installers"
+              >Installers</a
+            ><a href="https://www.vchrgd.com/partners-news">Partners</a
+            ><a href="https://www.vchrgd.com/about">About Us</a
+            ><a href="https://www.vchrgd.com/contact">Contact Us</a
+            ><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a
+            ><a href="https://www.vchrgd.com/privacy-policy"
+              >Website Privacy Policy</a
+            >
+          </nav>
+          <nav class="site-footer-links" aria-label="VCHRGD products">
+            <h3>Products</h3>
+            <a href="https://www.vchrgd.com/seven-pro">Seven Pro</a
+            ><a href="https://www.vchrgd.com/twentytwo-pro">TwentyTwo Pro</a
+            ><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a
+            ><a href="https://www.vchrgd.com/responsible-recycling"
+              >WEEE Recycling</a
+            >
+          </nav>
+          <nav
+            class="site-footer-links site-footer-social"
+            aria-label="Follow VCHRGD"
+          >
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/vchrgd_technologies/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="19"
+                  height="19"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07Zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.28 1.71.32 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.2-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 1.98a2.51 2.51 0 1 0 0 5.02 2.51 2.51 0 0 0 0-5.02Zm5.72-2.16a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z"
+                  /></svg></a
+              ><a
+                href="https://www.youtube.com/@vchrgd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Youtube"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z"
+                  /></svg></a
+              ><a
+                href="https://www.linkedin.com/company/vchrgd"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.76V1.74C24 .78 23.2 0 22.22 0Z"
+                  /></svg
+              ></a>
+            </div>
+          </nav>
+          <div class="site-footer-callback">
+            <h3>Let’s talk charging.</h3>
+            <p>
+              Have a question about your EV charger? Request a call from the
+              VCHRGD team.
+            </p>
+            <a
+              class="callback-button"
+              href="https://www.vchrgd.com/#footer-sections"
+              target="_blank"
+              rel="noopener noreferrer"
+              >REQUEST CALL
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="footer-phone" href="tel:01494370525">01494 370525</a>
+          </div>
+        </div>
+        <div class="site-footer-company">
+          <p>
+            VCHRGD is a trading name of VCHRGD TECHNOLOGIES LTD, a UK registered
+            company number 13264142
+          </p>
+          <p>
+            Registered Address: 1a Eghams Court, Boston Drive, Bourne-End,
+            Buckinghamshire, SL8 5YS
+          </p>
+        </div>
+        <details class="legal-disclosure">
+          <summary>
+            Regulatory information<span
+              class="legal-plus"
+              aria-hidden="true"
+            ></span>
+          </summary>
+          <p class="site-footer-lender">
+            VCHRGD Technologies Limited (FRN: 1062133), trading as ‘VCHRGD’, is
+            an introducer appointed representative of Frasers Group Financial
+            Services Limited (Registered Company no. 00718151) which is
+            authorised and regulated by the Financial Conduct Authority (FRN
+            311908) for consumer credit and general insurance and a member of
+            the Finance and Leasing Association. For regulated payment services,
+            Frasers Group Financial Services Limited is a payment agent of
+            Transact Payments Limited, a company authorised and regulated by the
+            Gibraltar Financial Services Commission as an electronic money
+            institution.
+            <strong
+              >Missed payments may affect your credit score and mean your 0%
+              interest plans end.</strong
+            >
+          </p>
+        </details>
+      </div>
+    </footer>
+
+    <!-- ===================== Mobile sticky CTA ===================== -->
+    <div class="mobile-cta">
+      <span>VCHRGD<span>Smart EV charging, made simple.</span></span
+      ><a href="/home-charging" class="button small checkout"
+        >Get your home charger
+        <svg
+          class="arrow-icon"
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 18 18 6M6 6h12v12" /></svg
+      ></a>
+    </div>
+  </body>
+</html>
