@@ -1,4 +1,5 @@
 import { IntegrationShowcase } from "@/components/integration-showcase";
+import { PaymentOptionsCallout } from "@/components/payment-options-callout";
 import { PaymentPopupReturnBridge } from "@/components/payment-popup-return-bridge";
 import Image from "next/image";
 import { CheckoutHero } from "@/components/checkout-hero";
@@ -188,6 +189,7 @@ export async function CheckoutPage({
           </div>
         ) : null}
         <div id="checkout" className="scroll-mt-4">
+        <PaymentOptionsCallout enableFrasersPlus={enableFrasersPlus} />
         <IntegrationShowcase
           initialCheckoutAccess={checkoutAccess}
           preferredDatesEnabled={preferredDatesEnabled}

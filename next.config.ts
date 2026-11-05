@@ -44,6 +44,14 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.resolve(__dirname),
   },
+  async rewrites() {
+    return [
+      // Serve the static home-charging landing page for the clean URL so
+      // links like /home-charging#payment resolve instead of 404ing.
+      { source: "/home-charging", destination: "/home-charging/index.html" },
+      { source: "/home-charging/", destination: "/home-charging/index.html" },
+    ];
+  },
   async headers() {
     return [
       {
