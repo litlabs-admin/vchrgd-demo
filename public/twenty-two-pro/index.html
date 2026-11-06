@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="TwentyTwo Pro by VCHRGD — a 22kW three-phase smart charger built for workplace, fleet, destination and commercial EV charging. Power. Precision. Performance."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#101212" />
+    <title>TwentyTwo Pro — Power. Precision. Performance. | VCHRGD</title>
+    <link
+      rel="icon"
+      href="/home-charging/assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preload" as="image" href="/home-charging/assets/hero.webp" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/home-charging/assets/inter-latin.woff2"
+      crossorigin
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="/home-charging/styles.css" />
+    <link rel="stylesheet" href="/SevenPro/sevenpro.css" />
+    <link rel="stylesheet" href="/twenty-two-pro/twentytwo.css" />
+    <!-- Installer map (self-hosted Leaflet, shared with /home-page) -->
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/MarkerCluster.css" />
+    <link rel="stylesheet" href="/home-page/vendor/leaflet/MarkerCluster.Default.css" />
+    <script src="/SevenPro/app.js" defer></script>
+    <script src="/home-page/vendor/leaflet/leaflet.js" defer></script>
+    <script src="/home-page/vendor/leaflet/markercluster.js" defer></script>
+    <script src="/home-page/installers.js" defer></script>
+    <script
+      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="brand" href="/twenty-two-pro" aria-label="VCHRGD TwentyTwo Pro"
+        ><img
+          src="/home-charging/assets/logo.png"
+          alt="VCHRGD"
+          width="146"
+          height="32"
+      /></a>
+      <nav aria-label="Main navigation" id="navigation">
+        <a href="/home-charging">Home Charging</a
+        ><a href="/SevenPro">Seven Pro</a
+        ><a href="/twenty-two-pro">TwentyTwo Pro</a
+        ><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a
+        ><a href="https://www.vchrgd.com/partners-news">Partners &amp; News</a
+        ><a href="https://www.vchrgd.com/about">About</a
+        ><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a>
+      </nav>
+      <a class="button small checkout" href="/"
+        >Book your installation
+        <span aria-hidden="true"
+          ><svg
+            class="arrow-icon"
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M6 18 18 6M6 6h12v12" /></svg></span
+      ></a>
+      <button
+        class="menu"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main id="main">
+      <!-- ===================== Hero ===================== -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <img
+          class="hero-photo"
+          src="/home-charging/assets/hero.webp"
+          alt="VCHRGD TwentyTwo Pro charger installed on a commercial brick wall"
+          width="1500"
+          height="1000"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-copy wrap">
+          <div class="hero-rating" aria-label="VCHRGD customer rating">
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="dark"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See our reviews on Trustpilot</a
+              >
+            </div>
+          </div>
+          <h1 id="hero-heading">TwentyTwo&nbsp;Pro.</h1>
+          <p class="hero-subhead">Power. Precision. Performance.</p>
+          <div class="sp-hero-badges">
+            <span class="sp-badge-kw">22kW</span
+            ><span class="sp-badge-use">Workplace Charging</span>
+          </div>
+          <p class="hero-intro">
+            The VCHRGD TwentyTwo Pro is built to drive fleet, workplace and
+            destination charging forwards.
+          </p>
+          <div class="hero-actions">
+            <a href="/" class="button checkout"
+              >Book your installation
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="button button-ghost" href="#pros"
+              >Explore the capability
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 4v16m-6-6 6 6 6-6" /></svg></span
+            ></a>
+          </div>
+          <p class="hero-note">
+            Up to 22kW three-phase smart charging. Workplace, fleet &amp;
+            destination. Subject to survey.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== Overview ===================== -->
+      <section
+        id="overview"
+        class="overview section theme-light"
+        aria-labelledby="overview-heading"
+      >
+        <div class="wrap overview-grid">
+          <div class="overview-copy">
+            <p class="eyebrow">MEET THE TWENTYTWO PRO &middot; 22KW THREE PHASE</p>
+            <h2 id="overview-heading" data-reveal>
+              Power. Precision. Performance.
+            </h2>
+            <p class="overview-lead" data-reveal style="--d: 0.06s">
+              The VCHRGD TwentyTwo Pro is the ultimate solution for workplace,
+              destination, fleet and commercial three-phase EV charging.
+            </p>
+
+            <div class="triad" data-reveal style="--d: 0.1s">
+              <div class="triad-item">
+                <button
+                  type="button"
+                  class="triad-q"
+                  aria-expanded="true"
+                  aria-controls="triad-sleek"
+                >
+                  <span
+                    ><span class="triad-ic" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M4 20 20 4M9 4h11v11" /></svg></span
+                    >Sleek</span
+                  ><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="triad-sleek">
+                  <div class="triad-a-inner">
+                    <p>
+                      The VCHRGD TwentyTwo Pro combines cutting-edge performance
+                      with a refined, modern design that enhances any workplace,
+                      fleet or destination charging environment. Its compact form
+                      factor, premium materials and discreet cable management
+                      ensure it looks as good as it performs — the ideal choice
+                      for businesses that value both aesthetics and
+                      functionality.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="triad-item">
+                <button
+                  type="button"
+                  class="triad-q"
+                  aria-expanded="false"
+                  aria-controls="triad-scalable"
+                >
+                  <span
+                    ><span class="triad-ic" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M3 12h7M3 6h12M3 18h5" />
+                        <path d="m14 15 3 3 5-6" /></svg></span
+                    >Scalable</span
+                  ><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="triad-scalable">
+                  <div class="triad-a-inner">
+                    <p>
+                      With integrated 4G, WiFi, RFID and Bluetooth connectivity,
+                      the TwentyTwo Pro supports seamless communication and
+                      control across single units or whole sites. Dynamic load
+                      management and OCPP 1.6J make it ready to scale from a few
+                      bays to a full fleet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="triad-item">
+                <button
+                  type="button"
+                  class="triad-q"
+                  aria-expanded="false"
+                  aria-controls="triad-secure"
+                >
+                  <span
+                    ><span class="triad-ic" aria-hidden="true"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect x="4" y="10" width="16" height="11" rx="2.5" />
+                        <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                        <path d="M12 14.5v2.5" /></svg></span
+                    >Secure</span
+                  ><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="triad-secure">
+                  <div class="triad-a-inner">
+                    <p>
+                      Advanced features such as PEN protection, dynamic load
+                      management and roaming data enhance safety and efficiency.
+                      RFID tap-and-charge lets you control who can charge, while a
+                      3-year warranty provides peace of mind.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="overview-body" data-reveal style="--d: 0.14s">
+              <p>
+                Combining cutting-edge technology with effortless functionality,
+                this 22kW charge point is designed to meet the demands of modern
+                electric mobility. Crafted with user experience at its core, the
+                sleek two-tone matte and glossy black design complements any
+                environment.
+              </p>
+              <p>
+                Push-fit installation simplifies setup and ensures ease of
+                maintenance throughout its lifetime. Engineered for reliability
+                and defined by its premium aesthetics, the VCHRGD TwentyTwo Pro
+                sets a new standard in EV charging.
+              </p>
+            </div>
+
+            <div class="connectivity" data-reveal style="--d: 0.18s">
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 8.5a16 16 0 0 1 20 0" />
+                  <path d="M5 12a11 11 0 0 1 14 0" />
+                  <path d="M8.5 15.5a6 6 0 0 1 7 0" />
+                  <circle cx="12" cy="19" r="1" /></svg
+                >Wi-Fi</span
+              ><span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m7 7 10 10-5 4V3l5 4L7 17" /></svg
+                >Bluetooth</span
+              ><span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 9a16 16 0 0 1 0 6" />
+                  <path d="M9 6a22 22 0 0 1 0 12" />
+                  <path d="M13 4a26 26 0 0 1 0 16" /></svg
+                >Contactless</span
+              ><span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.5 9 4.5 4.5 0 0 0 7 19Z"
+                  /></svg
+                >OCPP 1.6J</span
+              ><span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 9a18 18 0 0 1 16 0" />
+                  <path d="M7 13a12 12 0 0 1 10 0" />
+                  <path d="M10 17a6 6 0 0 1 4 0" /></svg
+                >4G</span
+              >
+            </div>
+
+            <div class="callus" data-reveal style="--d: 0.22s">
+              <p>
+                Thinking of having a charger installed but have some questions?
+                <a href="tel:01494370525">Give us a call!</a>
+              </p>
+              <a class="callus-num" href="tel:01494370525">01494 370525</a>
+            </div>
+          </div>
+
+          <div class="overview-side">
+            <figure class="overview-media" data-reveal style="--d: 0.12s">
+              <img
+                src="/home-charging/assets/untethered.webp"
+                alt="VCHRGD TwentyTwo Pro charger, two-tone matte and glossy black finish"
+                width="900"
+                height="1000"
+                loading="lazy"
+                style="object-fit: contain; background: #0a0d0c"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Compatible with ===================== -->
+      <section class="compat" aria-label="Compatible platforms">
+        <p class="compat-title">Compatible with&hellip;</p>
+        <div class="compat-track">
+          <div class="compat-group">
+            <span>WEVO</span><span>Powerverse</span><span>Clenergy EV</span
+            ><span>Fuuse</span><span>Tap Electric</span>
+          </div>
+          <div class="compat-group" aria-hidden="true">
+            <span>WEVO</span><span>Powerverse</span><span>Clenergy EV</span
+            ><span>Fuuse</span><span>Tap Electric</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Designed for Pros ===================== -->
+      <section id="pros" class="pros section" aria-labelledby="pros-heading">
+        <div class="wrap">
+          <div class="pros-head" data-reveal>
+            <h2 id="pros-heading">Smart Charging. <span>Designed for Pros.</span></h2>
+          </div>
+          <div class="pros-grid">
+            <div class="pros-col" data-reveal>
+              <h3>Ultimately Capable.</h3>
+              <p>Modularity, PEN &amp; DLM.</p>
+              <div class="triad">
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-a1">
+                    <span>7&ndash;22kW Charging</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-a1"><div class="triad-a-inner"><p>
+                    Single or three-phase supply, delivering from 7kW up to a full
+                    22kW for faster workplace and fleet top-ups.
+                  </p></div></div>
+                </div>
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-a2">
+                    <span>Dynamic Load Management</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-a2"><div class="triad-a-inner"><p>
+                    Balances available power across chargers and the building
+                    supply, so you can add charge points without costly upgrades.
+                  </p></div></div>
+                </div>
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-a3">
+                    <span>OZEV Approved</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-a3"><div class="triad-a-inner"><p>
+                    Eligible for OZEV workplace and infrastructure grant funding,
+                    helping reduce the cost of your installation.
+                  </p></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pros-media" data-reveal style="--d: 0.1s">
+              <img
+                src="/home-charging/assets/untethered.webp"
+                alt="TwentyTwo Pro charger, front view"
+                width="900"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="pros-col pros-col--right" data-reveal style="--d: 0.15s">
+              <h3>Seamlessly Connected.</h3>
+              <p>Charge Anywhere. Anytime.</p>
+              <div class="triad">
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-b1">
+                    <span>WiFi &amp; 4G as Standard</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-b1"><div class="triad-a-inner"><p>
+                    Stay online wherever the charger is installed, with WiFi and
+                    4G connectivity built in as standard.
+                  </p></div></div>
+                </div>
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-b2">
+                    <span>RFID Tap &amp; Charge</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-b2"><div class="triad-a-inner"><p>
+                    Authorise sessions with RFID cards — ideal for workplaces,
+                    shared sites and fleet access control.
+                  </p></div></div>
+                </div>
+                <div class="triad-item">
+                  <button type="button" class="triad-q" aria-expanded="false" aria-controls="pros-b3">
+                    <span>OCPP 1.6J</span><i class="triad-plus" aria-hidden="true"></i>
+                  </button>
+                  <div class="triad-a" id="pros-b3"><div class="triad-a-inner"><p>
+                    Open protocol support means the TwentyTwo Pro works with a
+                    wide range of third-party CPO and back-office platforms.
+                  </p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Document downloads ===================== -->
+      <section
+        id="downloads"
+        class="downloads section theme-light"
+        aria-labelledby="downloads-heading"
+      >
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">EVERYTHING YOU NEED</p>
+            <h2 id="downloads-heading">Document downloads.</h2>
+            <p>
+              Datasheets, guides and warranty information for your TwentyTwo Pro.
+            </p>
+          </div>
+          <div class="downloads-grid" data-reveal style="--d: 0.08s">
+            <a
+              class="download-card"
+              href="https://www.vchrgd.com/twentytwo-pro-datasheet-flipbook"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="download-ic" aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" />
+                  <path d="M14 3v5h5M9 13h6M9 17h6" /></svg
+              ></span>
+              <strong>Datasheet V1.2</strong>
+              <span>Full specifications for the TwentyTwo Pro</span>
+            </a>
+            <a
+              class="download-card"
+              href="https://www.vchrgd.com/twentytwo-pro-installation-guide-1"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="download-ic" aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg
+              ></span>
+              <strong>Install Guide 2025</strong>
+              <span>TwentyTwo Pro installation guide</span>
+            </a>
+            <a
+              class="download-card"
+              href="https://www.vchrgd.com/twentytwo-pro-warranty-flipbook"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="download-ic" aria-hidden="true"
+                ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z" />
+                  <path d="m9 12 2 2 4-4" /></svg
+              ></span>
+              <strong>Warranty</strong>
+              <span>After-sales warranty terms</span>
+            </a>
+          </div>
+          <div class="downloads-cta" data-reveal style="--d: 0.14s">
+            <a
+              class="button"
+              href="https://www.vchrgd.com/warranty-registration"
+              target="_blank"
+              rel="noopener"
+              >Warranty registration
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Stay Connected (CPO showcase) ===================== -->
+      <section id="connected" class="connected section" aria-labelledby="connected-heading">
+        <div class="wrap">
+          <div class="connected-head" data-reveal>
+            <h2 id="connected-heading">Stay Connected. <span>Stay in Charge.</span></h2>
+            <p>
+              With OCPP 1.6J compatibility, the TwentyTwo Pro works with a wide
+              range of CPO platforms. Why not check out a couple of our top
+              picks&hellip;
+            </p>
+          </div>
+          <div class="connected-grid">
+            <article class="connected-panel c-fuuse" data-reveal>
+              <span class="connected-brand">Fuuse</span>
+              <div>
+                <p>
+                  Powerful charge-point management with live status, revenue,
+                  utilisation and smart-charging insights across your whole
+                  network.
+                </p>
+                <a class="button" href="https://fuuse.io/" target="_blank" rel="noopener"
+                  >Learn more
+                  <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg
+                ></a>
+              </div>
+            </article>
+            <article class="connected-panel c-tap" data-reveal style="--d: 0.1s">
+              <span class="connected-brand">Tap Electric</span>
+              <div>
+                <p>
+                  Simple, driver-friendly charge management and dynamic pricing,
+                  with an app and dashboard that make running your chargers
+                  effortless.
+                </p>
+                <a class="button" href="https://tapelectric.app/" target="_blank" rel="noopener"
+                  >Learn more
+                  <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12" /></svg
+                ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== More than just charging ===================== -->
+      <section class="mtjc" aria-labelledby="mtjc-heading">
+        <div class="mtjc-grid">
+          <figure class="mtjc-media" data-reveal>
+            <img
+              src="/home-charging/assets/home.webp"
+              alt="An electric car charging from a VCHRGD pedestal charger at a workplace"
+              width="1400"
+              height="900"
+              loading="lazy"
+            />
+          </figure>
+          <div class="mtjc-copy" data-reveal style="--d: 0.1s">
+            <p class="eyebrow cyan">WORKPLACE CHARGING, REDEFINED</p>
+            <h2 id="mtjc-heading">More than just charging&hellip;</h2>
+            <p>
+              At VCHRGD, workplace charging is more than just plugging in — it's
+              about powering a smarter, cleaner future. We're driving
+              sustainability with every charge, keeping fleets moving efficiently
+              and making EV adoption accessible for all. With integrated support
+              for OZEV grant funding and scalable infrastructure tailored to your
+              needs, VCHRGD delivers more than energy — we deliver reliability,
+              simplicity and progress.
+            </p>
+            <div class="triad">
+              <div class="triad-item">
+                <button type="button" class="triad-q" aria-expanded="true" aria-controls="mtjc-a1">
+                  <span>Scalable</span><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="mtjc-a1"><div class="triad-a-inner"><p>
+                  From compact 7kW chargers to dual-socket 22kW units, VCHRGD
+                  offers a full range of hardware to support every workplace —
+                  whether you're powering a few bays or a full fleet.
+                </p></div></div>
+              </div>
+              <div class="triad-item">
+                <button type="button" class="triad-q" aria-expanded="false" aria-controls="mtjc-a2">
+                  <span>Flexible</span><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="mtjc-a2"><div class="triad-a-inner"><p>
+                  Wall-mounted or pedestal, tethered or socketed, single or
+                  three-phase — configure your installation around your site and
+                  the way your drivers charge.
+                </p></div></div>
+              </div>
+              <div class="triad-item">
+                <button type="button" class="triad-q" aria-expanded="false" aria-controls="mtjc-a3">
+                  <span>Customisable</span><i class="triad-plus" aria-hidden="true"></i>
+                </button>
+                <div class="triad-a" id="mtjc-a3"><div class="triad-a-inner"><p>
+                  Back-office, access control, pricing and branding can be tailored
+                  to your organisation through our CPO partners and OCPP
+                  integrations.
+                </p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Installer map ===================== -->
+      <section id="installers" class="section theme-light" aria-labelledby="installers-heading">
+        <div class="wrap">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">NATIONWIDE INSTALLATION</p>
+            <h2 id="installers-heading">We believe in local.</h2>
+            <p>
+              Find an approved installer near you who will go the extra mile, so
+              you don&rsquo;t have to.
+            </p>
+          </div>
+          <div class="installer-finder" data-reveal>
+            <div class="installer-panel">
+              <div class="installer-search">
+                <svg
+                  class="installer-search-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input
+                  id="installer-search"
+                  type="search"
+                  autocomplete="off"
+                  placeholder="Search by name, town or postcode"
+                  aria-label="Search installers by name, town or postcode"
+                />
+              </div>
+              <p class="installer-count" id="installer-count" aria-live="polite"></p>
+              <ul class="installer-list" id="installer-list"></ul>
+            </div>
+            <div class="installer-map-wrap">
+              <div id="installer-map" role="application" aria-label="Map of VCHRGD approved installers"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== TwentyTwo Pro Partners ===================== -->
+      <section id="partners" class="partners section" aria-labelledby="partners-heading">
+        <div class="wrap">
+          <div class="partners-head" data-reveal>
+            <p class="eyebrow cyan">WHERE TO BUY</p>
+            <h2 id="partners-heading">TwentyTwo Pro Partners.</h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-arrow prev" data-carousel-prev aria-label="Previous partners">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
+            <button type="button" class="carousel-arrow next" data-carousel-next aria-label="Next partners">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+          <div class="partners-grid carousel-track" data-carousel-track>
+            <div class="partner-tile" data-reveal>
+              <span class="partner-role">Wholesaler</span>
+              <strong>Electricpoint.com</strong>
+              <a class="button small" href="https://www.electricpoint.com/electric-car-chargers/vchrgd-ev-chargers.html" target="_blank" rel="noopener">Buy now</a>
+            </div>
+            <div class="partner-tile" data-reveal style="--d: 0.06s">
+              <span class="partner-role">Wholesaler</span>
+              <strong>Volta</strong>
+              <a class="button small" href="https://www.voltaev.co.uk/collections/vchrgd" target="_blank" rel="noopener">Buy now</a>
+            </div>
+            <div class="partner-tile" data-reveal style="--d: 0.12s">
+              <span class="partner-role">Wholesaler</span>
+              <strong>UK EV Installers</strong>
+              <a class="button small" href="https://shop.ukevinstallers.co.uk/product-tag/vchrgd-ev-chargers/" target="_blank" rel="noopener">Buy now</a>
+            </div>
+            <div class="partner-tile" data-reveal style="--d: 0.18s">
+              <span class="partner-role">Back-end</span>
+              <strong>Tap Electric</strong>
+              <a class="button small" href="https://tapelectric.app/" target="_blank" rel="noopener">Learn more</a>
+            </div>
+            <div class="partner-tile" data-reveal style="--d: 0.24s">
+              <span class="partner-role">Back-end</span>
+              <strong>WEVO Energy</strong>
+              <a class="button small" href="https://www.solaredge.com/en/products/software-tools/solaredge-one-for-ev" target="_blank" rel="noopener">Learn more</a>
+            </div>
+            <div class="partner-tile" data-reveal style="--d: 0.3s">
+              <span class="partner-role">Back-end</span>
+              <strong>Fuuse</strong>
+              <a class="button small" href="https://fuuse.io/" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+          </div>
+          <div class="partners-cta" data-reveal style="--d: 0.22s">
+            <a class="button" href="https://www.vchrgd.com/partners-news" target="_blank" rel="noopener"
+              >Partner page
+              <span aria-hidden="true"
+                ><svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12" /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Closing ===================== -->
+      <section class="closing">
+        <img
+          src="/home-charging/assets/untethered.webp"
+          alt="VCHRGD TwentyTwo Pro untethered charger"
+          width="900"
+          height="1000"
+          loading="lazy"
+        />
+        <div class="wrap">
+          <p class="eyebrow cyan">POWER. PRECISION. PERFORMANCE.</p>
+          <h2>Your site.<br /><span>Ready to charge.</span></h2>
+          <a class="button checkout" href="/"
+            >Book your installation
+            <span aria-hidden="true"
+              ><svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 18 18 6M6 6h12v12" /></svg></span
+          ></a>
+          <p class="closing-support">
+            Talk to us about workplace &amp; fleet charging.
+            <a href="tel:01494370525">Call VCHRGD</a> or
+            <a
+              href="https://www.vchrgd.com/#footer-sections"
+              target="_blank"
+              rel="noopener noreferrer"
+              >request a callback</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <div class="wrap">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <a href="https://www.vchrgd.com/" aria-label="VCHRGD website"
+              ><img
+                src="/home-charging/assets/logo.png"
+                alt="VCHRGD"
+                width="190"
+                height="50"
+                loading="lazy"
+            /></a>
+            <h2>VCHRGD<br />Technologies<br />Ltd.</h2>
+            <div
+              class="trustpilot-widget"
+              data-locale="en-GB"
+              data-template-id="5419b637fa0340045cd0c936"
+              data-businessunit-id="6470e16cdbc8260df976a0ae"
+              data-theme="light"
+              data-style-height="20px"
+              data-style-width="100%"
+            >
+              <a
+                href="https://uk.trustpilot.com/review/vchrgd.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Trustpilot</a
+              >
+            </div>
+          </div>
+          <nav class="site-footer-links" aria-label="Explore VCHRGD">
+            <h3>Explore</h3>
+            <a href="https://www.vchrgd.com/home-charging">Home Charging</a
+            ><a href="https://www.vchrgd.com/commercial">Commercial</a
+            ><a href="https://www.vchrgd.com/home-charging#installers">Installers</a
+            ><a href="https://www.vchrgd.com/partners-news">Partners</a
+            ><a href="https://www.vchrgd.com/about">About Us</a
+            ><a href="https://www.vchrgd.com/contact">Contact Us</a
+            ><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a
+            ><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy">Home Privacy Policy</a
+            ><a href="https://www.vchrgd.com/vchrgd-installer-privacy-policy">Install Privacy Policy</a
+            ><a href="https://www.vchrgd.com/privacy-policy">Website Privacy Policy</a
+            ><a href="https://www.vchrgd.com/terms-of-sale">Terms of Sale</a>
+          </nav>
+          <nav class="site-footer-links" aria-label="VCHRGD products">
+            <h3>Products</h3>
+            <a href="/SevenPro">Seven Pro</a
+            ><a href="/twenty-two-pro">TwentyTwo Pro</a
+            ><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a
+            ><a href="https://www.vchrgd.com/responsible-recycling">WEEE Recycling</a>
+          </nav>
+          <nav
+            class="site-footer-links site-footer-social"
+            aria-label="Follow VCHRGD"
+          >
+            <h3>Follow us</h3>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/vchrgd_technologies/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                ><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07Zm0 1.98c-3.15 0-3.52.01-4.76.07-.9.04-1.39.2-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.28.81-.32 1.71-.06 1.24-.07 1.6-.07 4.75s.01 3.51.07 4.75c.04.9.2 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.28 1.71.32 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.2 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.28-.81.32-1.71.06-1.24.07-1.6.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.2-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.12-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.37a4.49 4.49 0 1 1 0 8.98 4.49 4.49 0 0 1 0-8.98Zm0 1.98a2.51 2.51 0 1 0 0 5.02 2.51 2.51 0 0 0 0-5.02Zm5.72-2.16a1.05 1.05 0 1 1-2.1 0 1.05 1.05 0 0 1 2.1 0Z" /></svg></a
+              ><a href="https://www.youtube.com/@vchrgd" target="_blank" rel="noopener noreferrer" aria-label="Youtube"
+                ><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" /></svg></a
+              ><a href="https://www.linkedin.com/company/vchrgd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                ><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.5C0 23.2.8 24 1.77 24h20.45c.98 0 1.78-.8 1.78-1.76V1.74C24 .78 23.2 0 22.22 0Z" /></svg
+              ></a>
+            </div>
+          </nav>
+          <div class="site-footer-callback">
+            <h3>Let's talk charging.</h3>
+            <p>
+              Have a question about workplace or fleet charging? Request a call
+              from the VCHRGD team.
+            </p>
+            <a
+              class="callback-button"
+              href="https://www.vchrgd.com/#footer-sections"
+              target="_blank"
+              rel="noopener noreferrer"
+              >REQUEST CALL
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 18 18 6M6 6h12v12" /></svg></span></a
+            ><a class="footer-phone" href="tel:01494370525">01494 370525</a>
+          </div>
+        </div>
+        <div class="site-footer-company">
+          <p>
+            VCHRGD is a trading name of VCHRGD TECHNOLOGIES LTD, a UK registered
+            company number 13264142
+          </p>
+          <p>
+            Registered Address: 1a Eghams Court, Boston Drive, Bourne-End,
+            Buckinghamshire, SL8 5YS
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="mobile-cta">
+      <span>TwentyTwo Pro<span>Power. Precision. Performance.</span></span
+      ><a href="/" class="button small checkout"
+        >Book your installation
+        <svg
+          class="arrow-icon"
+          viewBox="0 0 24 24"
+          width="18"
+          height="18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M6 18 18 6M6 6h12v12" /></svg
+      ></a>
+    </div>
+  </body>
+</html>
