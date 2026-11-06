@@ -54,6 +54,10 @@ const nextConfig: NextConfig = {
       // home-charging page. Clean URL -> static file.
       { source: "/home-page", destination: "/home-page/index.html" },
       { source: "/home-page/", destination: "/home-page/index.html" },
+      // Seven Pro product page, built on the same design system as the
+      // home-charging page. Clean URL -> static file.
+      { source: "/SevenPro", destination: "/SevenPro/index.html" },
+      { source: "/SevenPro/", destination: "/SevenPro/index.html" },
     ];
   },
   async headers() {
