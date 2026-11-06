@@ -1,0 +1,229 @@
+/* ===========================================================
+   Seven Pro product page — supplemental styles.
+   Built on top of /home-charging/styles.css (same design system).
+   Only the components unique to this page live here.
+   =========================================================== */
+
+/* ---------- Hero badges ---------- */
+.sp-hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
+.sp-hero-badges span{display:inline-flex;align-items:center;min-height:38px;padding:8px 20px;border-radius:999px;font-size:13px;font-weight:650;letter-spacing:-.01em}
+.sp-badge-kw{background:linear-gradient(180deg,#2ff2ff,#00d6ef);color:#06201f}
+.sp-badge-use{background:#0c1211;color:#eaf0ed;border:1px solid #ffffff2e}
+.hero-subhead{color:var(--cyan);font-weight:560;font-size:clamp(22px,2.6vw,34px);letter-spacing:-.03em;line-height:1.05;margin-top:6px}
+
+/* ---------- Overview (Simplicity Redefined) ---------- */
+.overview.section{padding-top:clamp(48px,5vw,84px);padding-bottom:clamp(48px,5vw,84px)}
+.overview-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:start}
+.overview-copy>.eyebrow{margin-bottom:16px}
+.overview-copy h2{font-size:clamp(34px,3.6vw,50px)}
+.overview-lead{font-size:17px;line-height:1.6;color:var(--muted);margin-top:18px;max-width:520px}
+.triad{margin-top:30px;border-top:1px solid var(--border)}
+.triad-item{border-bottom:1px solid var(--border)}
+.triad-q{width:100%;background:transparent;border:0;color:inherit;display:flex;align-items:center;justify-content:space-between;gap:20px;text-align:left;padding:20px 2px;font-size:19px;font-weight:560;letter-spacing:-.02em;line-height:1.3}
+.triad-q>span{display:flex;align-items:center;gap:14px}
+.triad-q .triad-ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#ffffff0d;color:var(--cyan)}
+.theme-light .triad-q .triad-ic{background:#10121208}
+.triad-q .triad-ic svg{width:20px;height:20px}
+.triad-plus{position:relative;width:16px;height:16px;flex-shrink:0}
+.triad-plus::before,.triad-plus::after{content:'';position:absolute;top:50%;left:50%;width:14px;height:1.6px;border-radius:2px;background:currentColor;transform:translate(-50%,-50%);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.triad-plus::after{transform:translate(-50%,-50%) rotate(90deg)}
+.triad-q[aria-expanded=true] .triad-plus::after{transform:translate(-50%,-50%) rotate(0)}
+.triad-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s cubic-bezier(.16,1,.3,1)}
+.triad-q[aria-expanded=true]+.triad-a{grid-template-rows:1fr}
+.triad-a-inner{overflow:hidden;min-height:0}
+.triad-a p{font-size:15px;line-height:1.7;color:var(--muted);padding:0 2px 22px}
+.overview-body{margin-top:30px}
+.overview-body p{font-size:15px;line-height:1.75;color:var(--muted)}
+.overview-body p+p{margin-top:16px}
+
+/* connectivity badges */
+.connectivity{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.connectivity span{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;border:1px solid var(--border);font-size:13px;font-weight:550}
+.connectivity span svg{width:18px;height:18px;color:var(--cyan)}
+
+/* call us row */
+.callus{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border)}
+.callus p{font-size:16px;font-weight:500;color:var(--white);max-width:360px}
+.callus p a{color:var(--cyan)}
+.callus .callus-num{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:12px 24px;border-radius:999px;border:1px solid var(--border);font-weight:600;font-size:16px}
+
+/* media column */
+.overview-media{position:relative;align-self:stretch;border-radius:16px;overflow:hidden;background:#0a0d0c;min-height:420px}
+.overview-media img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.overview-octopus{display:flex;align-items:center;gap:16px;margin-top:20px;padding:16px 20px;border-radius:14px;border:1px solid var(--border)}
+.overview-octopus img{width:150px;height:auto;flex:none}
+.overview-octopus p{font-size:13px;color:var(--muted)}
+
+/* ---------- Compatible With marquee ---------- */
+.compat{background:#060808;border-block:1px solid #ffffff12;padding:34px 0;overflow:hidden}
+.compat-title{text-align:center;font-size:clamp(20px,2.4vw,28px);font-weight:560;letter-spacing:-.02em;margin-bottom:22px;color:#fff}
+.compat-track{display:flex;width:max-content;animation:compatScroll 28s linear infinite;gap:0}
+.compat-track:hover{animation-play-state:paused}
+.compat-group{display:flex;align-items:center;flex-shrink:0}
+.compat-group span{display:inline-flex;align-items:center;gap:14px;padding:0 34px;font-size:22px;font-weight:600;letter-spacing:-.01em;color:#dfe5e3;white-space:nowrap}
+.compat-group span::before{content:"";width:14px;height:18px;flex:none;background:var(--cyan);clip-path:polygon(55% 0,0 60%,45% 60%,45% 100%,100% 40%,55% 40%)}
+@keyframes compatScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.compat-track{animation:none;flex-wrap:wrap;width:auto;justify-content:center}}
+
+/* ---------- Install gallery ---------- */
+.gallery.section{padding-top:clamp(40px,4vw,72px);padding-bottom:clamp(40px,4vw,72px)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.gallery-grid figure{margin:0;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:#1b1f1f}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.gallery-grid figure:hover img{transform:scale(1.05)}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gallery-grid{grid-template-columns:1fr}}
+
+/* ---------- Horizontal carousel (tariffs + partners) ---------- */
+.carousel{position:relative}
+.carousel-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 10px;-ms-overflow-style:none;scrollbar-width:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track>*{flex:0 0 auto;scroll-snap-align:start}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:54px;height:54px;border-radius:50%;background:#2a2f2e;color:#fff;border:0;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.45);transition:background .25s,opacity .25s,transform .25s}
+.theme-light .carousel-arrow{background:#101212;color:#fff}
+.carousel-arrow.prev{left:-22px}
+.carousel-arrow.next{right:-22px}
+.carousel-arrow:hover{background:#3a403e}
+.carousel-arrow svg{width:22px;height:22px}
+.carousel-arrow[disabled]{opacity:.3;cursor:default;pointer-events:none}
+@media(max-width:560px){.carousel-arrow{width:44px;height:44px}.carousel-arrow.prev{left:-10px}.carousel-arrow.next{right:-10px}}
+
+/* ---------- Tariff cards ---------- */
+.tariffs.section{padding-top:clamp(48px,5vw,84px);padding-bottom:clamp(48px,5vw,84px)}
+.tariffs-head{text-align:center;max-width:720px;margin:0 auto 44px}
+.tariffs-grid.carousel-track>.tariff-card{width:clamp(280px,31%,360px)}
+.tariff-card{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--panel);border:1px solid var(--border)}
+.tariff-top{padding:22px 22px 18px;color:#fff}
+.tariff-brand{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.tariff-name{font-size:24px;font-weight:650;letter-spacing:-.02em;margin-top:6px;line-height:1.1}
+.tariff-tagline{font-size:12.5px;line-height:1.5;margin-top:10px;opacity:.92}
+.tariff-body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tariff-window{font-size:14px;font-weight:600;color:var(--cyan)}
+.tariff-desc{font-size:13px;line-height:1.6;color:var(--muted)}
+.tariff-rate{font-size:26px;font-weight:650;letter-spacing:-.03em;margin-top:4px}
+.tariff-foot{padding:0 22px 22px;text-align:center}
+.tariff-provider{font-size:14px;font-weight:600;margin-bottom:2px}
+.tariff-plan{font-size:12px;color:var(--muted);margin-bottom:16px}
+.tariff-card .button{width:100%;justify-content:center;border-radius:999px}
+.tariff-body{flex:1}
+.tariffs-note{max-width:980px;margin:36px auto 0;text-align:center}
+.tariffs-note p{font-size:12px;line-height:1.8}
+.tariffs-note a{text-decoration:underline;text-underline-offset:3px}
+/* brand accents */
+.tariff-top.t-octopus{background:#1b1455}
+.tariff-top.t-so{background:#111;color:#d8ff33}.tariff-top.t-so .tariff-name{color:#fff}
+.tariff-top.t-eon{background:#e2231a}
+.tariff-top.t-bg{background:#5ad2d6;color:#0d2b4e}.tariff-top.t-bg .tariff-brand,.tariff-top.t-bg .tariff-tagline{color:#0d2b4e}
+.tariff-top.t-edf{background:#ea5c0e}
+.tariff-top.t-ovo{background:#0a9d58}
+@media(max-width:560px){.tariffs-grid.carousel-track>.tariff-card{width:82vw}}
+
+/* ---------- Document downloads ---------- */
+.downloads.section{padding-top:clamp(40px,4vw,72px);padding-bottom:clamp(40px,4vw,72px)}
+.downloads-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.download-card{display:flex;flex-direction:column;gap:14px;padding:26px 22px;border-radius:14px;background:var(--panel);border:1px solid var(--border);text-align:center;align-items:center;transition:transform .3s,box-shadow .3s}
+.download-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px #10121290;color:inherit}
+.download-ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;background:#101212;color:var(--cyan)}
+.theme-light .download-ic{background:#101212;color:#2ff2ff}
+.download-ic svg{width:26px;height:26px}
+.download-card strong{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.download-card span{font-size:12px;color:var(--muted)}
+.downloads-cta{text-align:center;margin-top:36px}
+.downloads-cta .button{display:inline-flex;border-radius:999px}
+@media(max-width:900px){.downloads-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.downloads-grid{grid-template-columns:1fr}}
+
+/* ---------- Partners strip ---------- */
+.partners.section{padding-top:clamp(48px,5vw,84px);padding-bottom:clamp(48px,5vw,84px)}
+.partners-head{text-align:center;margin-bottom:40px}
+.partners-grid.carousel-track>.partner-tile{width:clamp(260px,30%,340px)}
+.partner-tile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:30px 22px;border-radius:14px;background:var(--panel);border:1px solid var(--border)}
+.partner-tile strong{font-size:19px;letter-spacing:-.02em}
+.partner-tile .partner-role{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}
+.partner-tile .button{margin-top:14px;border-radius:999px}
+.partners-cta{text-align:center;margin-top:36px}
+.partners-cta .button{display:inline-flex;border-radius:999px;background:transparent;color:var(--white);border:1px solid #ffffff44}
+.partners-cta .button:hover{background:#ffffff14;border-color:var(--cyan);color:var(--white)}
+@media(max-width:560px){.partners-grid.carousel-track>.partner-tile{width:78vw}}
+
+/* ---------- Fix: keep Leaflet map below the sticky header ---------- */
+/* Leaflet tiles/controls use z-index up to 1000; lift the sticky header above them. */
+.header{z-index:1200}
+
+/* ---------- Contact form ---------- */
+.contact{position:relative;overflow:hidden;min-height:620px;display:flex;align-items:center;color:#fff}
+.contact>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;z-index:-2}
+.contact::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0a0e0de8,#0a0e0dc4 50%,#0a0e0d80)}
+.contact .wrap{width:min(var(--max),calc(100% - 96px));padding:80px 0}
+.contact h2{font-size:clamp(48px,6vw,84px);letter-spacing:-.035em;line-height:1;margin-bottom:36px}
+.contact-form{max-width:620px}
+.contact-row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.field{display:flex;flex-direction:column;margin-bottom:26px}
+.field label{font-size:15px;font-weight:500;margin-bottom:4px}
+.field label small{color:#aeb6b3;font-weight:400;margin-left:6px}
+.field input,.field textarea{background:transparent;border:0;border-bottom:1px solid #ffffff55;color:#fff;font-size:16px;padding:10px 2px;outline-offset:4px}
+.field input:focus,.field textarea:focus{border-bottom-color:var(--cyan)}
+.field textarea{resize:vertical;min-height:90px}
+.contact-check{display:flex;align-items:center;gap:10px;font-size:14px;margin:-6px 0 26px}
+.contact-check input{width:17px;height:17px;accent-color:var(--cyan)}
+.contact-submit{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px}
+.contact-submit button{min-height:52px;padding:14px 34px;border-radius:999px;background:#f2f5f4;color:#0b1515;font-weight:650;font-size:14px;border:0}
+.contact-submit button:hover{background:#fff}
+.contact-fine{font-size:11px;line-height:1.7;color:#c3ccc8;max-width:430px;flex:1;min-width:240px}
+.contact-fine a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){.contact .wrap{width:calc(100% - 40px)}.contact-row{grid-template-columns:1fr;gap:0}}
+
+/* ---------- Learn more / YouTube videos (copied from home-page) ---------- */
+.videos-channel{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.videos-channel-logo{width:54px;height:54px;border-radius:50%;background:#101212;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.videos-channel-logo img{width:34px;height:auto}
+.videos-channel-meta strong{display:block;font-size:16px;font-weight:600;letter-spacing:-.01em}
+.videos-channel-meta span{font-size:12px;color:var(--muted)}
+.videos-channel-cta{margin-left:auto}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.video-card{position:relative;display:block;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#141818;transition:border-color .25s,transform .35s cubic-bezier(.16,1,.3,1)}
+.video-card:hover{border-color:#ffffff33;transform:translateY(-3px);color:inherit}
+.video-thumb{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 50% 0,#1d2424,#0c0f0f)}
+.video-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.video-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,14,13,.65))}
+.video-play{position:relative;z-index:1;width:56px;height:56px;border-radius:50%;background:#e11d2a;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.video-play svg{width:22px;height:22px;color:#fff;margin-left:3px}
+.video-duration{position:absolute;z-index:1;right:10px;bottom:10px;padding:3px 7px;border-radius:5px;background:#000000c2;color:#fff;font-size:11px;font-weight:600}
+.video-body{padding:16px 16px 18px}
+.video-body h3{font-size:14px;line-height:1.4;letter-spacing:-.01em;color:#fff}
+.video-body p{font-size:11px;color:var(--muted);margin-top:8px}
+.theme-light .video-card{background:#fff}
+.theme-light .video-body h3{color:var(--ink)}
+@media(max-width:900px){.video-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}.videos-channel-cta{margin-left:0;width:100%}}
+
+/* ---------- Installer finder (Leaflet map + searchable list) — from home-page ---------- */
+.installer-finder{display:grid;grid-template-columns:380px 1fr;gap:20px;height:580px}
+.installer-panel{display:flex;flex-direction:column;min-height:0;border:1px solid var(--border);border-radius:14px;background:var(--panel);overflow:hidden}
+.installer-search{position:relative;padding:16px;border-bottom:1px solid var(--border)}
+.installer-search-icon{position:absolute;top:50%;left:30px;transform:translateY(-50%);color:#8a9390;pointer-events:none}
+.installer-search input{width:100%;height:46px;padding:0 16px 0 44px;border:1px solid #ffffff24;border-radius:10px;background:#0f1313;color:var(--white);font-size:14px;outline-offset:2px}
+.installer-search input::placeholder{color:#7f8a88}
+.installer-search input:focus-visible{border-color:var(--cyan);outline:2px solid var(--cyan)}
+.installer-count{padding:12px 18px 4px;margin:0;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8a9390}
+.installer-list{list-style:none;margin:0;padding:4px 8px 8px;overflow-y:auto;flex:1;min-height:0;scrollbar-width:thin}
+.installer-item{width:100%;text-align:left;background:transparent;border:0;border-radius:10px;padding:14px 12px;cursor:pointer;display:block;border-bottom:1px solid #ffffff12;transition:background .2s}
+.installer-item:last-child{border-bottom:0}
+.installer-item:hover,.installer-item.is-active{background:#ffffff0c}
+.installer-item.is-active{box-shadow:inset 3px 0 0 var(--cyan)}
+.installer-item h4{margin:0;font-size:15px;font-weight:550;letter-spacing:-.01em;color:var(--white)}
+.installer-item .inst-addr{display:block;margin-top:5px;font-size:12px;line-height:1.5;color:#9aa4a1}
+.installer-item .inst-phone{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:500;color:var(--cyan)}
+.installer-empty{padding:28px 16px;text-align:center;color:#8a9390;font-size:13px}
+.installer-map-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative}
+#installer-map{width:100%;height:100%;min-height:360px;background:#0f1313}
+.inst-pin{background:transparent;border:0}
+.inst-pin svg{filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
+.inst-cluster{background:transparent;border:0;display:flex;align-items:center;justify-content:center}
+.inst-cluster span{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;background:#e11d2a;color:#fff;font-size:14px;font-weight:700;border:3px solid #fff;box-shadow:0 0 0 6px rgba(225,29,42,.28),0 0 0 12px rgba(225,29,42,.14),0 3px 8px rgba(0,0,0,.3)}
+.leaflet-popup-content-wrapper{border-radius:10px}
+.leaflet-popup-content{margin:12px 14px;font-family:var(--font-body)}
+.inst-pop h4{margin:0 0 4px;font-size:14px;font-weight:600;color:#101212}
+.inst-pop p{margin:0;font-size:12px;line-height:1.5;color:#4d5655}
+.inst-pop a{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;color:#007c87}
+.leaflet-container{font-family:var(--font-body)}
+@media(max-width:900px){.installer-finder{grid-template-columns:1fr;height:auto}.installer-map-wrap{height:340px;order:-1}.installer-panel{height:460px}}
