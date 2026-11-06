@@ -54,13 +54,16 @@
           height="32"
       /></a>
       <nav aria-label="Main navigation" id="navigation">
-        <a href="#home-charging">Home Charging</a
-        ><a href="#products">Products</a><a href="#commercial">Commercial</a
-        ><a href="#explore">Partners</a
-        ><a href="https://www.vchrgd.com/about">About</a>
+        <a href="/home-charging">Home Charging</a
+        ><a href="https://www.vchrgd.com/seven-pro">Seven Pro</a
+        ><a href="https://www.vchrgd.com/twentytwo-pro">TwentyTwo Pro</a
+        ><a href="https://www.vchrgd.com/twentytwo-dual1">TwentyTwo Dual</a
+        ><a href="https://www.vchrgd.com/partners-news">Partners &amp; News</a
+        ><a href="https://www.vchrgd.com/about">About</a
+        ><a href="https://www.vchrgd.com/vchrgd-shop">Shop</a>
       </nav>
-      <a class="button small checkout" href="/home-charging"
-        >Get your home charger
+      <a class="button small checkout" href="https://www.vchrgd.com/contact"
+        >Contact Us
         <span aria-hidden="true"
           ><svg
             class="arrow-icon"
@@ -176,22 +179,44 @@
       </section>
 
       <!-- ===================== Proof facts ===================== -->
-      <div class="facts home-facts wrap" aria-label="Why drivers choose VCHRGD">
-        <div>
+      <div id="highlights" class="facts home-facts wrap" aria-label="Why drivers choose VCHRGD">
+        <div data-reveal style="--d:0s">
           <strong
             ><span data-count="4.7" data-decimals="1">4.7</span
             ><span> / 5</span></strong
           ><span>Rated Excellent on Trustpilot</span>
         </div>
-        <div>
+        <div data-reveal style="--d:.08s">
           <strong>UK<span> wide</span></strong
           ><span>Nationwide approved installers</span>
         </div>
-        <div>
+        <div data-reveal style="--d:.16s">
           <strong>3<span> years</span></strong
           ><span>Charger warranty as standard</span>
         </div>
       </div>
+
+      <!-- ===================== Brand statement (editorial) ===================== -->
+      <section id="intro" class="brand-statement section" aria-labelledby="intro-heading">
+        <div class="wrap">
+          <p class="eyebrow cyan" data-reveal>SIMPLICITY · SUSTAINABILITY · SUPPORT</p>
+          <h2 id="intro-heading" class="brand-statement-head" data-reveal style="--d:.05s">
+            We design, build and install<br />
+            the UK&rsquo;s most <span class="cyan">considered</span><br />
+            <span class="muted">EV chargers.</span>
+          </h2>
+          <div class="brand-statement-foot" data-reveal style="--d:.12s">
+            <p>
+              From the driveway to the depot, every VCHRGD charger is built on
+              one promise &mdash; smart, reliable and beautifully simple to live
+              with, backed by nationwide installation and expert UK support.
+            </p>
+            <a class="text-link" href="#products"
+              >Explore the range <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </div>
+      </section>
 
       <!-- ===================== Product range ===================== -->
       <section id="products" class="section" aria-labelledby="products-heading">
@@ -460,43 +485,76 @@
         </div>
       </section>
 
-      <!-- ===================== Values ===================== -->
+      <!-- ===================== Workplace / Commercial band ===================== -->
       <section
-        class="section theme-light"
-        aria-labelledby="values-heading"
+        id="commercial"
+        class="section commercial"
+        aria-labelledby="commercial-heading"
       >
         <div class="wrap">
-          <div class="home-values-grid">
-            <div class="home-values-copy" data-reveal>
-              <p class="eyebrow cyan">POWERING THE FUTURE, SIMPLY</p>
-              <h2 id="values-heading">
-                Simplicity.<span class="muted">Sustainability.</span
-                ><span class="muted">Support.</span>
+          <div class="commercial-grid">
+            <div class="commercial-copy" data-reveal>
+              <p class="eyebrow cyan">FOR BUSINESS</p>
+              <h2 id="commercial-heading">
+                Workplace charging,<br /><span>redefined.</span>
               </h2>
+              <p class="commercial-lead">
+                Charging at work is more than just plugging in &mdash; it is
+                powering a smarter, cleaner future. We keep fleets moving,
+                drive sustainability with every charge and make EV adoption
+                accessible for all.
+              </p>
+              <p class="commercial-sub">
+                With integrated support for OZEV grant funding and scalable
+                infrastructure tailored to your site, VCHRGD delivers more than
+                energy &mdash; we deliver reliability, simplicity and progress.
+              </p>
+              <ul class="commercial-pillars">
+                <li>
+                  <strong>Scalable</strong>
+                  <span>Grow from a single bay to a full site, on demand.</span>
+                </li>
+                <li>
+                  <strong>Flexible</strong>
+                  <span>Workplace, fleet and public charging in one range.</span>
+                </li>
+                <li>
+                  <strong>Customisable</strong>
+                  <span>Infrastructure and access tailored to your needs.</span>
+                </li>
+              </ul>
+              <div class="commercial-actions">
+                <a class="button" href="https://www.vchrgd.com/commercial"
+                  >Explore commercial
+                  <svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 18 18 6M6 6h12v12" /></svg
+                ></a>
+                <a class="text-link" href="https://www.vchrgd.com/twentytwo-dual1"
+                  >Discover TwentyTwo Dual <span aria-hidden="true">&rarr;</span></a
+                >
+              </div>
             </div>
-            <div class="home-values-points" data-reveal style="--d: 0.1s">
-              <article>
-                <h3>Simplicity</h3>
-                <p>
-                  Beautifully designed chargers with intuitive apps and a
-                  buying journey that shows the installed price up front.
-                </p>
-              </article>
-              <article>
-                <h3>Sustainability</h3>
-                <p>
-                  Smart, solar-ready charging that helps you use cleaner,
-                  cheaper energy — at home, at work and across your fleet.
-                </p>
-              </article>
-              <article>
-                <h3>Support</h3>
-                <p>
-                  Nationwide installation, warranty coverage and a UK support
-                  team, backing you every step of the way.
-                </p>
-              </article>
-            </div>
+            <figure class="commercial-figure" data-reveal style="--d: 0.1s">
+              <img
+                src="/home-charging/assets/lifestyle.webp"
+                alt="Electric car charging from a VCHRGD TwentyTwo Dual 22kW charger at a workplace"
+                width="760"
+                height="900"
+                loading="lazy"
+              />
+              <figcaption>Scalable · Flexible · Customisable</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -647,12 +705,17 @@
           </div>
           <div class="route-grid">
             <a
-              id="commercial"
               class="route-card"
               href="https://www.vchrgd.com/commercial"
               data-reveal
               style="--d: 0s"
             >
+              <div class="route-card-top">
+                <span class="route-icon"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 21V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v16"/><path d="M14 21V10h4a1 1 0 0 1 1 1v10"/><path d="M9 8h2M9 12h2M9 16h2"/></svg
+                ></span>
+                <span class="route-index">01</span>
+              </div>
               <p class="eyebrow">FOR BUSINESS</p>
               <h3>Commercial.</h3>
               <p>Scalable workplace, fleet and public charging.</p>
@@ -680,6 +743,12 @@
               data-reveal
               style="--d: 0.08s"
             >
+              <div class="route-card-top">
+                <span class="route-icon"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s6.5-5.8 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.4"/></svg
+                ></span>
+                <span class="route-index">02</span>
+              </div>
               <p class="eyebrow">NATIONWIDE</p>
               <h3>Installers.</h3>
               <p>Approved local installers across the UK.</p>
@@ -707,6 +776,12 @@
               data-reveal
               style="--d: 0.16s"
             >
+              <div class="route-card-top">
+                <span class="route-icon"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="12" r="3.2"/><circle cx="16.5" cy="12" r="3.2"/><path d="M10.7 12h2.6"/></svg
+                ></span>
+                <span class="route-index">03</span>
+              </div>
               <p class="eyebrow">WORK WITH US</p>
               <h3>Partners.</h3>
               <p>Partner with VCHRGD and read the latest news.</p>
@@ -734,6 +809,12 @@
               data-reveal
               style="--d: 0.24s"
             >
+              <div class="route-card-top">
+                <span class="route-icon"
+                  ><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M3.5 13.5A1.5 1.5 0 0 1 5 12h1v5H5a1.5 1.5 0 0 1-1.5-1.5z"/><path d="M20.5 13.5A1.5 1.5 0 0 0 19 12h-1v5h1a1.5 1.5 0 0 0 1.5-1.5z"/><path d="M19 17a3 3 0 0 1-3 3h-2"/></svg
+                ></span>
+                <span class="route-index">04</span>
+              </div>
               <p class="eyebrow">THE COMPANY</p>
               <h3>About &amp; support.</h3>
               <p>Who we are, and how to get help when you need it.</p>
@@ -818,6 +899,92 @@
                 loading="lazy"
               />
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Testimonials (Trustpilot) ===================== -->
+      <section id="reviews" class="section reviews" aria-labelledby="reviews-heading">
+        <div class="wrap">
+          <div class="reviews-panel">
+            <div class="reviews-grid">
+              <div class="reviews-intro" data-reveal>
+                <p class="eyebrow">REVIEWED ON TRUSTPILOT</p>
+                <h2 id="reviews-heading">
+                  Don&rsquo;t take our<br />word for it.<br /><span>Take theirs.</span>
+                </h2>
+                <div class="reviews-score">
+                  <span class="tp-logo">
+                    <svg class="tp-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
+                    Trustpilot
+                  </span>
+                  <span class="tp-stars tp-stars--score" role="img" aria-label="4.7 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></span>
+                  <p class="reviews-score-meta">
+                    TrustScore 4.7
+                    <a href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">151 reviews</a>
+                  </p>
+                </div>
+                <a class="button reviews-cta" href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">
+                  Read all our reviews
+                  <svg class="arrow-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <p class="reviews-note">
+                  A selection of recent reviews. Every review, good and bad, is
+                  on Trustpilot.
+                </p>
+              </div>
+
+              <div class="reviews-cards" data-reveal style="--d:.1s">
+                <figure class="review-card">
+                  <span class="tp-stars" role="img" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></span>
+                  <blockquote>
+                    &ldquo;We are very pleased with our VCHRGD charger. &hellip;
+                    The charging speed is as advertised. It is easy to use and
+                    we are pleased we chose this charger.&rdquo;
+                  </blockquote>
+                  <figcaption class="review-foot">
+                    <span class="review-meta"><strong>Mary C.</strong><span>26 Oct 2026</span></span>
+                    <a class="review-link" href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">
+                      <svg class="tp-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
+                      Read on Trustpilot
+                    </a>
+                  </figcaption>
+                </figure>
+
+                <figure class="review-card">
+                  <span class="tp-stars" role="img" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></span>
+                  <blockquote>
+                    &ldquo;Adam managed my issue swiftly and gave me confidence
+                    that I could ring back if the problem wasn&rsquo;t resolved.
+                    He had great communication skills and was very
+                    reassuring!&rdquo;
+                  </blockquote>
+                  <figcaption class="review-foot">
+                    <span class="review-meta"><strong>Emily M.</strong><span>3 Nov 2026</span></span>
+                    <a class="review-link" href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">
+                      <svg class="tp-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
+                      Read on Trustpilot
+                    </a>
+                  </figcaption>
+                </figure>
+
+                <figure class="review-card">
+                  <span class="tp-stars" role="img" aria-label="5 out of 5 stars"><i></i><i></i><i></i><i></i><i></i></span>
+                  <blockquote>
+                    &ldquo;Friendly and helpful out of hours support above and
+                    beyond. &hellip; Every aspect of my dealing with VCHRGD has
+                    been highly professional &hellip;&rdquo;
+                  </blockquote>
+                  <figcaption class="review-foot">
+                    <span class="review-meta"><strong>Andrew P.</strong><span>26 Oct 2026</span></span>
+                    <a class="review-link" href="https://uk.trustpilot.com/review/vchrgd.com" target="_blank" rel="noopener noreferrer">
+                      <svg class="tp-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z"/></svg>
+                      Read on Trustpilot
+                    </a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
         </div>
       </section>
