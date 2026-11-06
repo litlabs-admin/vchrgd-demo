@@ -227,3 +227,11 @@
 .inst-pop a{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;color:#007c87}
 .leaflet-container{font-family:var(--font-body)}
 @media(max-width:900px){.installer-finder{grid-template-columns:1fr;height:auto}.installer-map-wrap{height:340px;order:-1}.installer-panel{height:460px}}
+
+/* ---------- Hero copy position fix (Seven Pro & TwentyTwo Pro) ----------
+   Anchor the hero copy to the left gutter and sit a touch lower on
+   desktop/tablet so it doesn't drift right on wide screens. Mobile keeps
+   its existing layout. */
+@media(min-width:801px){
+  .hero-copy{width:auto;max-width:min(90%,860px);margin:0;padding-left:clamp(48px,5vw,104px);padding-right:24px;padding-top:clamp(80px,10vh,150px);padding-bottom:clamp(36px,5vh,64px)}
+}

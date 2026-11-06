@@ -550,3 +550,12 @@ img,svg,video,select,input{max-width:100%}
   .home-facts>div:last-child{border-bottom:0;padding-bottom:0}
   .home-facts div>span{max-width:none}
 }
+
+/* ======================================================================
+   HERO copy position fix: anchor to the left gutter and sit a touch
+   lower on desktop/tablet (matches approved composition). Mobile keeps
+   its existing layout.
+   ====================================================================== */
+@media(min-width:801px){
+  .home-hero .hero-copy{width:auto;max-width:min(90%,920px);margin:0;padding-left:clamp(48px,5vw,104px);padding-right:24px;padding-top:clamp(80px,10vh,150px);padding-bottom:clamp(36px,5vh,64px)}
+}
