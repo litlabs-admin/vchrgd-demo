@@ -77,8 +77,8 @@ img,svg,video,select,input{max-width:100%}
 .fp-banner-apr{font-size:15px;font-weight:700;color:#fff;margin-top:16px}
 .fp-banner-fine{font-size:11px;line-height:1.6;color:#d8d0f0;margin-top:10px;max-width:460px}
 .fp-banner-logo img{width:clamp(220px,20vw,300px);height:auto}
-.fp-banner-btn{justify-self:end;display:inline-flex;align-items:center;justify-content:center;padding:15px 34px;border-radius:10px;background:#fff;color:#8f0dd5;font-size:15px;font-weight:600;white-space:nowrap;transition:background .2s,color .2s,transform .2s}
-.fp-banner-btn:hover{background:#f3ebff;color:#7a0bb8;transform:translateY(-1px)}
+.fp-banner-btn{justify-self:end;display:inline-flex;align-items:center;justify-content:center;padding:16px 34px;min-height:54px;border-radius:999px;background:#fff;color:#8f0dd5;font-size:15px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;box-shadow:0 10px 26px -16px #00000066,inset 0 1px 0 #ffffff;transition:background .25s,color .25s,transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.fp-banner-btn:hover{background:#f3ebff;color:#7a0bb8;transform:translateY(-2px);box-shadow:0 16px 32px -16px #0000008a,inset 0 1px 0 #ffffff}
 .fp-banner-btn:focus-visible{outline:3px solid #a21df0;outline-offset:3px}
 @media(max-width:1000px){.fp-banner{grid-template-columns:1fr auto;gap:26px 32px}.fp-banner-logo{grid-column:1}.fp-banner-btn{grid-column:2;grid-row:2;align-self:center}}
 @media(max-width:640px){.fp-banner{grid-template-columns:1fr;gap:22px;padding:28px 24px;text-align:left}.fp-banner-logo{grid-column:1;grid-row:auto;justify-self:start}.fp-banner-btn{grid-column:1;grid-row:auto;justify-self:stretch}}
@@ -235,3 +235,318 @@ img,svg,video,select,input{max-width:100%}
 [data-reveal]{opacity:0;transform:translateY(22px)}
 .in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.16,1,.3,1) var(--d,0s),transform .7s cubic-bezier(.16,1,.3,1) var(--d,0s)}
 @media(prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none}}
+
+/* ===================== Workplace / Commercial band ===================== */
+.commercial{background:linear-gradient(180deg,#0d1414,#101212);border-top:1px solid var(--border);overflow:hidden}
+.commercial-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.commercial-copy .eyebrow{margin-bottom:22px}
+.commercial-copy h2{margin-bottom:24px}
+.commercial-copy h2 span{color:var(--cyan)}
+.commercial-lead{font-size:17px;line-height:1.7;color:#d4dbd9;max-width:520px}
+.commercial-sub{font-size:14px;line-height:1.75;color:#9aa4a2;max-width:520px;margin-top:16px}
+.commercial-pillars{list-style:none;margin:34px 0 0;padding:28px 0 0;border-top:1px solid var(--border);display:grid;gap:20px}
+.commercial-pillars li{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:baseline}
+.commercial-pillars strong{font-family:var(--font-heading);font-size:19px;font-weight:560;letter-spacing:-.02em;color:var(--white)}
+.commercial-pillars span{font-size:14px;color:#9aa4a2;line-height:1.6}
+.commercial-actions{display:flex;align-items:center;gap:28px;margin-top:36px;flex-wrap:wrap}
+.commercial-figure{position:relative;margin:0;border-radius:16px;overflow:hidden}
+.commercial-figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.3;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.commercial-figure:hover img{transform:scale(1.04)}
+.commercial-figure figcaption{position:absolute;left:18px;bottom:18px;padding:9px 16px;border-radius:999px;background:#0b1414b0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #ffffff2e;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#eafdff;font-weight:600}
+@media(max-width:900px){.commercial-grid{grid-template-columns:1fr;gap:40px}.commercial-figure{order:-1}.commercial-figure img{aspect-ratio:16/11}}
+@media(max-width:560px){.commercial-grid{gap:32px}.commercial-lead{font-size:15px}.commercial-pillars li{grid-template-columns:110px 1fr;gap:12px}.commercial-pillars strong{font-size:17px}.commercial-pillars span{font-size:13px}.commercial-actions{gap:18px;margin-top:28px}.commercial-figure figcaption{font-size:9px;left:14px;bottom:14px}}
+
+/* ======================================================================
+   PREMIUM / CINEMATIC HOMEPAGE REDESIGN
+   Homepage-only elevation. Overrides the shared hero shell for a
+   full-screen, centred, cinematic treatment + editorial rhythm.
+   ====================================================================== */
+
+/* ---- Cinematic hero --------------------------------------------------- */
+.home-hero{min-height:100vh;min-height:100svh;align-items:center}
+.home-hero .hero-copy{padding-top:calc(var(--header-h) + 10px);padding-bottom:0;display:flex;flex-direction:column;align-items:center;text-align:center;max-width:none}
+.home-hero .hero-video{width:100%;height:100%;top:0;bottom:auto;object-fit:cover;object-position:60% 50%;opacity:1}
+/* Readability overlay: darker at the top (nav) and bottom (text + scroll),
+   lightest through the middle so the video stays the centrepiece. */
+.home-hero .hero-shade{background:
+  linear-gradient(180deg,rgba(13,16,16,.64) 0%,rgba(13,16,16,.28) 24%,rgba(13,16,16,.4) 54%,rgba(13,16,16,.92) 100%),
+  radial-gradient(130% 110% at 50% 46%,transparent 36%,rgba(9,12,12,.5) 100%)}
+/* Deliberate vertical rhythm: rating → headline → intro → CTAs → note */
+.home-hero .hero-rating{display:flex;justify-content:center;margin-bottom:clamp(22px,2.4vw,32px)}
+.home-hero h1{max-width:none;font-size:clamp(44px,7.4vw,104px);line-height:.99;letter-spacing:-.04em;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.38)}
+.home-hero .hero-intro{max-width:560px;margin:clamp(20px,2vw,26px) auto 0;font-size:clamp(15px,1.4vw,18px);line-height:1.62;color:#d3dad8;text-shadow:0 1px 18px rgba(0,0,0,.32)}
+.home-hero .hero-actions{justify-content:center;flex-wrap:wrap;gap:14px 16px;margin-top:clamp(28px,3vw,36px)}
+.home-hero .hero-note{margin-top:clamp(14px,1.6vw,20px);color:#aab3b1}
+
+/* ---- Scroll indicator ------------------------------------------------- */
+.hero-scroll{position:absolute;left:50%;bottom:clamp(20px,3vh,30px);transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;color:#cdd4d2;transition:color .25s}
+.hero-scroll:hover,.hero-scroll:focus-visible{color:#fff}
+.hero-scroll-label{font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:600}
+.hero-scroll-mouse{width:23px;height:36px;border:1.5px solid #ffffff5c;border-radius:12px;display:flex;justify-content:center;padding-top:6px}
+.hero-scroll-mouse i{width:3px;height:7px;border-radius:2px;background:#fff;animation:heroScroll 1.9s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes heroScroll{0%,14%{opacity:0;transform:translateY(-4px)}40%{opacity:1}76%,100%{opacity:0;transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){.hero-scroll-mouse i{animation:none}}
+
+/* ---- Editorial brand statement --------------------------------------- */
+.brand-statement{border-top:1px solid var(--border)}
+.brand-statement .eyebrow{margin-bottom:clamp(20px,2.4vw,28px)}
+.brand-statement-head{font-family:var(--font-heading);font-weight:560;font-size:clamp(32px,5.6vw,78px);line-height:1.03;letter-spacing:-.04em}
+.brand-statement-head .muted{color:#586260}
+.brand-statement-foot{display:grid;grid-template-columns:1fr auto;gap:28px 64px;align-items:end;margin-top:clamp(34px,4vw,46px);padding-top:clamp(26px,2.4vw,32px);border-top:1px solid var(--border)}
+.brand-statement-foot p{font-size:clamp(15px,1.3vw,16px);line-height:1.72;color:var(--muted);max-width:620px}
+.brand-statement-foot .text-link{white-space:nowrap}
+@media(max-width:700px){.brand-statement-foot{grid-template-columns:1fr;gap:20px;align-items:start}}
+
+/* ---- Product discovery (larger, more premium) ------------------------ */
+.range-grid{gap:24px}
+.range-card{border-radius:16px;transition:border-color .3s,transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s}
+.range-card:hover{border-color:#00eaff44;transform:translateY(-6px);box-shadow:0 34px 70px -42px rgba(0,0,0,.9)}
+.range-media{aspect-ratio:4/3.35}
+.range-media img{height:88%;transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.range-card:hover .range-media img{transform:scale(1.06)}
+.range-body{padding:30px 28px 32px}
+.range-body h3{font-size:28px;letter-spacing:-.03em}
+.range-body>p{font-size:14px;line-height:1.72;margin-top:16px}
+.range-actions{margin-top:26px}
+
+/* ---- Consistent responsive section rhythm (one cohesive flagship) ---- */
+#main .section{padding-top:clamp(84px,9vw,116px);padding-bottom:clamp(84px,9vw,116px)}
+/* editorial sits tighter and flows deliberately into the product range */
+#main .brand-statement{padding-top:clamp(72px,8vw,118px);padding-bottom:clamp(50px,6vw,82px)}
+#main #products{padding-top:clamp(44px,5vw,74px)}
+#main .section-head{margin-bottom:clamp(40px,4.5vw,54px)}
+#main .section-head h2{text-wrap:balance}
+@media(max-width:560px){
+  .hero-scroll{display:none}
+  .home-hero .hero-copy{padding-top:calc(var(--header-h) + 6px)}
+  .home-hero h1{font-size:clamp(34px,9.4vw,50px);line-height:1.03;letter-spacing:-.035em}
+  .home-hero .hero-intro{font-size:15px;max-width:34ch}
+  .home-hero .hero-actions .button{width:100%;justify-content:center}
+}
+
+/* ======================================================================
+   FLAGSHIP POLISH PASS
+   Hero-to-content bridge (credibility strip), editorial composition,
+   and restrained premium details. Homepage-only; overrides earlier rules.
+   ====================================================================== */
+
+/* ---- Hero micro-proportions: a touch more video, calmer top ---------- */
+.home-hero .hero-shade{background:
+  linear-gradient(180deg,rgba(13,16,16,.6) 0%,rgba(13,16,16,.24) 26%,rgba(13,16,16,.38) 56%,rgba(13,16,16,.9) 100%),
+  radial-gradient(128% 108% at 50% 47%,transparent 38%,rgba(9,12,12,.48) 100%)}
+
+/* ---- Credibility strip (the deliberate first beat after the hero) ---- */
+.home-facts{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:clamp(32px,3.8vw,52px) 0}
+.home-facts>div{display:flex;flex-direction:column;justify-content:center;padding:4px clamp(24px,3vw,46px);transition:opacity .5s}
+.home-facts>div:first-child{padding-left:0}
+.home-facts strong{font-size:clamp(32px,3.5vw,46px);font-weight:500;letter-spacing:-.045em;line-height:1;color:#fff}
+.home-facts strong span{font-size:.5em;font-weight:400;letter-spacing:-.02em;color:#aeb8b6}
+.home-facts div>span{font-size:12px;letter-spacing:.015em;color:#8e9b98;margin-top:13px;line-height:1.5;max-width:24ch}
+
+/* ---- Editorial brand statement: a distinctive composition ------------ */
+/* short cyan rule anchors the eyebrow as an editorial kicker */
+.brand-statement .eyebrow{display:inline-flex;align-items:center;gap:14px}
+.brand-statement .eyebrow::before{content:"";width:30px;height:1px;background:var(--cyan);opacity:.85;flex:0 0 auto}
+/* supporting block offset to the right for intentional editorial asymmetry */
+.brand-statement-foot{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(16px,1.6vw,22px);max-width:540px;margin:clamp(42px,5vw,66px) 0 0 auto;padding-top:clamp(26px,2.4vw,32px);border-top:1px solid var(--border)}
+.brand-statement-foot p{font-size:clamp(15px,1.3vw,17px);line-height:1.74;color:var(--muted);max-width:none}
+@media(max-width:760px){.brand-statement-foot{max-width:none;margin-left:0}}
+
+/* ---- Product media: calmer, more premium presentation --------------- */
+.range-media{background:radial-gradient(130% 120% at 50% 12%,#20262633,#0b0e0e)}
+
+/* ---- Responsive: credibility strip on small screens ------------------ */
+@media(max-width:560px){
+  .home-facts{padding:28px 0}
+  .home-facts>div{padding:0 14px}
+  .home-facts>div:first-child{padding-left:14px}
+  .home-facts strong{font-size:clamp(28px,8vw,36px)}
+  .home-facts div>span{font-size:11px;margin-top:9px;max-width:none}
+}
+
+/* ======================================================================
+   EXPLORE VCHRGD — routes section refinement
+   Elevates the existing dark-card-on-light composition. Same palette,
+   same font, same destinations. Homepage-only.
+   ====================================================================== */
+
+/* Composition: tie the heading to the grid as one block */
+#explore .section-head{border-bottom:1px solid var(--border);padding-bottom:clamp(28px,3vw,40px);max-width:none}
+#explore .section-head>p:last-child{max-width:52ch}
+/* tighter bottom so the transition into the next section is intentional */
+#main #explore{padding-bottom:clamp(66px,7vw,96px)}
+
+/* Card system: refined depth, borders and typography */
+.route-grid{gap:18px}
+.route-card{min-height:272px;border-radius:16px;border:1px solid #ffffff1a;padding:26px 24px 24px;background:linear-gradient(165deg,#1d2223 0%,#131717 56%,#0d1010 100%);box-shadow:inset 0 1px 0 #ffffff12,0 1px 2px rgba(0,0,0,.4);transition:border-color .35s,transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s}
+.route-card:hover{border-color:#00eaff5c;transform:translateY(-6px);box-shadow:inset 0 1px 0 #ffffff1f,0 30px 60px -34px rgba(0,0,0,.9)}
+.route-card:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+/* soften the existing corner glow so it reads as depth, not decoration */
+.route-card::after{top:-40%;right:-30%;width:70%;height:80%;opacity:.4}
+
+/* Per-destination motif + index: personality within one system */
+.route-card-top{display:flex;width:100%;align-items:center;justify-content:space-between;margin-bottom:22px}
+.route-icon{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--cyan);background:#00eaff12;border:1px solid #00eaff2e;transition:transform .45s cubic-bezier(.16,1,.3,1),background .35s,border-color .35s}
+.route-icon svg{width:21px;height:21px}
+.route-card:hover .route-icon{transform:translateY(-2px);background:#00eaff1f;border-color:#00eaff5c}
+.route-index{font-family:var(--font-heading);font-size:13px;font-weight:500;letter-spacing:.05em;color:#6f7b79;transition:color .35s}
+.route-card:hover .route-index{color:#9fb0ad}
+
+.route-card .eyebrow{color:#8ba59f;margin-bottom:12px}
+.route-card h3{font-size:23px;letter-spacing:-.03em;color:#fff}
+.route-card p{font-size:12.75px;line-height:1.66;margin-top:11px;color:#aab4b2;max-width:32ch}
+/* CTA pinned to the base with a hairline that lights up on hover */
+.route-card .text-link{position:relative;width:100%;margin-top:auto;padding-top:22px;font-size:12px;color:var(--cyan)}
+.route-card .text-link::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:#ffffff14;transition:background .35s,width .45s}
+.route-card:hover .text-link::before{background:#00eaff4d}
+
+/* Responsive */
+@media(max-width:560px){
+  .route-card{min-height:0;padding:24px 22px}
+  .route-card-top{margin-bottom:18px}
+  .route-icon{width:40px;height:40px}
+}
+
+/* ======================================================================
+   FOR BUSINESS / commercial band — art-direction refinement
+   Keeps the split layout, heading, copy, CTAs and destinations.
+   Homepage-only; CSS-only; overrides earlier .commercial rules.
+   ====================================================================== */
+
+/* Balance: equal-height columns, a touch more room for the image */
+.commercial-grid{grid-template-columns:1.02fr .98fr;gap:clamp(44px,5vw,78px);align-items:stretch}
+.commercial-copy{display:flex;flex-direction:column;justify-content:center}
+
+/* Typography hierarchy: confident lead, quieter supporting note */
+.commercial-copy .eyebrow{margin-bottom:20px}
+.commercial-copy h2{margin-bottom:22px}
+.commercial-lead{font-size:clamp(16px,1.5vw,18.5px);line-height:1.68;color:#dde3e1;max-width:500px;margin:0}
+.commercial-sub{font-size:14px;line-height:1.75;color:#99a3a1;max-width:450px;margin-top:18px}
+
+/* Feature rows: designed benefits with hairline separators + cyan marker */
+.commercial-pillars{list-style:none;margin:clamp(30px,3.4vw,40px) 0 0;padding:0;border-top:1px solid var(--border);display:block}
+.commercial-pillars li{display:grid;grid-template-columns:minmax(150px,200px) 1fr;gap:24px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--border);transition:background .3s,padding-left .35s cubic-bezier(.16,1,.3,1)}
+.commercial-pillars li:hover{background:#ffffff05;padding-left:12px}
+.commercial-pillars strong{position:relative;padding-left:20px;font-family:var(--font-heading);font-size:clamp(17px,1.6vw,20px);font-weight:560;letter-spacing:-.02em;color:var(--white)}
+.commercial-pillars strong::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--cyan);transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.commercial-pillars li:hover strong::before{transform:scale(1.35)}
+.commercial-pillars span{font-size:14px;color:#99a3a1;line-height:1.6}
+
+/* CTA rhythm: primary + secondary on a clear baseline */
+.commercial-actions{display:flex;align-items:center;gap:14px 30px;margin-top:clamp(30px,3.4vw,40px);flex-wrap:wrap}
+.commercial-actions .text-link{font-size:13px}
+
+/* Image: fills the column (balanced), defined edge, integrated caption */
+.commercial-figure{height:100%;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -56px #000}
+.commercial-figure img{width:100%;height:100%;object-fit:cover;object-position:52% 50%;aspect-ratio:auto}
+/* natural bottom fade so the label belongs to the image */
+.commercial-figure::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,transparent,rgba(9,12,12,.82));pointer-events:none;z-index:1}
+.commercial-figure figcaption{position:absolute;left:22px;right:22px;bottom:20px;z-index:2;display:flex;align-items:center;gap:11px;padding:0;background:none;border:0;border-radius:0;-webkit-backdrop-filter:none;backdrop-filter:none;font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:#eafdff;font-weight:600}
+.commercial-figure figcaption::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cyan);flex:0 0 auto;box-shadow:0 0 0 4px rgba(0,234,255,.16)}
+
+/* Responsive */
+@media(max-width:900px){
+  .commercial-grid{grid-template-columns:1fr;gap:38px;align-items:start}
+  .commercial-figure{height:auto}
+  .commercial-figure img{height:auto;aspect-ratio:16/11}
+}
+@media(max-width:560px){
+  .commercial-pillars li{grid-template-columns:1fr;gap:5px;padding:16px 4px}
+  .commercial-pillars li:hover{padding-left:4px}
+  .commercial-figure figcaption{left:16px;right:16px;bottom:16px;font-size:9.5px;letter-spacing:.14em}
+}
+
+/* ======================================================================
+   TESTIMONIALS — Trustpilot reviews section
+   Dark contained panel, intro + score card on the left, 3 review cards.
+   Homepage-only. VCHRGD palette + Trustpilot green for the rating marks.
+   ====================================================================== */
+/* white section background; the dark review panel sits on top */
+.reviews{background:#fff}
+.reviews-panel{background:#0c0f0f;border:1px solid #ffffff12;border-radius:clamp(20px,2.6vw,30px);padding:clamp(28px,4vw,64px)}
+.reviews-grid{display:grid;grid-template-columns:0.92fr 2.08fr;gap:clamp(34px,4vw,60px);align-items:start}
+
+/* Left intro */
+.reviews-intro{display:flex;flex-direction:column;align-items:flex-start}
+.reviews-intro .eyebrow{color:#8a9390;margin-bottom:22px}
+.reviews-intro h2{font-size:clamp(34px,3.6vw,52px);line-height:1.04;letter-spacing:-.035em;color:#fff}
+.reviews-intro h2 span{color:var(--cyan)}
+
+/* Trustpilot score card */
+.reviews-score{margin-top:clamp(26px,3vw,38px);padding:22px 24px;border:1px solid #ffffff14;border-radius:14px;background:#141819;width:100%;max-width:300px}
+.tp-logo{display:inline-flex;align-items:center;gap:8px;font-weight:650;font-size:17px;letter-spacing:-.01em;color:#fff}
+.tp-glyph{width:17px;height:17px;fill:#00b67a;flex:0 0 auto}
+.tp-stars{display:inline-flex;gap:3px}
+.tp-stars i{width:21px;height:21px;border-radius:2px;background:#00b67a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z'/%3E%3C/svg%3E") center/14px no-repeat}
+.tp-stars--score{margin-top:14px}
+.tp-stars--score i:last-child{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6z'/%3E%3C/svg%3E") center/14px no-repeat,linear-gradient(90deg,#00b67a 54%,#59636a 54%)}
+.reviews-score-meta{font-size:13px;color:#aab4b2;margin-top:14px}
+.reviews-score-meta a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.reviews-score-meta a:hover{color:var(--cyan)}
+
+/* CTA + note */
+.reviews-cta{margin-top:clamp(26px,3vw,36px)}
+.reviews-note{font-size:12px;line-height:1.6;color:#8a9390;margin-top:20px;max-width:34ch}
+
+/* Review cards */
+.reviews-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.review-card{display:flex;flex-direction:column;margin:0;padding:24px 22px;border:1px solid #ffffff14;border-radius:16px;background:#141819;transition:border-color .35s,transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s}
+.review-card:hover{border-color:#00eaff3d;transform:translateY(-5px);box-shadow:0 28px 56px -34px rgba(0,0,0,.9)}
+.review-card blockquote{margin:18px 0 0;font-size:14px;line-height:1.62;color:#d6dddb;flex:1}
+.review-foot{margin-top:24px;padding-top:18px;border-top:1px solid #ffffff12}
+.review-meta{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.review-meta strong{font-size:14px;font-weight:600;color:#fff;letter-spacing:-.01em}
+.review-meta>span{font-size:12px;color:#8a9390}
+.review-link{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-size:12px;font-weight:500;color:#aab4b2;transition:color .25s}
+.review-link:hover{color:#fff}
+
+/* Responsive */
+@media(max-width:980px){
+  .reviews-grid{grid-template-columns:1fr;gap:34px}
+  .reviews-cards{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  .reviews-cards{grid-template-columns:1fr}
+  .reviews-score{max-width:none}
+  .reviews-cta{width:100%;justify-content:center}
+  .reviews-note{max-width:none}
+}
+@media(max-width:560px){
+  .reviews-panel{padding:24px 20px}
+  .tp-stars i{width:19px;height:19px;background-size:13px}
+}
+
+/* ======================================================================
+   HERO — reverted to the original LEFT-ALIGNED composition.
+   Keeps the background video. Overrides the cinematic/centred hero rules.
+   ====================================================================== */
+.home-hero{min-height:710px;align-items:center}
+.home-hero .hero-copy{display:block;text-align:left;max-width:none;padding-top:45px;padding-bottom:125px}
+/* left-to-right shade so copy stays readable and the video shows on the right */
+.home-hero .hero-shade{background:
+  linear-gradient(90deg,#101212 0%,#101212ee 23%,#10121266 53%,#10121200 82%),
+  linear-gradient(0deg,#101212eb,transparent 35%)}
+.home-hero .hero-rating{display:block;justify-content:flex-start;margin-bottom:25px}
+.home-hero h1{max-width:14ch;font-size:clamp(64px,6.65vw,94px);line-height:1.02;letter-spacing:-.035em;text-shadow:none;text-wrap:balance}
+.home-hero .hero-intro{max-width:480px;margin:26px 0 0;font-size:15px;color:#c0c7c5;text-shadow:none}
+.home-hero .hero-actions{justify-content:flex-start;margin-top:30px;gap:27px}
+.home-hero .hero-note{margin-top:15px;color:#9fa8a6}
+
+@media(max-width:800px){.home-hero{min-height:680px;align-items:center}.home-hero .hero-copy{padding-top:45px;padding-bottom:60px}}
+@media(max-width:560px){
+  .home-hero .hero-copy{padding-top:36px;padding-bottom:40px}
+  .home-hero h1{max-width:none;font-size:clamp(40px,11vw,56px);line-height:1.05;letter-spacing:-.03em}
+  .home-hero .hero-intro{max-width:340px;font-size:14px}
+  .home-hero .hero-actions{flex-direction:column;align-items:stretch;gap:14px}
+}
+
+/* ---- Credibility strip: stack cleanly on mobile (no clipped column) --- */
+@media(max-width:560px){
+  .home-facts{grid-template-columns:1fr;gap:0;padding:26px 0}
+  .home-facts>div{padding:16px 0;border-right:0;border-bottom:1px solid var(--border)}
+  .home-facts>div:first-child{padding-top:0;padding-left:0}
+  .home-facts>div:nth-child(2){border-right:0}
+  .home-facts>div:nth-child(3){grid-column:auto;padding-left:0}
+  .home-facts>div:last-child{border-bottom:0;padding-bottom:0}
+  .home-facts div>span{max-width:none}
+}

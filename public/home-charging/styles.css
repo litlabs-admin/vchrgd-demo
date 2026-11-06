@@ -524,3 +524,131 @@ html.fd-animating .header::before{backdrop-filter:none;-webkit-backdrop-filter:n
 @media(max-width:560px){.pm-head h2{font-size:clamp(32px,8.6vw,40px)}.pm-head>p:last-child{font-size:16px}.pm-logo{height:52px}.pm-logo--card img{height:48px}.pm-logo--amex img{height:30px}.pm-logo--revolut img{height:21px}.pm-logo--wallet img{height:46px}.pm-group{gap:36px;padding:0 18px}.pm-cta{width:100%;justify-content:center}.pm-marquee{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}}
 .pm-logo--gpay img{height:54px}
 @media(max-width:560px){.pm-logo--gpay img{height:54px}}
+
+/* ============================================================
+   UNIFIED PREMIUM CTA SYSTEM  (overrides earlier button rules)
+   One shape · one color language · clear hierarchy · restrained motion
+   ============================================================ */
+:root{
+  --cta-radius:999px;
+  --cta-grad:linear-gradient(180deg,#38f3ff 0%,#00d2ec 55%,#00bcd8 100%);
+  --cta-grad-hover:linear-gradient(180deg,#5ef6ff 0%,#18ddf4 55%,#02cbe6 100%);
+  --cta-ink:#052322;
+}
+/* ---- Primary button ---- */
+.button{
+  justify-content:center;
+  gap:11px;
+  min-height:54px;
+  padding:16px 30px;
+  border-radius:var(--cta-radius);
+  background:var(--cta-grad);
+  color:var(--cta-ink);
+  font-weight:700;
+  letter-spacing:-.01em;
+  border:1px solid transparent;
+  box-shadow:0 10px 26px -14px #00eaffcc, inset 0 1px 0 #ffffff8c;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,border-color .25s,color .2s;
+}
+.button:hover,.button:focus-visible{
+  background:var(--cta-grad-hover);
+  color:var(--cta-ink);
+  box-shadow:0 16px 34px -14px #00eaff, inset 0 1px 0 #ffffffb0;
+  transform:translateY(-2px);
+}
+.button:active{transform:translateY(0);box-shadow:0 8px 20px -14px #00eaffcc,inset 0 1px 0 #ffffff80}
+.button.small{min-height:44px;padding:12px 22px;gap:9px}
+/* softer, slower sheen so it reads premium not gimmicky */
+.button::after{background:linear-gradient(110deg,transparent 36%,#ffffff4d 50%,transparent 64%)}
+
+/* ---- Secondary / ghost: clearly lighter so primary wins ---- */
+.button-ghost,.hero-actions .button-ghost{
+  background:transparent;
+  color:var(--white);
+  border:1px solid #ffffff33;
+  box-shadow:none;
+  font-weight:600;
+}
+.button-ghost:hover,.button-ghost:focus-visible{
+  background:#ffffff12;
+  border-color:#ffffff7a;
+  color:var(--white);
+  box-shadow:none;
+  transform:translateY(-2px);
+}
+.button-ghost::after{display:none}
+
+/* ---- Hero actions align to the unified look ---- */
+.hero-actions .button{min-height:56px;gap:11px;padding:16px 32px;font-size:15px;justify-content:center;white-space:nowrap}
+
+/* ---- Header pill & scheduler CTA share the one radius ---- */
+.header>.button{border-radius:var(--cta-radius)}
+.sched-cta-row .button{border-radius:var(--cta-radius)}
+
+/* ---- Light theme keeps its ink fill but loses the cyan glow ---- */
+.theme-light .button{background:var(--ink);color:#fff;box-shadow:0 10px 24px -16px #0b1515cc,inset 0 1px 0 #ffffff26}
+.theme-light .button:hover{background:#007c87;color:#fff;box-shadow:0 16px 30px -16px #0b1515;transform:translateY(-2px)}
+.theme-light .button-ghost{color:var(--ink);border-color:#10121233}
+.theme-light .button-ghost:hover{background:#10121208;border-color:#10121266;color:var(--ink)}
+
+/* ============================================================
+   CONTEXT-AWARE PERSISTENT HEADER CTA
+   Over the hero: quiet refined glass pill (lets the hero CTA lead)
+   On scroll: solidifies into the premium cyan pill on the dark bar
+   ============================================================ */
+.header>.button{
+  min-height:40px;
+  padding:10px 20px;
+  gap:9px;
+  font-weight:600;
+  color:#eafdff;
+  background:rgba(14,20,20,.30);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+  border:1px solid #ffffff3d;
+  box-shadow:none;
+  transition:background .3s,color .3s,border-color .3s,box-shadow .3s,transform .25s cubic-bezier(.2,.8,.2,1);
+}
+.header>.button:hover,.header>.button:focus-visible{
+  background:rgba(0,234,255,.14);
+  border-color:#5cf3ff;
+  color:#ffffff;
+  box-shadow:none;
+  transform:translateY(-1px);
+}
+.header>.button .arrow-icon{opacity:.9}
+
+/* Solidify once the user scrolls past the hero (header gains its dark bar) */
+.header.scrolled>.button{
+  background:linear-gradient(180deg,#38f3ff 0%,#00cfe8 55%,#00bcd8 100%);
+  color:#052322;
+  border-color:transparent;
+  font-weight:700;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  box-shadow:0 8px 20px -10px #00eaffcc,inset 0 1px 0 #ffffff80;
+}
+.header.scrolled>.button:hover,.header.scrolled>.button:focus-visible{
+  background:linear-gradient(180deg,#5ef6ff 0%,#18ddf4 55%,#02cbe6 100%);
+  color:#052322;
+  border-color:transparent;
+  box-shadow:0 12px 26px -10px #00eaff,inset 0 1px 0 #ffffffb0;
+  transform:translateY(-1px);
+}
+.header.scrolled>.button .arrow-icon{opacity:.85}
+
+/* ===================== Charging speeds (education) ===================== */
+.speeds-head{max-width:620px;margin-bottom:46px}
+.speeds-head .eyebrow{margin-bottom:18px}
+.speeds-head h2{margin-bottom:18px}
+.speeds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.speed-card{position:relative;display:flex;flex-direction:column;padding:32px 28px;border:1px solid var(--border);border-radius:16px;background:#14181833}
+.speed-card.is-featured{background:linear-gradient(180deg,#0e2422,#111a1a);border-color:#00eaff55;box-shadow:0 24px 60px -34px #00eaff66}
+.speed-badge{position:absolute;top:-11px;left:28px;padding:5px 13px;border-radius:999px;background:linear-gradient(180deg,#38f3ff,#00cfe8);color:#052322;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.speed-rate{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#9aa4a2}
+.speed-kw{font-family:var(--font-heading);font-size:38px;font-weight:540;letter-spacing:-.04em;line-height:1;margin:14px 0 6px}
+.speed-card.is-featured .speed-kw{color:var(--cyan)}
+.speed-range{font-size:13px;font-weight:600;color:var(--white);margin-bottom:14px}
+.speed-card>p:last-child{font-size:13.5px;line-height:1.7;color:#9aa4a2;margin:0}
+.speeds-foot{margin-top:28px;text-align:center}
+@media(max-width:860px){.speeds-grid{grid-template-columns:1fr;gap:26px}.speed-card{padding:28px 24px}.speeds-head{margin-bottom:36px}}
