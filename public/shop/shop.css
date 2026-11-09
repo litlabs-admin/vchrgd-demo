@@ -1,0 +1,343 @@
+/* ============================================================
+   Shop page — built on the shared VCHRGD design system
+   (/home-charging/styles.css + /SevenPro/sevenpro.css + /SevenPro/app.js).
+   Left-aligned hero, light product rows, dark values band, gallery.
+   ============================================================ */
+
+/* ---------- Dark content surface (matches the product pages) ---------- */
+.shop-content {
+  background: var(--bg);
+  color: var(--white);
+}
+.shop-content .eyebrow {
+  color: var(--cyan);
+  margin-bottom: 16px;
+}
+
+/* ---------- Product rows ---------- */
+.shop-product {
+  display: grid;
+  grid-template-columns: 0.95fr 0.8fr 1.25fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: center;
+  padding: clamp(48px, 6vw, 88px) 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.shop-product:first-of-type {
+  border-top: 0;
+}
+
+/* Buy column (left) */
+.shop-buy {
+  order: 1;
+}
+.shop-buy h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.shop-option + .shop-option {
+  margin-top: 28px;
+}
+.shop-option-label {
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 400;
+  color: #eef2f1;
+  letter-spacing: -0.01em;
+}
+.shop-option-label strong {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.shop-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.shop-install {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.18);
+}
+.shop-install-label {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #fff;
+}
+.shop-install-label strong {
+  display: block;
+  color: var(--cyan);
+  font-size: 1.18em;
+  margin-top: 4px;
+}
+.shop-install .button {
+  margin-top: 18px;
+}
+
+/* Media column (center) */
+.shop-product-media {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+}
+/* Soft spotlight so the dark charger renders read on the black surface */
+.shop-product-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    58% 50% at 50% 48%,
+    rgba(120, 180, 200, 0.18) 0%,
+    rgba(120, 180, 200, 0.06) 40%,
+    transparent 72%
+  );
+}
+.shop-product-media img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
+}
+
+/* Placeholder when a real product render isn't available yet */
+.shop-ph {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 28px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  color: #8a9392;
+}
+.shop-ph svg {
+  width: 46px;
+  height: 46px;
+  color: #6b7572;
+}
+.shop-ph span {
+  font-family: var(--font-cta);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Info column (right) */
+.shop-product-info {
+  order: 3;
+}
+.shop-product-info h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 4.6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: #fff;
+  margin: 0;
+}
+.shop-tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--cyan);
+  margin: 10px 0 0;
+}
+.shop-product-info .shop-lead {
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  margin: 24px 0 0;
+}
+.shop-product-info p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b6bebc;
+  margin: 16px 0 0;
+}
+
+/* Buttons tuned for the shop (reuse base .button + .button-ghost) */
+.shop-content .button {
+  min-height: 48px;
+  padding: 13px 26px;
+  font-size: 12px;
+  gap: 10px;
+}
+.shop-content .button-ghost {
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+}
+.shop-content .button-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--cyan);
+  color: var(--white);
+}
+
+/* ---------- Values band (dark) ---------- */
+.shop-values {
+  background: #101212;
+  color: #fff;
+}
+.shop-values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 88px);
+  align-items: center;
+}
+.shop-values-stack h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(44px, 6vw, 92px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  color: #fff;
+  margin: 0;
+}
+.shop-values-copy h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 24px;
+}
+.shop-values-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #c0c7c5;
+  margin: 0 0 18px;
+}
+.shop-values-copy p strong {
+  color: #fff;
+}
+.shop-values-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+/* ---------- Gallery ---------- */
+.shop-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 1.6vw, 22px);
+}
+.shop-gallery figure {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+.shop-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shop-gallery figure:hover img {
+  transform: scale(1.05);
+}
+.shop-gallery .g-tall {
+  grid-row: span 2;
+  aspect-ratio: 3 / 5;
+}
+.shop-gallery .g-wide {
+  aspect-ratio: 3 / 2;
+}
+
+/* ---------- Local / installers band ---------- */
+.shop-local h2 {
+  font-size: clamp(32px, 4vw, 56px);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  max-width: 20ch;
+}
+.shop-local h2 {
+  color: #fff;
+}
+.shop-local h2 span {
+  color: var(--cyan);
+}
+.shop-local p {
+  max-width: 60ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #b6bebc;
+  margin: 22px 0 0;
+}
+.shop-local .button {
+  margin-top: 30px;
+}
+
+/* Nudge the closing copy a little to the left on desktop */
+@media (min-width: 768px) {
+  .closing > .wrap {
+    transform: translateX(-32px);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .shop-product {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left;
+  }
+  /* Mobile order: image -> name & description -> pricing & buy */
+  .shop-product-media {
+    order: 1;
+  }
+  .shop-product-info {
+    order: 2;
+  }
+  .shop-buy {
+    order: 3;
+  }
+  .shop-product-media img {
+    max-width: 240px;
+  }
+  .shop-values-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .shop-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .shop-gallery {
+    grid-template-columns: 1fr;
+  }
+  .shop-gallery .g-tall {
+    grid-row: auto;
+    aspect-ratio: 3 / 2;
+  }
+  .shop-actions .button,
+  .shop-install .button {
+    width: 100%;
+  }
+}
