@@ -61,6 +61,9 @@ const nextConfig: NextConfig = {
       // TwentyTwo Pro product page, same design system. Clean URL -> static file.
       { source: "/twenty-two-pro", destination: "/twenty-two-pro/index.html" },
       { source: "/twenty-two-pro/", destination: "/twenty-two-pro/index.html" },
+      // Partners & News page, same design system. Clean URL -> static file.
+      { source: "/partners-news", destination: "/partners-news/index.html" },
+      { source: "/partners-news/", destination: "/partners-news/index.html" },
     ];
   },
   async headers() {
