@@ -214,7 +214,7 @@
 .installer-item .inst-addr{display:block;margin-top:5px;font-size:12px;line-height:1.5;color:#9aa4a1}
 .installer-item .inst-phone{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:500;color:var(--cyan)}
 .installer-empty{padding:28px 16px;text-align:center;color:#8a9390;font-size:13px}
-.installer-map-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative}
+.installer-map-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative;z-index:0;isolation:isolate}
 #installer-map{width:100%;height:100%;min-height:360px;background:#0f1313}
 .inst-pin{background:transparent;border:0}
 .inst-pin svg{filter:drop-shadow(0 3px 4px rgba(0,0,0,.35))}
@@ -261,4 +261,24 @@
   .carousel-arrow{display:none}
   .carousel-track{scroll-padding-inline:2px}
   .tariffs-grid.carousel-track,.partners-grid.carousel-track{padding-inline:2px}
+}
+
+/* ---- Carousel swipe affordance (mobile): pagination dots + edge fade +
+   clearer next-card peek, so users know the tariffs / "Where to buy"
+   carousels scroll horizontally. Arrows still show on desktop. ---- */
+.carousel-dots{display:none}
+@media(max-width:560px){
+  /* a touch more peek so the next card is clearly visible */
+  .tariffs-grid.carousel-track>.tariff-card,
+  .partners-grid.carousel-track>.partner-tile{width:80vw}
+  /* edge fades hint there is more to swipe (toggled by JS at the ends) */
+  .carousel::before,.carousel::after{content:"";position:absolute;top:0;bottom:0;width:36px;pointer-events:none;z-index:3;transition:opacity .3s}
+  .carousel::before{left:0;background:linear-gradient(90deg,var(--bg),rgba(16,18,18,0))}
+  .carousel::after{right:0;background:linear-gradient(270deg,var(--bg),rgba(16,18,18,0))}
+  .carousel.is-start::before{opacity:0}
+  .carousel.is-end::after{opacity:0}
+  /* pagination dots */
+  .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+  .carousel-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#ffffff30;transition:background .25s,transform .25s;cursor:pointer}
+  .carousel-dot.is-active{background:var(--cyan);transform:scale(1.3)}
 }

@@ -276,16 +276,47 @@
     var prev = carousel.querySelector("[data-carousel-prev]");
     var next = carousel.querySelector("[data-carousel-next]");
     if (!track) return;
+    var items = track.querySelectorAll(":scope > *");
     var stepBy = function () {
       var first = track.querySelector(":scope > *");
       if (!first) return track.clientWidth * 0.9;
       var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "18") || 18;
       return first.getBoundingClientRect().width + gap;
     };
+    // Swipe affordance: pagination dots (shown on mobile via CSS)
+    var dotsWrap = null;
+    if (items.length > 1) {
+      dotsWrap = document.createElement("div");
+      dotsWrap.className = "carousel-dots";
+      items.forEach(function (item, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", "Go to item " + (i + 1));
+        dot.addEventListener("click", function () {
+          track.scrollTo({ left: i * stepBy(), behavior: "smooth" });
+        });
+        dotsWrap.appendChild(dot);
+      });
+      carousel.appendChild(dotsWrap);
+    }
     var update = function () {
       var maxScroll = track.scrollWidth - track.clientWidth - 2;
       if (prev) prev.disabled = track.scrollLeft <= 2;
       if (next) next.disabled = track.scrollLeft >= maxScroll;
+      // edge-fade state (hides the left/right fade at the ends)
+      carousel.classList.toggle("is-start", track.scrollLeft <= 2);
+      carousel.classList.toggle("is-end", track.scrollLeft >= maxScroll);
+      // active dot
+      if (dotsWrap) {
+        var step = stepBy() || 1;
+        var active = Math.round(track.scrollLeft / step);
+        if (active < 0) active = 0;
+        if (active > items.length - 1) active = items.length - 1;
+        for (var d = 0; d < dotsWrap.children.length; d++) {
+          dotsWrap.children[d].classList.toggle("is-active", d === active);
+        }
+      }
     };
     if (prev)
       prev.addEventListener("click", function () {
