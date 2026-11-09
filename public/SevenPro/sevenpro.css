@@ -259,8 +259,11 @@
    Hide the arrows on small screens and rely on swipe + snap. ---- */
 @media(max-width:560px){
   .carousel-arrow{display:none}
-  .carousel-track{scroll-padding-inline:2px}
-  .tariffs-grid.carousel-track,.partners-grid.carousel-track{padding-inline:2px}
+  /* centre the active card in the viewport (cards are 80vw; wrap gutter ~20px)
+     so a scrolled card sits in the middle of the screen, not left-aligned */
+  .carousel-track>*{scroll-snap-align:center}
+  .carousel-track{scroll-padding-inline:0}
+  .tariffs-grid.carousel-track,.partners-grid.carousel-track{padding-inline:calc(10vw - 20px)}
 }
 
 /* ---- Carousel swipe affordance (mobile): pagination dots + edge fade +
