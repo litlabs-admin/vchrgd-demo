@@ -234,7 +234,21 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 800px) {
   .pn-hero {
-    min-height: 420px;
+    min-height: 440px;
+  }
+  /* Narrow viewport: focus the charger/brick side of the photo and
+     darken more evenly so the centred title stays legible. */
+  .pn-hero .hero-photo {
+    opacity: 0.6;
+    background-position: 78% 42%;
+  }
+  .pn-hero .hero-shade {
+    background: linear-gradient(
+      180deg,
+      rgba(16, 18, 18, 0.78),
+      rgba(16, 18, 18, 0.62) 45%,
+      rgba(16, 18, 18, 0.9)
+    );
   }
   .pn-hero .hero-copy {
     padding-top: 36px;
