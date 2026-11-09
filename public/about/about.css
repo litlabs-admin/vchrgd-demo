@@ -1,0 +1,449 @@
+/* ============================================================
+   About page — built on the shared VCHRGD design system
+   (/home-charging/styles.css + /SevenPro/sevenpro.css + /SevenPro/app.js).
+   Mirrors the Partners & News hero + light content surface.
+   ============================================================ */
+
+/* Hero uses the shared left-aligned .hero from /home-charging/styles.css
+   (same photo, shade, white + cyan heading, actions, note) for full
+   consistency with the product pages. */
+
+/* ---------- Light content surface ---------- */
+.ab-content {
+  background: #fff;
+  color: #101212;
+  color-scheme: light;
+}
+.ab-content .eyebrow {
+  color: #2b7a63;
+}
+.ab-content h2 {
+  color: #101212;
+  letter-spacing: -0.035em;
+}
+.ab-content h3 {
+  color: #101212;
+}
+.ab-content p {
+  color: #4a504d;
+}
+.ab-content strong {
+  color: #101212;
+  font-weight: 600;
+}
+.ab-content .button {
+  background: var(--ink, #101212);
+  color: #fff;
+}
+.ab-content .button:hover {
+  background: #007c87;
+  color: #fff;
+}
+
+/* ---------- Intro + Who we are (text left, sticky image right) ---------- */
+.ab-split {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+.ab-lede {
+  font-size: clamp(18px, 1.6vw, 21px);
+  line-height: 1.65;
+  color: #3a403d;
+  max-width: 60ch;
+  margin-top: 22px;
+}
+.ab-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.ab-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 16px;
+  border: 1px solid #e3e7e5;
+  background: #f6f8f7;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #243029;
+}
+.ab-chip svg {
+  width: 16px;
+  height: 16px;
+  color: #2b7a63;
+}
+.ab-subhead {
+  font-size: clamp(24px, 2.4vw, 30px);
+  margin-top: 56px;
+  margin-bottom: 18px;
+}
+.ab-content .ab-split p + p {
+  margin-top: 18px;
+}
+.ab-figure {
+  position: sticky;
+  top: calc(var(--header-h) + 24px);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.18);
+}
+.ab-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 5;
+}
+.ab-figure-badge {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  background: rgba(10, 14, 13, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.ab-figure-badge span.ab-badge-ic {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--cyan);
+  color: #06201f;
+}
+.ab-figure-badge svg {
+  width: 20px;
+  height: 20px;
+}
+.ab-figure-badge p {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #eef3f1;
+  margin: 0;
+}
+.ab-figure-badge strong {
+  color: #fff;
+}
+
+/* ---------- What we offer (cards) ---------- */
+.ab-wash {
+  background: #f5f7f6;
+}
+.ab-section-head {
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+.ab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ab-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e6eae8;
+  border-radius: 22px;
+  padding: 28px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s,
+    border-color 0.3s;
+}
+.ab-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 234, 255, 0.4);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+}
+.ab-card-ic {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #e8fbff;
+  color: #006c85;
+  transition: background 0.3s, color 0.3s;
+}
+.ab-card:hover .ab-card-ic {
+  background: var(--cyan);
+  color: #06201f;
+}
+.ab-card-ic svg {
+  width: 24px;
+  height: 24px;
+}
+.ab-card h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  letter-spacing: -0.02em;
+}
+.ab-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+.ab-card.ab-card-dark {
+  background: #101212;
+  border-color: #101212;
+  justify-content: space-between;
+}
+.ab-card-dark h3,
+.ab-card-dark p {
+  color: #fff;
+}
+.ab-card-dark p {
+  color: #b9c2bf;
+}
+.ab-card-dark .ab-card-ic {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--cyan);
+}
+.ab-card-dark .button {
+  width: fit-content;
+  margin-top: 26px;
+  background: #fff;
+  color: #06201f;
+}
+.ab-card-dark .button:hover {
+  background: #fff;
+}
+
+/* ---------- Why VCHRGD (image + stats) ---------- */
+.ab-why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.ab-why-media {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.18);
+}
+.ab-why-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 5;
+}
+.ab-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+.ab-stat {
+  border: 1px solid #e6eae8;
+  background: #f6f8f7;
+  border-radius: 16px;
+  padding: 22px;
+}
+.ab-stat strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.ab-stat span {
+  display: block;
+  font-size: 13px;
+  color: #5a615d;
+  margin-top: 8px;
+}
+
+/* ---------- Sustainability (dark band) ---------- */
+.ab-eco {
+  background: #101212;
+  color: #fff;
+}
+.ab-eco .ab-why {
+  align-items: center;
+}
+.ab-eco h2 {
+  color: #fff;
+}
+.ab-eco p {
+  color: #bcc5c2;
+}
+.ab-eco strong {
+  color: #fff;
+}
+.ab-eco .eyebrow {
+  color: #8fe9d8;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.ab-eco .eyebrow svg {
+  width: 15px;
+  height: 15px;
+  color: var(--cyan);
+}
+.ab-eco .button {
+  background: var(--cyan);
+  color: #06201f;
+  margin-top: 32px;
+}
+.ab-eco .button:hover {
+  background: #8bf6ff;
+  color: #06201f;
+}
+.ab-eco-media {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+}
+.ab-eco-media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+}
+
+/* ---------- Company details ---------- */
+.ab-company {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  gap: 40px;
+}
+.ab-detail-card {
+  border: 1px solid #e6eae8;
+  background: #f6f8f7;
+  border-radius: 20px;
+  padding: 28px;
+}
+.ab-detail-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.ab-detail-card h3 svg {
+  width: 20px;
+  height: 20px;
+  color: #006c85;
+}
+.ab-detail-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+.ab-detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e6eae8;
+  font-size: 14px;
+}
+.ab-detail-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.ab-detail-row span {
+  color: #5a615d;
+}
+.ab-detail-row a {
+  font-weight: 600;
+  color: #101212;
+}
+.ab-detail-row a:hover {
+  color: #006c85;
+}
+.ab-detail-list {
+  margin-top: 16px;
+}
+
+/* ---------- FAQ: light surface override ---------- */
+.ab-content .faq {
+  border-top-color: #e6eae8;
+}
+.ab-content .faq-intro .eyebrow {
+  color: #2b7a63;
+}
+.ab-content .faq h2 {
+  color: #101212;
+}
+.ab-content .faq-list .faq-item {
+  border-bottom-color: #e6eae8;
+}
+.ab-content .faq-list .faq-q > span {
+  color: #3a403d;
+}
+.ab-content .faq-list .faq-q:hover > span,
+.ab-content .faq-list .faq-q[aria-expanded="true"] > span {
+  color: #101212;
+}
+.ab-content .faq-icon::before,
+.ab-content .faq-icon::after {
+  background: #9aa09c;
+}
+.ab-content .faq-q[aria-expanded="true"] .faq-icon::before,
+.ab-content .faq-q[aria-expanded="true"] .faq-icon::after {
+  background: #006c85;
+}
+.ab-content .faq-list p {
+  color: #5a615d;
+}
+.ab-content .faq-contact-label {
+  color: #8a9a91;
+}
+.ab-content .faq-contact a {
+  color: #101212;
+}
+.ab-content .faq-contact a:hover {
+  color: #006c85;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .ab-split,
+  .ab-why,
+  .ab-eco .ab-why {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .ab-figure {
+    position: static;
+    order: -1;
+  }
+  .ab-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ab-company {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .ab-why-media {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .ab-grid {
+    grid-template-columns: 1fr;
+  }
+  .ab-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ab-figure img,
+  .ab-why-media img {
+    aspect-ratio: 4 / 3;
+  }
+}

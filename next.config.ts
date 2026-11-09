@@ -64,6 +64,9 @@ const nextConfig: NextConfig = {
       // Partners & News page, same design system. Clean URL -> static file.
       { source: "/partners-news", destination: "/partners-news/index.html" },
       { source: "/partners-news/", destination: "/partners-news/index.html" },
+      // About page, same design system. Clean URL -> static file.
+      { source: "/about", destination: "/about/index.html" },
+      { source: "/about/", destination: "/about/index.html" },
     ];
   },
   async headers() {
