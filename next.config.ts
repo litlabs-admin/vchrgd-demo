@@ -67,6 +67,9 @@ const nextConfig: NextConfig = {
       // About page, same design system. Clean URL -> static file.
       { source: "/about", destination: "/about/index.html" },
       { source: "/about/", destination: "/about/index.html" },
+      // Shop page, same design system. Clean URL -> static file.
+      { source: "/shop", destination: "/shop/index.html" },
+      { source: "/shop/", destination: "/shop/index.html" },
     ];
   },
   async headers() {
