@@ -235,3 +235,30 @@
 @media(min-width:801px){
   .hero-copy{width:auto;max-width:min(90%,860px);margin:0;padding-left:clamp(48px,5vw,104px);padding-right:24px;padding-top:clamp(80px,10vh,150px);padding-bottom:clamp(36px,5vh,64px)}
 }
+
+/* ---- Overview section: collapse to one column on tablet/mobile
+   (fixes the squashed image column + overflow on the Seven Pro and
+   TwentyTwo Pro overview "MEET THE ..." section). ---- */
+@media(max-width:860px){
+  .overview-grid{grid-template-columns:1fr;gap:34px}
+  .overview-media{min-height:0;aspect-ratio:16/11;align-self:auto}
+  .overview-media img{height:100%}
+}
+@media(max-width:560px){
+  .overview.section{padding-top:clamp(40px,8vw,56px);padding-bottom:clamp(40px,8vw,56px)}
+  .overview-grid{gap:26px}
+  .overview-media{aspect-ratio:4/3.2}
+  .overview-lead{font-size:15px}
+  .overview-octopus{gap:14px;padding:14px 16px}
+  .overview-octopus img{width:116px}
+  .overview-octopus p{font-size:12.5px}
+}
+
+/* ---- Carousels are natively swipeable; on mobile the cards fill the
+   viewport (82vw/78vw) so the prev/next arrows overlapped the cards.
+   Hide the arrows on small screens and rely on swipe + snap. ---- */
+@media(max-width:560px){
+  .carousel-arrow{display:none}
+  .carousel-track{scroll-padding-inline:2px}
+  .tariffs-grid.carousel-track,.partners-grid.carousel-track{padding-inline:2px}
+}

@@ -559,3 +559,16 @@ img,svg,video,select,input{max-width:100%}
 @media(min-width:801px){
   .home-hero .hero-copy{width:auto;max-width:min(90%,920px);margin:0;padding-left:clamp(48px,5vw,104px);padding-right:24px;padding-top:clamp(80px,10vh,150px);padding-bottom:clamp(36px,5vh,64px)}
 }
+
+/* ---- Product cards: portrait chargers need a taller frame when cards go
+   full-width (single column). Fixes the small, lost Seven Pro / TwentyTwo
+   Pro images on tablet + mobile. ---- */
+@media(max-width:900px){
+  .range-media{aspect-ratio:1/1}
+  .range-media img{height:92%}
+}
+@media(max-width:560px){
+  .range-media{aspect-ratio:4/4.3}
+  .range-media img{height:94%}
+  .range-body{padding:24px 22px 26px}
+}
