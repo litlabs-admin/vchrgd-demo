@@ -48,7 +48,7 @@
   align-items: start;
 }
 .ab-lede {
-  font-size: 16px;
+  font-size: var(--fs-lead);
   line-height: 1.7;
   color: #3a403d;
   max-width: 60ch;
@@ -113,7 +113,7 @@
   margin-bottom: 20px;
 }
 .ab-who-copy p {
-  font-size: 16px;
+  font-size: var(--fs-body);
   line-height: 1.7;
   color: #3a403d;
 }
